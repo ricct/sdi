@@ -286,9 +286,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Simple Data Integrator" class="md-nav__button md-logo" aria-label="Simple Data Integrator" data-md-component="logo">
       
@@ -757,7 +755,7 @@
   
     <li class="md-nav__item">
       <a href="../../userguide/connectioncsvexcel/" class="md-nav__link">
-        CSV、Excel File
+        CSV,Excel File
       </a>
     </li>
   
@@ -1340,6 +1338,114 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sdi-installation" class="md-nav__link">
+    SDI Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="SDI Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step1-download-sdi" class="md-nav__link">
+    Step1: Download SDI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step2-interactively-install-simpledataintegratorsetupmsi" class="md-nav__link">
+    Step2: Interactively install SimpleDataIntegratorSetup.msi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step3-install-simpledataintegratorworker-service" class="md-nav__link">
+    Step3: Install SimpleDataIntegratorWorker service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-you-are-using-db2-please-follow-the-steps-below-to-set-up" class="md-nav__link">
+    If you are using DB2, please follow the steps below to set up.
+  </a>
+  
+    <nav class="md-nav" aria-label="If you are using DB2, please follow the steps below to set up.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step4-db2-library-installation" class="md-nav__link">
+    Step4: DB2 library installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Step4: DB2 library installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step4-1-download-and-unzip-the-db2-library" class="md-nav__link">
+    Step4-1 : Download and unzip the DB2 library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step4-2-copy-the-required-library-to-the-sdi-installed-folder" class="md-nav__link">
+    Step4-2 : Copy the required library to the SDI installed folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step4-3-add-path" class="md-nav__link">
+    Step4-3 : Add Path
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -1349,7 +1455,7 @@
                 <h1 id="sdi-installation-guide">SDI Installation Guide</h1>
 <h2 id="sdi-installation">SDI Installation</h2>
 <h3 id="step1-download-sdi">Step1: Download SDI</h3>
-<p><a href="../bin/SimpleDataIntegratorSetup_1_2_2205_10.zip" onclick="gtag('event', 'sdidownload', {'event_category': 'zip', 'event_label': 'SimpleDataIntegratorSetup_1_2_2205_10.zip'})" target="_blank"><i class="fa fa-download"></i> Simple Data Integrator 1.2.2205.10</a> </p>
+<p><a href="https://ja.sdi.ricct.com/start/bin/SimpleDataIntegratorSetup_1_2_2208_9.zip" onclick="gtag('event', 'sdidownload', {'event_category': 'zip', 'event_label': 'SimpleDataIntegratorSetup_1_2_2205_10.zip'})" target="_blank"><i class="fa fa-download"></i> Simple Data Integrator 1.2.2208.9</a> </p>
 <div class="admonition note">
 <p class="admonition-title">Extraction password:</p>
 <p><strong>WelcomeToSdi</strong></p>
@@ -1489,7 +1595,7 @@ Execute the following command.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>

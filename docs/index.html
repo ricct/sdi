@@ -317,9 +317,55 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         Home
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#main-functions" class="md-nav__link">
+    Main functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case" class="md-nav__link">
+    Use case
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1235,7 +1281,7 @@
               
                 
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1247,6 +1293,35 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#main-functions" class="md-nav__link">
+    Main functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case" class="md-nav__link">
+    Use case
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1265,8 +1340,8 @@
 <p>On-premises, cloud and hybrid cloud are supported. While connecting to the cloud, it is possible to establish a secure link via the SDI web service without setting up a VPN.<br />
 Oracle, SQL Server, MySql, PostgreSql, DB2, ODBC, files (CSV, Excel) are supported. File systems, FTP/FTPS, SFTP, AWS S3, OCI Object Storage are supported for importing source files and exporting.<br />
 The scheduler is provided that lets you define the automatic data integration at a specific time.</p>
-<h1 id="main-functions">Main functions</h1>
-<h3 id="data-integration">Data Integration</h3>
+<h2 id="main-functions">Main functions</h2>
+<h4 id="data-integration">Data Integration</h4>
 <ul>
 <li><img src="../img/fdb2db.png" alt="" title="" width="50" />&nbsp;&nbsp;Transfer data from the source DB table, view, request to target DB table.</li>
 <li><img src="../img/fexcel2db.png" alt="" title="" width="50" />&nbsp;&nbsp; Import data from CSV, EXCEL into the target database table.</li>
@@ -1275,32 +1350,55 @@ The scheduler is provided that lets you define the automatic data integration at
 <li><img src="../img/fworkflow.png" alt="" title="" width="50" />&nbsp;&nbsp; Workflow</li>
 <li><img src="../img/fnotification.png" alt="" title="" width="50" />&nbsp;&nbsp; Result notification of the execution. (email or event)</li>
 </ul>
-<h3 id="other-functions">Other functions</h3>
+<h4 id="other-functions">Other functions</h4>
 <ul>
 <li><img src="../img/fdbmonitor.png" alt="" title="" width="50" />&nbsp;&nbsp; Database availability monitoring</li>
 <li><img src="../img/fdatacheck.png" alt="" title="" width="50" />&nbsp;&nbsp; Data monitoring and detection (detection of irregular data, data loss, inconsistency, etc.)</li>
 </ul>
-<h3 id="scheduler">Scheduler</h3>
+<h4 id="scheduler">Scheduler</h4>
 <ul>
 <li><img src="../img/fschedule.png" alt="" title="" width="50" />&nbsp;&nbsp; Hourly, daily, weekly, monthly, repeat job execution.</li>
 <li><img src="../img/sschedulerexecuteseq.png" alt="" title="" width="50" />&nbsp;&nbsp;  Execute multiple jobs in parallel or in serial.</li>
 <li><img src="../img/fretry.png" alt="" title="" width="50" />&nbsp;&nbsp; Retry function.</li>
 </ul>
-<h1 id="features">Features</h1>
-<h3 id="1simple-design-easy-operation-and-powerful-functions">1．Simple design, easy operation and powerful functions</h3>
+<h2 id="features">Features</h2>
+<h4 id="1simple-design-easy-operation-and-powerful-functions">1．Simple design, easy operation and powerful functions</h4>
 <p>Installation is complete with just a few clicks. Data linkage and scheduler setting are completed in just 3 steps.<br />
 It can handle everything from simple table mapping to complex queries and workflows.</p>
 <p><img src="../img/features1.png" alt="" title="" width="700" /></p>
-<h3 id="2high-performance">2.High performance</h3>
+<h4 id="2high-performance">2.High performance</h4>
 <p>Adopts architectures like parallel, in-memory, and compressed transfer to achieve high-speed data transfer.</p>
 <p><img src="../img/features2.png" alt="" title="" width="700" /></p>
-<h3 id="3easily-meet-various-requirements">3.Easily meet various requirements</h3>
+<h4 id="3easily-meet-various-requirements">3.Easily meet various requirements</h4>
 <p>It can handle any requirements such as on-premises, cloud and hybrid cloud.<br />
 While connecting to the cloud, it is possible to establish a secure link via the SDI web service without setting up a VPN.</p>
 <p><img src="../img/features3.png" alt="" title="" width="700" /></p>
-<h3 id="4high-availability">4.High Availability</h3>
+<h4 id="4high-availability">4.High Availability</h4>
 <p>Cold standby and hot standby are supported.</p>
 <p><img src="../img/features4.png" alt="" title="" width="700" /></p>
+<h2 id="use-case">Use case</h2>
+<h4 id="integration-of-data-across-internal-systems">Integration of data across internal systems</h4>
+<p>Integrate data in different formats between different systems.</p>
+<p><img src="../img/case1.png" alt="" title=""  width="480" /></p>
+<h4 id="centrally-managed-data-across-multiple-sites">Centrally managed data across multiple sites</h4>
+<p>Centralized data management and data utilization for companies with multiple sites.</p>
+<p><img src="../img/case2.png" alt="" title=""  width="480" /></p>
+<h4 id="data-linking-between-on-premises-cloud-and-multiple-clouds">Data linking between on-premises, cloud and multiple clouds.</h4>
+<p>Flexible connection design of data linking between on-premises, cloud and multiple clouds.  </p>
+<p>On-premises with cloud<br />
+<img src="../img/case3_1.png" alt="" title=""  width="480" />  </p>
+<p>Multi-cloud data linkage<br />
+<img src="../img/case3_2.png" alt="" title=""  width="480" />  </p>
+<h4 id="create-and-import-csvexcel-files-regularly">Create and import CSV/Excel files regularly.</h4>
+<p>Create and import CSV/Excel files regularly. 
+(FTP/FTPS, SFTP, AWS S3, OCI Object Storage are supported. )  </p>
+<p><img src="../img/case4.png" alt="" title=""  width="480" />  </p>
+<h4 id="database-availability-monitoring-data-monitoring-and-detection">Database availability monitoring, data monitoring and detection</h4>
+<p>Database availability monitoring and data monitoring and detection(detection of irregular data, data loss, inconsistency, etc.).</p>
+<ul>
+<li>Remote database monitoring is also possible via SDI WEB Service.    </li>
+</ul>
+<p><img src="../img/case5.png" alt="" title=""  width="480" />  </p>
                 
                   
                 

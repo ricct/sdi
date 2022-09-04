@@ -1071,33 +1071,6 @@
     Mail template example
   </a>
   
-    <nav class="md-nav" aria-label="Mail template example">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#system-warning-mail-template-example" class="md-nav__link">
-    System warning mail template example
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mail-template-example-on-mapping-success" class="md-nav__link">
-    Mail template example on mapping success.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mail-template-example-on-mapping-failure" class="md-nav__link">
-    Mail template example on mapping failure.
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -1423,33 +1396,6 @@
     Mail template example
   </a>
   
-    <nav class="md-nav" aria-label="Mail template example">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#system-warning-mail-template-example" class="md-nav__link">
-    System warning mail template example
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mail-template-example-on-mapping-success" class="md-nav__link">
-    Mail template example on mapping success.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mail-template-example-on-mapping-failure" class="md-nav__link">
-    Mail template example on mapping failure.
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -1658,11 +1604,6 @@
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left">{Summary}</td>
-<td align="left">Summary when sent from the system.</td>
-<td align="left"></td>
-</tr>
-<tr>
 <td align="left">{Message}</td>
 <td align="left">Detailed message when sent from the system.</td>
 <td align="left"></td>
@@ -1690,15 +1631,15 @@
 </tbody>
 </table>
 <h3 id="mail-template-example">Mail template example</h3>
-<h4 id="system-warning-mail-template-example">System warning mail template example</h4>
+<h4 id="system-error-mail-template-example">System error mail template example</h4>
 <p>Subject：</p>
-<div class="highlight"><pre><span></span><code>SDI Warning : {Summary}
+<div class="highlight"><pre><span></span><code>SDI Error  {DateTime}
 </code></pre></div>
 <p>Mail Body：</p>
-<div class="highlight"><pre><span></span><code>An SDI warning has occurred.
+<div class="highlight"><pre><span></span><code>A SDI error occured.
 
-Message：
-{Message}
+Error message：
+{ErrorMessage}
 
 {DateTime}
 </code></pre></div>

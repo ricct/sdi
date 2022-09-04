@@ -711,8 +711,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#aws-s3-amazon-simple-storage-service" class="md-nav__link">
-    AWS S3　（Amazon Simple Storage Service）
+  <a href="#aws-s3" class="md-nav__link">
+    AWS S3
   </a>
   
 </li>
@@ -1371,8 +1371,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#aws-s3-amazon-simple-storage-service" class="md-nav__link">
-    AWS S3　（Amazon Simple Storage Service）
+  <a href="#aws-s3" class="md-nav__link">
+    AWS S3
   </a>
   
 </li>
@@ -1406,7 +1406,7 @@
 <h2 id="overview">Overview</h2>
 <p>SDI can import from and export to CSV and Excel files.<br />
 When using a CSV or Excel file, select file as the location , select CSV or Excel as the data type, and configure the detailed settings.<br />
-File system, FTP / FTPS, SFTP are supported.</p>
+File systems, FTP/FTPS, SFTP, AWS S3, OCI Object Storage are supported.</p>
 <h2 id="configuration">Configuration</h2>
 <h3 id="file-system">File system</h3>
 <p><img src="../img/connection_file_filesystem.png" alt="" title="" >  </p>
@@ -1527,8 +1527,24 @@ File system, FTP / FTPS, SFTP are supported.</p>
 </tr>
 </tbody>
 </table>
-<h3 id="aws-s3-amazon-simple-storage-service">AWS S3　（Amazon Simple Storage Service）</h3>
+<h3 id="aws-s3">AWS S3</h3>
 <p><img src="../img/connection_file_awss3.png" alt="" title="" >  </p>
+<div class="admonition note info">
+<p class="admonition-title"> Please note when creating AWS Credentials File </p>
+<p>Normally, the OS user performing ODI Studio and the OS user executing worker agents are different. Save your AWS Credentials file to a folder that can be accessed by both OS users.<br />
+<mark>If you use the default configuration file location from the official documentation, the worker agent may not be accessible.</mark>  <br />
+  Reference：<a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html" target="_blank">Named profiles for the AWS CLI</a></p>
+</div>
+<p>AWS Credentials File example：</p>
+<div class="highlight"><pre><span></span><code>[default]
+aws_access_key_id=AKIAIOSFODNN7EXAMPLE
+aws_secret_access_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+region=ap-northeast-1
+[user1]
+aws_access_key_id=AKIAI44QH8DHBEXAMPLE
+aws_secret_access_key=je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY
+region=ap-northeast-1
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -1567,6 +1583,26 @@ File system, FTP / FTPS, SFTP are supported.</p>
 </table>
 <h3 id="oci-object-storage">OCI Object Storage</h3>
 <p><img src="../img/connection_file_ocios.png" alt="" title="" >  </p>
+<div class="admonition note info">
+<p class="admonition-title">Please note when creating OCI Configuration File</p>
+<p>Normally, the OS user performing ODI Studio and the OS user executing worker agents are different. Save your OCI Configuration File to a folder that can be accessed by both OS users.<br />
+<mark>If you use the default configuration file location from the official documentation, the worker agent may not be accessible.</mark>  <br />
+  Reference：<a href="https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm" target="_blank">SDK and CLI Configuration File</a></p>
+</div>
+<p>OCI Configuration File Example：</p>
+<div class="highlight"><pre><span></span><code>[default]
+user=ocid1.user.oc1..aaaaaaaamaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+fingerprint=a8:63:a7:a2:89:a9:a3:98:a0:aa:a4:20:a7:ab:0a:0a
+tenancy=ocid1.tenancy.oc1..aaaaaaaamaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+region=ap-tokyo-1
+key_file=C:\keys\oci\test_1.pem
+[user1]
+user=ocid1.user.oc1..bbbbbbbbmbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+fingerprint=b8:63:b7:b2:89:b9:b3:98:b0:bb:b4:20:b7:bb:0b:0b
+tenancy=ocid1.tenancy.oc1..aaaaaaaamaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+region=ap-tokyo-1
+key_file=C:\keys\oci\test_2.pem
+</code></pre></div>
 <table>
 <thead>
 <tr>

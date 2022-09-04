@@ -47,3 +47,17 @@ h3 {
   background: -webkit-linear-gradient(to right, rgb(202, 221,246), transparent);
   background: linear-gradient(to right, rgb(202, 221,246), transparent);
 }
+
+h4 {
+  position: relative;
+  padding: 0.3em 0.6em;
+  background: -webkit-linear-gradient(to right, rgb(212, 231,250), transparent);
+  background: linear-gradient(to right, rgb(212, 231,250), transparent);
+}
+
+h5 {
+  position: relative;
+  padding: 0.2em 0.8em;
+  background: -webkit-linear-gradient(to right, rgb(222, 241,254), transparent);
+  background: linear-gradient(to right, rgb(222, 241,254), transparent);
+}

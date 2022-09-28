@@ -639,7 +639,7 @@
   
     <li class="md-nav__item">
       <a href="../connectioncsvexcel/" class="md-nav__link">
-        CSV,Excel File
+        File
       </a>
     </li>
   
@@ -795,6 +795,13 @@
           <li class="md-nav__item">
   <a href="#for-excel" class="md-nav__link">
     For Excel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-json" class="md-nav__link">
+    For JSON
   </a>
   
 </li>
@@ -1356,6 +1363,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#for-json" class="md-nav__link">
+    For JSON
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1376,7 +1390,7 @@
                 
                 <h1 id="mapping-target-data-configuration">Mapping target data configuration</h1>
 <h2 id="overview">Overview</h2>
-<p>The target data can be selected from RDB, CSV and Execel.
+<p>The target data can be selected from RDB, CSV , Execel or JSON.<br />
 * Before mapping configuration,, complete the connection configuration first.</p>
 <h2 id="configuration">Configuration</h2>
 <p><img src="../img/mapping_target.png" alt="" title="" width="500" ></p>
@@ -1404,12 +1418,7 @@
 <tr>
 <td align="left">3</td>
 <td align="left">Data Update Mode</td>
-<td align="left">Select how to update the target table.<br /> <code>Merge</code> - Merge the data into the target table using the primary key of the target table as a search condition.<br />If the result is true, then updates the row with the corresponding data from the source table. <br />In case the result is false for any rows, then inserts the corresponding row from the source table into the target table.<br /> *If the primary key is not defined on the target table, this method cannot be selected</td>
-</tr>
-<tr>
-<td align="left"><br /><code>Append</code> - Insert the data into the target table. <br /><code>Custome</code> - Write a SQL statement for updating data. (Do it on the detailed setting form)</td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">Select how to update the target table.<br /> <code>Merge</code> - Merge the data into the target table using the primary key of the target table as a search condition.<br />If the result is true, then updates the row with the corresponding data from the source table. <br />In case the result is false for any rows, then inserts the corresponding row from the source table into the target table.<br /> *If the primary key is not defined on the target table, this method cannot be selected<br /><code>Append</code> - Insert the data into the target table. <br /><code>Custome</code> - Write a SQL statement for updating data. (Do it on the detailed setting form)</td>
 </tr>
 <tr>
 <td align="left">4</td>
@@ -1471,6 +1480,24 @@
 <td align="left">10</td>
 <td align="left">Excel Filename</td>
 <td align="left">Enter the name for the Excel export file.<br />There are two ways to set, the fixed name and the pattern configuration.<br />1. If the Excel name is fixed, input the filename as it is.<br />2. In case of pattern configuration, it is possible to place the output time in the filename.<br />e.g : <code>EMP{yyyyMMddHHmmss}.xlsx</code><br /> If you execute the mapping on March 5, 2019 at 6:32:47 p.m., the file name will be EMP20190305183247.xlsx.<br />Reference：<a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings" target="_blank">Custom date and time format strings</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="for-json">For JSON</h3>
+<p><img src="../img/mapping_target_json.png" alt="" title="" width="500" ></p>
+<table>
+<thead>
+<tr>
+<th align="left">No</th>
+<th align="left">Item</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">11</td>
+<td align="left">JSON Filename</td>
+<td align="left">Enter the name for the JSON export file.<br />There are two ways to set, the fixed name and the pattern configuration.<br />1. If the JSON name is fixed, input the filename as it is.<br />2. In case of pattern configuration, it is possible to place the output time in the filename.<br />e.g : <code>EMP{yyyyMMddHHmmss}.json</code><br /> If you execute the mapping on March 5, 2019 at 6:32:47 p.m., the file name will be EMP20190305183247.json.<br />Reference：<a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings" target="_blank">Custom date and time format strings</a></td>
 </tr>
 </tbody>
 </table>

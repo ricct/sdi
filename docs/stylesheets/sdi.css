@@ -31,3 +31,27 @@ h5 {
   background: -webkit-linear-gradient(to right, rgb(174,199,210), transparent);
   background: linear-gradient(to right, rgb(174,199,210), transparent);
 }
+
+body {
+ position: relative;
+ margin: 0;
+ padding: 0;
+}
+
+.slogan-div {
+            position: fixed;
+            right: 80px; /* Add margin on the right */
+            top: 70px; /* Add margin on the bottom */
+            width: 318px; /* Set width */
+            height: auto; /* Adjust height automatically */
+            background-size: cover; /* Or use 'auto' depending on your preference */
+            background-repeat: no-repeat;
+            z-index: 999; /* Ensure it's in front */
+            
+}
+
+        @media (max-width: 1280px) {
+            .slogan-div {
+                display: none !important; 
+            }
+        }

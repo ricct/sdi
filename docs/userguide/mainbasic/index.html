@@ -738,6 +738,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../connectionwebserviceapi/" class="md-nav__link">
+        WEB Service/API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../connectioncsvexcel/" class="md-nav__link">
         File
       </a>
@@ -918,6 +932,20 @@
     <li class="md-nav__item">
       <a href="../schedulefrequency/" class="md-nav__link">
         Frequency
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedulefiletrigger/" class="md-nav__link">
+        Triggered by file events
       </a>
     </li>
   
@@ -1484,6 +1512,11 @@ All operations are started from here.</p>
 </tr>
 <tr>
 <td align="left">4</td>
+<td align="left">Copy icon</td>
+<td align="left">Create a new connection by duplicating an existing one.</td>
+</tr>
+<tr>
+<td align="left">5</td>
 <td align="left">Delete icon</td>
 <td align="left">Delete the existing connection. <br / >* Connections used in mapping cannot be deleted.</td>
 </tr>
@@ -1527,6 +1560,11 @@ All operations are started from here.</p>
 </tr>
 <tr>
 <td align="left">6</td>
+<td align="left">Copy icon</td>
+<td align="left">Create a new mapping by duplicating an existing one.</td>
+</tr>
+<tr>
+<td align="left">7</td>
 <td align="left">Delete icon</td>
 <td align="left">Delete the existing mapping. <br / >* A warning message will be displayed when deleting the mapping used in any scheduler.</td>
 </tr>
@@ -1566,7 +1604,7 @@ All operations are started from here.</p>
 <tr>
 <td align="left">5</td>
 <td align="left">Frequency</td>
-<td align="left">The frequency abbreviation is displayed.<br /> H-Hourly <br />D- Daily <br />W-Weekly <br />M-Monthly <br />R-Repeat</td>
+<td align="left">The frequency abbreviation is displayed.<br /> H-Hourly <br />D- Daily <br />W-Weekly <br />M-Monthly <br />R-Repeat<br /> F-File trigger</td>
 </tr>
 <tr>
 <td align="left">6</td>
@@ -1580,13 +1618,20 @@ All operations are started from here.</p>
 </tr>
 <tr>
 <td align="left">8</td>
+<td align="left">Copy icon</td>
+<td align="left">Create a new scheduler by duplicating an existing one.</td>
+</tr>
+<tr>
+<td align="left">9</td>
 <td align="left">Delete icon</td>
 <td align="left">Delete the existing scheduler.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="worker-agent-monitor">Worker agent monitor</h3>
-<p><img src="../img/main_agent.png" alt="" title="" >  </p>
+<p>The SDI Scheduler is executed by the Worker Agent, which runs as a Windows Service named 'SimpleDataIntegratorWorker.'<br />
+The Worker Agent Monitor can track the status of both the Windows Service and the Worker Agent.<br />
+<img src="../img/main_agent.png" alt="" title="" >  </p>
 <table>
 <thead>
 <tr>

@@ -641,6 +641,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../connectionwebserviceapi/" class="md-nav__link">
+        WEB Service/API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../connectioncsvexcel/" class="md-nav__link">
         File
       </a>
@@ -795,6 +809,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#for-xml" class="md-nav__link">
+    For XML
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target-file-detail-configuration" class="md-nav__link">
+    Target file detail configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-service-web-api" class="md-nav__link">
+    Web Service/ Web API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#about-dynamic-parameter-configuration" class="md-nav__link">
+    About Dynamic Parameter Configuration
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -906,6 +948,20 @@
     <li class="md-nav__item">
       <a href="../schedulefrequency/" class="md-nav__link">
         Frequency
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedulefiletrigger/" class="md-nav__link">
+        Triggered by file events
       </a>
     </li>
   
@@ -1373,6 +1429,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#for-xml" class="md-nav__link">
+    For XML
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target-file-detail-configuration" class="md-nav__link">
+    Target file detail configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-service-web-api" class="md-nav__link">
+    Web Service/ Web API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#about-dynamic-parameter-configuration" class="md-nav__link">
+    About Dynamic Parameter Configuration
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1469,19 +1553,34 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">8</td>
+<td align="left">11</td>
 <td align="left">CSV Filename</td>
-<td align="left">If the connection is selected as a CSV folder, the CSV file list will be displayed. Select the CSV file in the list.</td>
+<td align="left">Enter the name of the CSV file to be imported.<br />If you want to configure a file pattern, press the "File Detail" button and set the detailed settings.</td>
 </tr>
 <tr>
-<td align="left">9</td>
+<td align="left">12</td>
+<td align="left">File Detail</td>
+<td align="left">If you want to include multiple CSV files as import targets, press the "File Detail" button and configure the settings on the detailed settings screen. <br /><br />For more details on how to configure the settings, refer to the following: <br /><a href=".#target-file-detail-configuration" ><i class="fa fa-book"></i> File Details Settings</a></td>
+</tr>
+<tr>
+<td align="left">13</td>
 <td align="left">Encoding</td>
 <td align="left">Enter the encoding of the CSV file.&lt;br /e.g.：UTF-8、Shift_JIS</td>
 </tr>
 <tr>
-<td align="left">10</td>
+<td align="left">14</td>
 <td align="left">Use header columns</td>
 <td align="left">Whether the CSV file has a header row.</td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left">Retrieve Columns from File</td>
+<td align="left">Select a template CSV file, analyze its column information, and display it in a list.</td>
+</tr>
+<tr>
+<td align="left">16</td>
+<td align="left">Columns</td>
+<td align="left">A list displaying the columns of the template CSV file.</td>
 </tr>
 <tr>
 <td align="left">※</td>
@@ -1502,24 +1601,39 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">11</td>
-<td align="left">Excel FileName</td>
-<td align="left">If the connection is selected as a Excel folder, the Excel file list will be displayed. Select the Excel file in the list.</td>
+<td align="left">21</td>
+<td align="left">Excel Filename</td>
+<td align="left">Enter the name of the Excel file to be imported.<br />If you want to configure a file pattern, press the "File Detail" button and set the detailed settings.</td>
 </tr>
 <tr>
-<td align="left">12</td>
+<td align="left">22</td>
+<td align="left">File Detail</td>
+<td align="left">If you want to include multiple Excel files as import targets, press the "File Detail" button and configure the settings on the detailed settings screen. <br /><br />For more details on how to configure the settings, refer to the following: <br /><a href=".#target-file-detail-configuration" ><i class="fa fa-book"></i> File Details Settings</a></td>
+</tr>
+<tr>
+<td align="left">23</td>
 <td align="left">Sheet</td>
 <td align="left">Select the sheet number to be imported. <br /> * The first sheet is 1.</td>
 </tr>
 <tr>
-<td align="left">13</td>
+<td align="left">24</td>
 <td align="left">Encoding</td>
 <td align="left">Enter the encoding of the Excel file.&lt;br /e.g.：UTF-8、Shift_JIS</td>
 </tr>
 <tr>
-<td align="left">14</td>
+<td align="left">25</td>
 <td align="left">Use header columns</td>
 <td align="left">Whether the Excel file has a header row.</td>
+</tr>
+<tr>
+<td align="left">26</td>
+<td align="left">Retrieve Columns from File</td>
+<td align="left">Select a template excel file, analyze its column information, and display it in a list.</td>
+</tr>
+<tr>
+<td align="left">27</td>
+<td align="left">Columns</td>
+<td align="left">A list displaying the columns of the template Excel file.</td>
 </tr>
 </tbody>
 </table>
@@ -1535,11 +1649,327 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">15</td>
-<td align="left">JSON FileName</td>
-<td align="left">If the connection is selected as a JSON folder, the JSON file list will be displayed. Select the JSON file in the list.</td>
+<td align="left">31</td>
+<td align="left">JSON Filename</td>
+<td align="left">Enter the name of the JSON file to be imported.<br />If you want to configure a file pattern, press the "File Detail" button and set the detailed settings.</td>
+</tr>
+<tr>
+<td align="left">32</td>
+<td align="left">File Detail</td>
+<td align="left">If you want to include multiple JSON files as import targets, press the "File Detail" button and configure the settings on the detailed settings screen. <br /><br />For more details on how to configure the settings, refer to the following: <br /><a href=".#target-file-detail-configuration" ><i class="fa fa-book"></i> File Details Settings</a></td>
+</tr>
+<tr>
+<td align="left">33</td>
+<td align="left">Retrieve Structure from File</td>
+<td align="left">Select a template JSON file, analyze its structure, and display it in a tree view format.</td>
+</tr>
+<tr>
+<td align="left">34</td>
+<td align="left">Tergget object</td>
+<td align="left">If the data is structured as an array, each element within the array (detail row) can be imported as a single record.<br />Please select the array object to be imported.</td>
+</tr>
+<tr>
+<td align="left">35</td>
+<td align="left">Show Parent objects</td>
+<td align="left">By default, the child-layer objects of the selected object are displayed. <br />If you also need parent-layer objects, check this option.</td>
 </tr>
 </tbody>
+</table>
+<p>The list of objects displayed as a sample is based on the following JSON example.</p>
+<div class="highlight"><pre><span></span><code>{ 
+ &quot;orderno&quot;: 1, 
+ &quot;customercode&quot;: &quot;A001&quot;, 
+ &quot;customeraddress&quot;:
+   {
+   &quot;streetaddress&quot;:&quot;Nagashima 1-1-1&quot;,
+   &quot;city&quot;:&quot;Aomori City&quot;,
+   &quot;state&quot;: &quot;Aomori Prefecture&quot;,
+   &quot;postalcode&quot;:&quot;030-8570&quot;
+   }, 
+ &quot;detail&quot;: [
+     {
+      &quot;prodcode&quot;: 1,
+      &quot;ordernumber&quot;: 3,
+      &quot;price&quot;: 2000,
+      &quot;amount&quot;: &quot;6000&quot;
+     },
+     {
+      &quot;prodcode&quot;: 2,
+      &quot;ordernumber&quot;: 2,
+      &quot;price&quot;: 1700,
+      &quot;amount&quot;: 3400
+     }
+      ]
+} 
+</code></pre></div>
+<h3 id="for-xml">For XML</h3>
+<p><img src="../img/mapping_source_xml.png" alt="" title="" width="500" ></p>
+<table>
+<thead>
+<tr>
+<th align="left">No</th>
+<th align="left">Item</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">41</td>
+<td align="left">XML Filename</td>
+<td align="left">Enter the name of the XML file to be imported.<br />If you want to configure a file pattern, press the "File Detail" button and set the detailed settings.</td>
+</tr>
+<tr>
+<td align="left">42</td>
+<td align="left">File Detail</td>
+<td align="left">If you want to include multiple XML files as import targets, press the "File Detail" button and configure the settings on the detailed settings screen. <br /><br />For more details on how to configure the settings, refer to the following: <br /><a href=".#target-file-detail-configuration" ><i class="fa fa-book"></i> File Details Settings</a></td>
+</tr>
+<tr>
+<td align="left">43</td>
+<td align="left">Retrieve Structure from File</td>
+<td align="left">Select a template JSON file, analyze its structure, and display it in a tree view format.</td>
+</tr>
+<tr>
+<td align="left">44</td>
+<td align="left">Target Element</td>
+<td align="left">If the data is structured as an array, each element within the array (detail row) can be imported as a single record. Please select the array element to be imported.</td>
+</tr>
+<tr>
+<td align="left">45</td>
+<td align="left">Show Parent Elements</td>
+<td align="left">By default, the child-level elements of the selected element are displayed. If you also need parent-level elements, check this option.</td>
+</tr>
+<tr>
+<td align="left">46</td>
+<td align="left">Show Attributes</td>
+<td align="left">By default, XML attributes are not listed. If attribute data is also required, check this option.</td>
+</tr>
+</tbody>
+</table>
+<p>The list of elements displayed as a sample is based on the following XML example.</p>
+<div class="highlight"><pre><span></span><code>&lt;data&gt;
+     &lt;orderno&gt;1&lt;/orderno&gt;
+     &lt;customercode&gt;A001&lt;/customercode&gt;
+     &lt;customeraddress&gt;
+         &lt;streetaddress&gt;Nagashima 1-1-1&lt;/streetaddress&gt;
+         &lt;city&gt;Aomori City&lt;/city&gt;
+         &lt;state&gt;Aomori Prefecture&lt;/state&gt;
+         &lt;postalcode&gt;030-8570&lt;/postalcode&gt;
+     &lt;/customeraddress&gt;
+     &lt;detail&gt;
+         &lt;prodcode&gt;1&lt;/prodcode&gt;
+         &lt;ordernumber&gt;3&lt;/ordernumber&gt;
+         &lt;price&gt;2000&lt;/price&gt;
+         &lt;amount&gt;6000&lt;/amount&gt;
+     &lt;/detail&gt;
+     &lt;detail&gt;
+         &lt;prodcode&gt;2&lt;/prodcode&gt;
+         &lt;ordernumber&gt;2&lt;/ordernumber&gt;
+         &lt;price&gt;1700&lt;/price&gt;
+         &lt;amount&gt;3400&lt;/amount&gt;
+     &lt;/detail&gt;
+ &lt;/data&gt;
+</code></pre></div>
+<h3 id="target-file-detail-configuration">Target file detail configuration</h3>
+<p><img src="../img/mapping_file_detail.png" alt="" title="" width="500" ></p>
+<table>
+<thead>
+<tr>
+<th align="left">No</th>
+<th align="left">Item</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">51</td>
+<td align="left">File Selection Typt</td>
+<td align="left">The data import target can be set as a single file or a list of files that match a filename pattern.</td>
+</tr>
+<tr>
+<td align="left">52</td>
+<td align="left">File Name Pattern</td>
+<td align="left">If you select a filename pattern as the data import target, you can configure the pattern using wildcards and regular expressions.</td>
+</tr>
+<tr>
+<td align="left">53</td>
+<td align="left">FileMask</td>
+<td align="left">Please enter a file mask using wildcards or regular expressions.</td>
+</tr>
+<tr>
+<td align="left">54</td>
+<td align="left">Order By</td>
+<td align="left">If multiple files are selected, set the order of file import.</td>
+</tr>
+<tr>
+<td align="left">55</td>
+<td align="left">Order Action</td>
+<td align="left">Please set the sorting order action.</td>
+</tr>
+<tr>
+<td align="left">56</td>
+<td align="left">Test</td>
+<td align="left">The current list of target files is displayed based on the configured file mask.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="web-service-web-api">Web Service/ Web API</h3>
+<p><img src="../img/mapping_source_webserviceapi.png" alt="" title="" width="500" ></p>
+<table>
+<thead>
+<tr>
+<th align="left">No</th>
+<th align="left">Item</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">61</td>
+<td align="left">Endpoint</td>
+<td align="left">Please enter a relative URL.<br /><br />Dynamic parameters related to time can be configured.<br />For details on the configuration method, refer to the following:<br /><a href=".#about-dynamic-parameter-configuration" ><i class="fa fa-book"></i> About Dynamic Parameter Configuration</a></td>
+</tr>
+<tr>
+<td align="left">62</td>
+<td align="left">Request Detail</td>
+<td align="left">Configure detailed information such as the request method, headers, and POST body.</td>
+</tr>
+<tr>
+<td align="left">63</td>
+<td align="left">Refresh</td>
+<td align="left">Retrieve the latest information from the endpoint.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="web-service-web-api-request-detailed-configuration">Web Service / Web API Request Detailed configuration</h4>
+<p><img src="../img/mapping_source_webserviceapi_detail.png" alt="" title=""  ></p>
+<table>
+<thead>
+<tr>
+<th align="left">No</th>
+<th align="left">Item</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">71</td>
+<td align="left">Method</td>
+<td align="left">Select the request method. GET and POST are supported.</td>
+</tr>
+<tr>
+<td align="left">72</td>
+<td align="left">Endpoint</td>
+<td align="left">Please enter a relative URL.<br /><br />Dynamic parameters related to time can be configured.<br />For details on the configuration method, refer to the following:<br /><a href=".#about-dynamic-parameter-configuration" ><i class="fa fa-book"></i> About Dynamic Parameter Configuration</a></td>
+</tr>
+<tr>
+<td align="left">73</td>
+<td align="left">test</td>
+<td align="left">Execute an access test for the Web Service / Web API.</td>
+</tr>
+<tr>
+<td align="left">74</td>
+<td align="left">Headers</td>
+<td align="left">Configure the request headers.</td>
+</tr>
+<tr>
+<td align="left">75</td>
+<td align="left">Body</td>
+<td align="left">If using POST, configure the request body here.</td>
+</tr>
+<tr>
+<td align="left">76</td>
+<td align="left">Content-Type Setting Button</td>
+<td align="left">A button that automatically sets the Content-Type header to text, JSON, XML, or HTML.</td>
+</tr>
+<tr>
+<td align="left">77</td>
+<td align="left">Response</td>
+<td align="left">When you run the test, information about the response will be displayed.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../img/mapping_source_webserviceapi_detail_body1.png" alt="" title="" width="500" ></p>
+<table>
+<thead>
+<tr>
+<th align="left">No</th>
+<th align="left">Item</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">81</td>
+<td align="left">Text</td>
+<td align="left">Select "Text" if the body type is RAW text.</td>
+</tr>
+<tr>
+<td align="left">82</td>
+<td align="left">Body Text</td>
+<td align="left">Please enter the body text. <br /><br />Dynamic parameters related to time can be configured.<br />For details on the configuration method, refer to the following:<br /><a href=".#about-dynamic-parameter-configuration" ><i class="fa fa-book"></i> About Dynamic Parameter Configuration</a></td>
+</tr>
+</tbody>
+</table>
+<p><img src="../img/mapping_source_webserviceapi_detail_body2.png" alt="" title="" width="500" ></p>
+<table>
+<thead>
+<tr>
+<th align="left">No</th>
+<th align="left">Item</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">83</td>
+<td align="left">Dynamic Generation</td>
+<td align="left">Select "Dynamic Generation" if the body content is dynamically generated. <br />In dynamic generation, the execution result of the SQL set in SELECT SQL is used as the body for the POST request.</td>
+</tr>
+<tr>
+<td align="left">84</td>
+<td align="left">Connection</td>
+<td align="left">Select the target database.</td>
+</tr>
+<tr>
+<td align="left">85</td>
+<td align="left">SELECT SQL</td>
+<td align="left">Enter the SQL query to be executed.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="about-dynamic-parameter-configuration">About Dynamic Parameter Configuration</h3>
+<p>The configuration method evaluates expressions enclosed in <code>{}</code> and uses the computed values.</p>
+<table>
+  <tr>
+    <th>Example</th>
+    <th>Configuration Method</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Example of using the current date</td>
+    <td>/api/v1/orders/{yyyyMMdd} /api/v1/orders/<span style="color: #ff7f50;">{yyyyMMdd}</span></td>
+  </tr>
+  <tr>
+    <td>
+{<br />
+ "orderno": 1,<br />
+ "customercode": "A001", <br />
+ "updatedate": "<span style="color: #ff7f50;">{yyyy/MM/dd HH:mm:ss}</span>", <br />
+} <br />
+    </td>
+  </tr>  
+<tr>
+    <td rowspan="2">Example of Using Yesterday's Date.</td>
+    <td>/api/v1/orders/<span style="color: #ff7f50;">{DateTime.Now.AddDays(-1).ToString("yyyyMMdd")}</span></td>
+  </tr>
+  <tr>
+    <td>
+{ <br />
+ "orderno": 1, <br />
+ "customercode": "A001", <br />
+ "updatedate": "<span style="color: #ff7f50;">{DateTime.Now.AddDays(-1).ToString(\"yyyyMMdd\")}</span>"<br />
+} <br />
+    </td>
+  </tr>  
 </table>
                 
               

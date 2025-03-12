@@ -641,6 +641,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../connectionwebserviceapi/" class="md-nav__link">
+        WEB Service/API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../connectioncsvexcel/" class="md-nav__link">
         File
       </a>
@@ -885,6 +899,20 @@
     <li class="md-nav__item">
       <a href="../schedulefrequency/" class="md-nav__link">
         Frequency
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedulefiletrigger/" class="md-nav__link">
+        Triggered by file events
       </a>
     </li>
   
@@ -1351,8 +1379,8 @@
                 
                 <h1 id="schedule-configuration">Schedule configuration</h1>
 <h2 id="overview">Overview</h2>
-<p>The scheduler is used to  execute mapping tasks automatically.
-SDI Studio is used to setup the scheduler and the worker agent will run the jobs.</p>
+<p>The SDI Scheduler automates tasks based on predefined schedules or file-triggered events. <br />
+It is configured using SDI Studio and executed by the Worker Agent, which runs as a Windows Service named SimpleDataIntegratorWorker.</p>
 <h2 id="configuration">Configuration</h2>
 <h3 id="composition-of-scheduler-form">Composition of scheduler form</h3>
 <p><img src="../img/schedule_overview.png" alt="" title="">  </p>
@@ -1372,8 +1400,8 @@ SDI Studio is used to setup the scheduler and the worker agent will run the jobs
 </tr>
 <tr>
 <td align="left">2</td>
-<td align="left">Frequency</td>
-<td align="left">The following frequency can be set.<br /> Hourly <br />Daily <br />Weekly <br />Monthly <br />Repeat</td>
+<td align="left">Startup Method</td>
+<td align="left">There are two types of startup methods: Scheduled Startup and File Triggered Startup.<br />For Scheduled Startup, you can set the following frequencies:<br /> Hourly <br />Daily <br />Weekly <br />Monthly <br />Repeat</td>
 </tr>
 <tr>
 <td align="left">3</td>

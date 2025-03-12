@@ -641,6 +641,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../connectionwebserviceapi/" class="md-nav__link">
+        WEB Service/API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../connectioncsvexcel/" class="md-nav__link">
         File
       </a>
@@ -823,6 +837,20 @@
     <li class="md-nav__item">
       <a href="../schedulefrequency/" class="md-nav__link">
         Frequency
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedulefiletrigger/" class="md-nav__link">
+        Triggered by file events
       </a>
     </li>
   
@@ -1351,11 +1379,11 @@
                 
                 <h1 id="scheduler-properties">Scheduler Properties</h1>
 <h2 id="overview">Overview</h2>
-<p>Scheduler properties include validity, execution sequence, retry, etc.</p>
+<p>This is the configuration screen for enabling/disabling the scheduler, setting execution order, and configuring retry options.</p>
 <h2 id="configuration">configuration</h2>
 <p><img src="../img/schedule_setting.png" alt="" title="" width="700" ></p>
 <h3 id="items">Items</h3>
-<p><img src="../img/schedule_setting_detail.png" alt="" title=""  width="400"></p>
+<p><img src="../img/schedule_setting_detail1.png" alt="" title=""  width="400"></p>
 <table>
 <thead>
 <tr>
@@ -1370,25 +1398,81 @@
 <td align="left">Active or Disable</td>
 <td align="left"><code>Active</code> - he schedule is enabled and will executed by the worker agent.   <br /><code>Disable</code> - - he schedule is inactive and will not be executed.</td>
 </tr>
+</tbody>
+</table>
+<p><img src="../img/schedule_setting_detail2.png" alt="" title=""  width="400"></p>
+<table>
+<thead>
+<tr>
+<th align="left">No</th>
+<th align="left">Item</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left">2</td>
-<td align="left">Task execution sequence</td>
-<td align="left"><code>Parallel</code> - For multiple jobs, these are run in parallel. The result of executing the task has no effect on the other tasks.  <br /><code>Serial</code> -For multiple tasks, the tasks are executed in sequence. If the task fails, subsequent tasks will not be executed.</td>
+<td align="left">Task execution method</td>
+<td align="left"><code>Parallel</code> - For multiple jobs, these are run in parallel. The result of executing the task has no effect on the other tasks.</td>
 </tr>
 <tr>
 <td align="left">3</td>
+<td align="left">Parallelism</td>
+<td align="left">Set the number of tasks to be executed simultaneously.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../img/schedule_setting_detail3.png" alt="" title=""  width="400"></p>
+<table>
+<thead>
+<tr>
+<th align="left">No</th>
+<th align="left">Item</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">4</td>
+<td align="left">Task execution method</td>
+<td align="left"><code>Serial</code> - When multiple tasks exist, they are executed sequentially in order.</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Interrupt on error</td>
+<td align="left">If a task fails, subsequent tasks will not be executed.</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">Interrupt if no data</td>
+<td align="left">If there is no data in the mapping task, subsequent tasks will not be executed.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../img/schedule_setting_detail4.png" alt="" title=""  width="400"></p>
+<table>
+<thead>
+<tr>
+<th align="left">No</th>
+<th align="left">Item</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">7</td>
 <td align="left">Retry Radio button</td>
 <td align="left">Whether retry in case of job failure.</td>
 </tr>
 <tr>
-<td align="left">4</td>
+<td align="left">8</td>
 <td align="left">Retry Count</td>
-<td align="left"></td>
+<td align="left">Set the number of retry attempts.</td>
 </tr>
 <tr>
-<td align="left">5</td>
+<td align="left">9</td>
 <td align="left">Retry Interval</td>
-<td align="left"></td>
+<td align="left">Set the time interval before retrying. The unit is minutes.</td>
 </tr>
 </tbody>
 </table>
@@ -1416,7 +1500,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../schedulefrequency/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Frequency" rel="prev">
+        <a href="../schedulefiletrigger/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Triggered by file events" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1425,7 +1509,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Frequency
+              Triggered by file events
             </div>
           </div>
         </a>

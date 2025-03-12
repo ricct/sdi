@@ -641,6 +641,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../connectionwebserviceapi/" class="md-nav__link">
+        WEB Service/API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../connectioncsvexcel/" class="md-nav__link">
         File
       </a>
@@ -809,6 +823,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#for-xml" class="md-nav__link">
+    For XML
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -906,6 +927,20 @@
     <li class="md-nav__item">
       <a href="../schedulefrequency/" class="md-nav__link">
         Frequency
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedulefiletrigger/" class="md-nav__link">
+        Triggered by file events
       </a>
     </li>
   
@@ -1373,6 +1408,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#for-xml" class="md-nav__link">
+    For XML
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1484,6 +1526,11 @@
 <td align="left">Excel Filename</td>
 <td align="left">Enter the name for the Excel export file.<br />There are two ways to set, the fixed name and the pattern configuration.<br />1. If the Excel name is fixed, input the filename as it is.<br />2. In case of pattern configuration, it is possible to place the output time in the filename.<br />e.g : <code>EMP{yyyyMMddHHmmss}.xlsx</code><br /> If you execute the mapping on March 5, 2019 at 6:32:47 p.m., the file name will be EMP20190305183247.xlsx.<br />Reference：<a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings" target="_blank">Custom date and time format strings</a></td>
 </tr>
+<tr>
+<td align="left">11</td>
+<td align="left">Sheet Name</td>
+<td align="left">Specify the sheet name for the output Excel file.</td>
+</tr>
 </tbody>
 </table>
 <h3 id="for-json">For JSON</h3>
@@ -1498,9 +1545,42 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">11</td>
+<td align="left">12</td>
 <td align="left">JSON Filename</td>
 <td align="left">Enter the name for the JSON export file.<br />There are two ways to set, the fixed name and the pattern configuration.<br />1. If the JSON name is fixed, input the filename as it is.<br />2. In case of pattern configuration, it is possible to place the output time in the filename.<br />e.g : <code>EMP{yyyyMMddHHmmss}.json</code><br /> If you execute the mapping on March 5, 2019 at 6:32:47 p.m., the file name will be EMP20190305183247.json.<br />Reference：<a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings" target="_blank">Custom date and time format strings</a></td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">Root Key</td>
+<td align="left">Specify the root object name for the output JSON file. Leaving it empty is allowed.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="for-xml">For XML</h3>
+<p><img src="../img/mapping_target_xml.png" alt="" title="" width="500" ></p>
+<table>
+<thead>
+<tr>
+<th align="left">No</th>
+<th align="left">Item</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">14</td>
+<td align="left">XML Filename</td>
+<td align="left">Enter the name for the XML export file.<br />There are two ways to set, the fixed name and the pattern configuration.<br />1. If the XML name is fixed, input the filename as it is.<br />2. In case of pattern configuration, it is possible to place the output time in the filename.<br />e.g : <code>EMP{yyyyMMddHHmmss}.xml</code><br /> If you execute the mapping on March 5, 2019 at 6:32:47 p.m., the file name will be EMP20190305183247.xml.<br />Reference：<a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings" target="_blank">Custom date and time format strings</a></td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left">Root Element</td>
+<td align="left">Specify the root element name for the output XML file. Empty values are not allowed.</td>
+</tr>
+<tr>
+<td align="left">16</td>
+<td align="left">Table Element</td>
+<td align="left">Specify the table element name for the output XML file. Empty values are not allowed.</td>
 </tr>
 </tbody>
 </table>

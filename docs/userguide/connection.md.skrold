@@ -1,0 +1,29 @@
+# Connection configuration
+
+## Overview
+The connection configuration form is used to set up connections for various databases (Oracle, SQL Server, etc.), files (Excel, CSV, JSON, XML), and web services or web APIs.
+
+## Configuration
+
+### Composition of connection configuration form 
+<img src="../img/connection_overview.png" alt="" title="" >  
+
+|No|Item|Description|
+|:--|:--|:--|
+|1|Basic information|Basic information such as connection name, location, type, etc.|
+|2|Connection details|Enter detailed connection information to connect to DBs.|
+|3|Buttons| |
+
+
+### Basic information 
+<img src="../img/connection_head.png" alt="" title="" >  
+
+
+|No|Item|Description|
+|:--|:--|:--|
+|1|Connection name|An identification name. You can use alphanumericals or symbols.|
+|2|Description|It is a comment of the connection. You can freely enter any information such as characteristics and usage.|
+|3|Location|Set the connection method to the database.<br /> `Local DB`  - Connect to the database directly.<br />`File` -  CSV , Excel , JSON , XML file. <br />`Web Service/API` - Connect to web services and web APIs.<br />`Remote DB (via SDI Web service) ` - Connect to the database via SDI Web service |
+|4|Data Type|Select the database or file type. |
+
+

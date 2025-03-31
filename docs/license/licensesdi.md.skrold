@@ -1,0 +1,185 @@
+# Simple Data Integrator (SDI) license
+
+Copyright (c) Research institute of Cloud Computing Technology(RiCCT).    
+<a href="https://www.ricct.com" target="_blank">www.ricct.com</a>
+
+
+## License system
+<table style="border-collapse:collapse; border-spacing:0px;" border="1">
+  <tr  style="background-color: #F1F1F1;">
+    <th>Functions</th>
+    <th>Developer<br /> Edition</th>
+    <th>Express<br /> Edition</th>
+    <th>Standard<br /> Edition</th>
+    <th>Enterprise<br /> Edition</th>
+  </tr>
+ <tr>
+    <td>SDI Studio</td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+  </tr>
+  <tr>
+    <td>SDI Worker Agent</td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+  </tr>
+  <tr>
+    <td>SDI WEB Service</td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+  </tr>  
+  <tr>
+    <td>SDI CLI <br />Command Line Interface</td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+  </tr>    
+     <tr>
+    <td>High Availability <br />Cold Standby</td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+  </tr>
+   <tr>
+    <td>High Availability <br />Hot Standby</td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td></td>
+    <td></td>
+    <td><img src="/img/yes.png" width="20"></td>
+  </tr>    
+  <tr>
+    <td>Limit of the mappings number *1</td>
+    <td>Unlimited</td>
+    <td>5</td>
+    <td>50</td>
+    <td>Unlimited</td>
+  </tr>
+    <tr>
+    <td colspan="5">*1  Number of mappings ≒ Number of target tables</td>
+  </tr> 
+
+   </tr>
+  <tr  style="background-color: #F1F1F1;">
+    <th>Use</th>
+    <th>Developer<br /> Edition</th>
+    <th>Express<br /> Edition</th>
+    <th>Standard<br /> Edition</th>
+    <th>Enterprise<br /> Edition</th>
+  </tr>   
+  <tr>
+    <td>Development, education, demo</td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+  </tr>  
+    <tr>
+    <td>Non-commercial use</td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+  </tr> 
+      <tr>
+    <td>Commercial Production use</td>
+    <td></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+    <td><img src="/img/yes.png" width="20"></td>
+  </tr>
+  <tr  style="background-color: #f0f8ff;">
+    <th>License</th>
+    <th>Developer<br /> Edition</th>
+    <th>Express<br /> Edition</th>
+    <th>Standard<br /> Edition</th>
+    <th>Enterprise<br /> Edition</th>
+  </tr>
+  
+    <tr>
+    <td rowspan="2">Price</td>
+    <td colspan="2" rowspan="2">Free of charge</td>
+    <td colspan="2">* Server license (per instance)</td>
+  </tr>  
+  <tr>
+    <td>US$ 75/Month</td>
+    <td>US$ 150/Month</td>
+  </tr>
+  
+  <tr>
+    <td>How to get a license</td>
+    <td colspan="1"><a href="https://ja.sdi.ricct.com/start/bin/developerlicense.zip" target="_blank"><img src="../img/developerdownload.png" title="Development license file download"></a><a href="https://ja.sdi.ricct.com/start/bin/developerlicense.zip" target="_blank">Development license file download</a><br />Refer to the unzipped file name for the license number.<br /></td>
+    <td colspan="1"><a href="https://forms.gle/iWkMYZM5EBDS7JVM7" target="_blank"><img src="../img/expressapplication.png" title="SDI Express Edition license application"></a><a href="https://forms.gle/iWkMYZM5EBDS7JVM7" target="_blank">SDI Express license application</td>
+    <td colspan="2" style="background-color: #fffacd;"><a href="https://forms.gle/4GymYDkdJUh8eGkk6" target="_blank"><img src="../img/seapplication.png"  title="SDI Standard/Enterprise Edition Quotation Request"></a><a href="https://forms.gle/4GymYDkdJUh8eGkk6" target="_blank">SDI Standard/Enterprise Edition Quotation Request</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>License<br />model</td>
+    <td colspan="4">Server License (instance-based)<br />A server license must be assigned to a specific physical server, VM, or container running SDI.</td>
+  </tr> 
+  <tr style="background-color: #f0f8ff;">
+    <th>Support</th>
+    <th>Developer<br /> Edition</th>
+    <th>Express<br /> Edition</th>
+    <th>Standard<br /> Edition</th>
+    <th>Enterprise<br /> Edition</th>
+  </tr>  
+  <tr>
+    <td>Community support<br / >(free)</td>
+    <td colspan="4">Please submit the Issue from the following URL. <br / >
+    <a href="https://github.com/ricct/sdi/issues" target="_blank">https://github.com/ricct/sdi/issues</a>
+    </td>
+  </tr> 
+  <tr>
+    <td>Professional technical support<br / >(Paid)</td>
+    <td colspan="2"></td>
+    <td colspan="2">We will provide guidance to customers on how to submit an issue . The issues will be handled by the RiCCT Engineer.
+    </td>
+  </tr>
+</table>
+
+## License Agreement
+
+By Installing or using the Software, Licensee agrees to be bound by this Agreement.
+If Licensee does not agree to this Agreement, Licensee is not allowed to install or use the Software.
+###1. Definitions
+**Agreement** shall mean this document.  
+**RiCCT** shall mean Research institute of Cloud Computing Technology.  
+**License** shall mean the right to use the Software granted to Licensee by RiCCT through this Agreement.  
+**Licensee** shall mean the legal entity to which License has been granted;
+
+###2. Ownership and Copyright  
+Through this Agreement, Software is licensed, not sold.  
+All the copyrights of the Software are and shall remain owned fully and solely by RiCCT.  
+
+###3. Grant of License
+Licensee have rights to use, copy, modify, merge, publish, distribute, and/or 
+provide service using the Software.
+Sublicensing of Software is only allowed when incorporated with Licensee Product supplied to Third Party in accordance with this Agreement.
+Licensee have rights to use any version , including new Releases of the licensed Software.  
+Licensee should seek the suitable License type and Edition depend on the usage, such as e.g. Development,Demonstration, Non-commercial Use, Commercial Use, etc.   
+
+Decompile, attempt to discover the source code or resources are not permitted.
+
+###4. Warranty  
+
+RiCCT has the requisite knowledge, resources and know-how to fully perform and deliver the Software and associated services as contemplated by this Agreement in a professional manner.  
+
+RiCCT has not intentionally placed and will use its best efforts to avoid the placement of any Harmful Codes into Software provided under this Agreement.  
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+

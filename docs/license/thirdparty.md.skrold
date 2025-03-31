@@ -1,0 +1,19 @@
+# Third Party Licenses including Open Source Software
+
+Simple Data Integrator (SDI) use software provided by third parties,including open source software. The following copyright statements and licenses apply to various components that are distributed with SDI. Licensee must fully agree and comply with these license terms or must not use these components. The third party license terms apply only to the respective software to which the license pertains, and the third party license terms do not apply to Research Institute of Cloud Computing Technology(RiCCT).
+
+|Software|Comment|
+|:--|:--|
+|<a href="https://www.nuget.org/packages/Oracle.ManagedDataAccess/" target="_blank">Oracle.ManagedDataAccess</a>|Used for connection to Oracle.|
+|<a href="https://www.nuget.org/packages/Npgsql/" target="_blank">Npgsql</a>|Used for connection to PostgreSQL|
+|<a href="https://www.nuget.org/packages/MySql.Data/" target="_blank">MySql.Data</a>|Used for connection to MySQL|
+|<a href="https://www.nuget.org/packages/IBM.Data.DB.Provider/" target="_blank">IBM.Data.DB.Provider</a>|Used for connection to DB2|
+|<a href="https://www.nuget.org/packages/Otp.NET/" target="_blank">Otp.NET</a>|One-time password generation and authentication (for enhancing SDI Web Service security)|
+|<a href="https://www.nuget.org/packages/ClosedXML" target="_blank">ClosedXML</a>|For reading and outputting Excel files|
+|<a href="https://www.nuget.org/packages/CsvHelper/" target="_blank">CsvHelper</a>|For reading and outputting CSV files|
+|<a href="https://www.nuget.org/packages/Json.Net" target="_blank">Json.Net</a>|For reading and outputting JSON files|
+|<a href="https://www.nuget.org/packages/FluentFTP/" target="_blank">FluentFTP</a>|For FTP server access|
+|<a href="https://www.nuget.org/packages/SSH.NET/" target="_blank">SSH.NET</a>|For SFTP server access|
+|<a href="https://www.nuget.org/packages/AWSSDK.S3/" target="_blank">AWSSDK.S3</a>|For AWS S3 access|
+|<a href="https://www.nuget.org/packages/OCI.DotNetSDK.Objectstorage" target="_blank">OCI.DotNetSDK.Objectstorage</a>|For OCI Objectstorage access|
+|<a href="https://www.nuget.org/packages/log4net/" target="_blank">log4net</a>|For Log recording|

@@ -1,0 +1,257 @@
+# SDI Web service configuration
+## Overview  
+To use the service, You need configure the user authentication method, application authentication, and database connection string , etc.
+At a minimum, set the highlighted line in the cdbcService session and the service will work.
+
+* SDI Web Service has a built-in CDBC, which is a separate product of our company.
+
+
+## Configurations  
+###  `<configSections>`  
+
+!!! abstract "Description"
+    Used to add configSections declarations. Please do not change.
+
+XML example
+
+```XML
+  <configSections>
+    <section name="oracle.manageddataaccess.client" type="OracleInternal.Common.ODPMSectionHandler, Oracle.ManagedDataAccess" />
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net" />
+    <section name="cdbcService" type="CdbcServiceUtils.Config.CdbcConfigurationSectionHandler, CdbcServiceUtils" />
+  </configSections>
+```
+
+
+###  `<cdbcService>`
+
+!!! abstract "Description"
+    cdbcService related configuration.  
+    n order for cdbcService to work, at least set the highlighted line below.
+    
+XML example
+```XML hl_lines="2 4 7 9 20"
+  <cdbcService>
+    <userAuthentication authMethod="None , Basic or UserPsk">
+      <authenticatedUsers>
+        <add userId="" userPsk="" comment=""/>
+      </authenticatedUsers>
+    </userAuthentication>
+    <clientApplicationAuthentication authMethod="None or ApplicationPsk">
+      <authenticatedApplications>
+        <add applicationId="" applicationPsk="" comment="" />
+      </authenticatedApplications>
+    </clientApplicationAuthentication>
+        <idps enabled="true" 
+          accessBlockApplicationFailureCount="5"           
+          accessBlockUserFailureCount="5" 
+          accessBlockIpAdressFailureCount="20" 
+          accessBlockSeconds="10" 
+          failureResetSeconds="600" 
+          clientServerMaxTimeLagSeconds="120" />
+    <connectionStrings>
+      <add name="" connectionString="" providerName=""/>
+    </connectionStrings>
+  </cdbcService>
+
+```
+
+
+#### `<userAuthentication>`  
+
+!!! abstract "Description"
+    Only authenticated users can access the cdbc service. In this session, you can set the user authentication method and related settings.
+
+
+```XML
+<userAuthentication authMethod="None , Basic or UserPsk">
+```
+
+Attributes
+
+|Attribute|Description|Value|Remarks|
+|:--|:--|:--|:--|
+|authMethod|User authorization method. |`None` , `Basic` or `UserPsk`|`None` - No user authorization. Any user can access the service.<br />`Basic` - Use IIS basic authorization. Cdbc will not do user authentication. <br/> `UserPsk` - Use Pre-Shared Key for each user.|
+
+#####  `<authenticatedUsers>`
+
+!!! abstract "Description"
+    The authenticated user list can be stored in the authenticatedUsers section.
+    You can use the AuthenticatedUsersCollection to retrieve authenticated users from application configuration files.
+    Its properties map to authenticated user attributes, allowing you to retrieve a single authenticated user specifying the userId.  
+    This setting is valid only when userAuthentication authMethod = "UserPsk"
+    
+```XML
+<authenticatedUsers>
+  <add userId="" userPsk="" comment=""/>
+</authenticatedUsers>
+```
+
+Attributes
+
+|Attribute|Description|Value|Remarks|
+|:--|:--|:--|:--|
+|userId|User ID|String||
+|userPsk|User psk (Pre-Shared Key 16 digital)|String||
+|comment|Comment about the user, It will not be used by the system|String||
+
+
+####  `<clientApplicationAuthentication>`
+
+!!! abstract "Description"
+    Only the authenticated client application can access cdbc service.
+    You can configure client application authorization method and related settings in this session.
+
+```XML
+    <clientApplicationAuthentication authMethod="None or ApplicationPsk">
+```
+
+Attributes
+
+|Attribute|Description|Value|Remarks|
+|:--|:--|:--|:--|
+|authMethod|Client application authorization method. |`None` - No application authentication. All applications can access the service. <br /> `ApplicationPsk` - Use a Pre-Shared Key for each application. ||
+
+
+#####  `<authenticatedApplications>`
+
+!!! abstract "Description"
+    The authenticated applications list can be stored in the authenticatedApplications section.
+    You can use the AuthenticatedApplicationsCollection to retrieve authenticated applications from application configuration files.
+    Its properties map to authenticated application attributes, allowing you to retrieve a single authenticated application specifying the applicationId.
+    This setting is valid only when clientApplicationAuthentication authMethod = "ApplicationPsk"
+    
+```XML
+      <authenticatedApplications>
+        <add applicationId="" applicationPsk="" comment="" />
+      </authenticatedApplications>
+```
+
+Attributes
+
+|Attribute|Description|Value|Remarks|
+|:--|:--|:--|:--|
+|applicationId|Applicaion ID|String||
+|applicationPsk|Applicaion psk (Pre-Shared Key 16 digital)|String||
+|comment|Comment about the applicaion, It will not be used by the system|String||
+
+
+
+####  `<idps>`
+
+!!! abstract "Description"
+    Idps is used to block illegal access.
+    The accesses will be blocked for a specified time period while authorization failed certain time.
+
+```XML
+        <idps enabled="true" 
+          accessBlockApplicationFailureCount="5"           
+          accessBlockUserFailureCount="5" 
+          accessBlockIpAdressFailureCount="20" 
+          accessBlockSeconds="10" 
+          failureResetSeconds="600"  />          
+```
+Attributes
+
+|Attribute|Description|Value|Remarks|
+|:--|:--|:--|:--|
+|enabled|Enable or disable Idps. If Idps is enabled , Cdbc service will block the accesses after authorization failed certain times. |`true` or `false` <br>default `true`||
+|accessBlockApplicationFailureCount|Used to set the application authorization failure count while start block.|int>=1 <br> default `5`|Count access from same ip and same application id|
+|accessBlockUserFailureCount|Used to set the user authorization failure count while start block.|int>=1 <br> default `5`|Count access from same ip and same user id|
+|accessBlockIpAdressFailureCount|Used to set the authorization failure count from the same ip while start to block access.|int>=1 <br> default `20`|Count access from same ip|
+|accessBlockSeconds|Used to set how many seconds will the access be blocked.|int>=1 <br> default `10`||
+|failureResetSeconds|If there is no authorization error after a certain seconds the failure count will be reset to 0. failureResetSeconds is used to set the reset time.|int>accessBlockSeconds <br> default `600`||
+
+
+
+####  `<connectionStrings>`
+
+!!! abstract "Description"
+    Connection strings used by cdbc service can be stored in the connectionStrings section.
+    Please refer microsoft's document to see the details about connectionStrings.
+    
+    Oracle : <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/odpnt/featConnecting.html#GUID-BCF2F215-C25F-403C-8D18-B03A69BC7104" target="_blank">Connecting to Oracle Database</a>  
+    SQLServer : <a href="https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=dotnet-plat-ext-6.0#system-data-sqlclient-sqlconnection-connectionstring" target="_blank">SqlConnection.ConnectionString</a>   
+    MySQL: <a href="https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html" target="_blank">Creating a Connector/NET Connection String</a>  
+    PostgreSQL:<a href="https://www.npgsql.org/doc/connection-string-parameters.html" target="_blank">Npgsql Connection string parameters</a>  
+
+```XML
+    <connectionStrings>
+      <add name="" connectionString="" />
+    </connectionStrings>
+```    
+
+
+###  `<log4net>`
+
+!!! abstract "Description"
+    Cdbc use log4net to log system and audit log.  
+    Please refer log4net's document to see the details.
+
+```XML
+  <log4net>
+    <appender name="RollingLogFileAppenderSystem" type="log4net.Appender.RollingFileAppender,log4net">
+    ...
+    </appender>
+    <appender name="RollingLogFileAppenderAudit" type="log4net.Appender.RollingFileAppender,log4net">
+    ...
+    </appender>
+    <logger name="audit">
+      <appender-ref ref="RollingLogFileAppenderAudit"/>
+    </logger>
+    <logger name="system">
+      <appender-ref ref="RollingLogFileAppenderSystem"/>
+    </logger>
+  </log4net>
+
+```
+
+###  `<serviceModel>`
+
+!!! abstract "Description"
+    serviceModel session includes some wcf configurations for cdbc service .
+    You can modify it to fit your requirement if you have deep knowledge about wcf.
+    Please refer Microsoft's document to see the details.
+
+```XML
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding maxReceivedMessageSize="5798464">
+        </binding>
+      </basicHttpBinding>
+      <basicHttpsBinding>
+        <binding maxReceivedMessageSize="5798464">
+        </binding>
+      </basicHttpsBinding>
+    </bindings>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <serviceMetadata httpGetEnabled="false" httpsGetEnabled="false"/>
+          <serviceDebug includeExceptionDetailInFaults="false" httpHelpPageEnabled="false" httpsHelpPageEnabled="false"/>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <protocolMapping>
+        <add binding="basicHttpsBinding" scheme="https" />
+    </protocolMapping>    
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true" />
+  </system.serviceModel>
+
+```
+
+
+
+###  `<oracle.manageddataaccess.client>`
+
+!!! abstract "Description"
+    SDI Web Service uses ODP.NET managed drivers. You can configure ODP.NET Managed driver related settings here.
+
+```XML
+<oracle.manageddataaccess.client>
+    <version number="*">
+    </version>
+</oracle.manageddataaccess.client>
+
+```

@@ -1,0 +1,26 @@
+# SDI Web Service setup guide
+
+
+!!! note info "Setting Up SDI Web Service"
+
+    This is required only when performing data linkage via an SDI Web Service. ==If SDI connects directly to databases, no Web Service configuration is needed==.
+
+### Step1: Download SDI Web Service
+<a href="../bin/SdiService_1_2_2205_8.zip" onclick="gtag('event', 'SdiServicedownload', {'event_category': 'zip', 'event_label': 'SdiService_1_2_2205_8.zip'})" target="_blank">:fa-download: SDI Web Service 1.2.2205.8 </a> 
+
+!!! note  "Extraction password:"
+    **WelcomeToSdi**
+
+
+### Step2: IIS installation
+<a href="/start/installiis/" target="_blank">:fa-link: IIS　installation</a> 
+
+### Step3: Deploy SDI Web service
+<a href="/start/deployservice/" target="_blank">:fa-link:Deploy SDI Web service</a> 
+
+### Step4: SDI Web Service configuration
+<a href="/start/configservice/" target="_blank">:fa-link: SDI Web Service configuration</a> 
+
+
+
+

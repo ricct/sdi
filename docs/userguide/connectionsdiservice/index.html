@@ -26,7 +26,7 @@
     
     
       
-        <title>Remote (Via SDI Web service) - Simple Data Integrator</title>
+        <title>Remote (Via SDI Gateway service) - Simple Data Integrator</title>
       
     
     
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Remote (Via SDI Web service)
+              Remote (Via SDI Gateway service)
             
           </span>
         </div>
@@ -438,7 +438,7 @@
             
   
   <span class="md-ellipsis">
-    SDI Web Service
+    SDI Gateway Service
     
   </span>
   
@@ -449,7 +449,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            SDI Web Service
+            SDI Gateway Service
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -464,7 +464,7 @@
         
   
   <span class="md-ellipsis">
-    SDI Web Service Setup
+    SDI Gateway Service Setup
     
   </span>
   
@@ -508,7 +508,7 @@
         
   
   <span class="md-ellipsis">
-    SDI Web service deployment
+    SDI Gateway Service deployment
     
   </span>
   
@@ -530,7 +530,7 @@
         
   
   <span class="md-ellipsis">
-    SDI Web service configuration
+    SDI Gateway Service configuration
     
   </span>
   
@@ -903,7 +903,7 @@
           
   
   <span class="md-ellipsis">
-    Remote (Via SDI Web service)
+    Remote (Via SDI Gateway service)
     
   </span>
   
@@ -915,7 +915,7 @@
         
   
   <span class="md-ellipsis">
-    Remote (Via SDI Web service)
+    Remote (Via SDI Gateway service)
     
   </span>
   
@@ -1873,9 +1873,16 @@
 
 <h1 id="remote-database-connection-configuration">Remote database connection configuration</h1>
 <h2 id="overview">Overview</h2>
-<p>SDI can connect to a remotely installed database via the SDI Web service. <br />
-When connecting to a database installed remotely via  SDI Web service, select Remote DB as the location, select the data type you want to connect to, and then configure the detailed settings.<br />
-* It is necessary to install and set up the SDI Web service first.</p>
+<p>SDI can connect to a remotely installed database through the SDI Gateway Service.<br />
+To connect to a remote database using the SDI Gateway Service: </p>
+<ul>
+<li>Select "Select Remote Database(via SDI Gateway Service)" as the location.</li>
+<li>Choose the appropriate data type.</li>
+<li>Configure the detailed settings accordingly.</li>
+</ul>
+<div class="admonition note info">
+<p>The SDI Gateway Service must be installed and set up beforehand.</p>
+</div>
 <h2 id="configuration">Configuration</h2>
 <p><img src="../img/connection_sdiservice.png" alt="" title="" >  </p>
 <table>
@@ -1890,7 +1897,7 @@ When connecting to a database installed remotely via  SDI Web service, select Re
 <tr>
 <td style="text-align: left;">1</td>
 <td style="text-align: left;">Location</td>
-<td style="text-align: left;">Select Remote DB(via SDI Web service)</td>
+<td style="text-align: left;">Select Remote Database(via SDI Gateway Service)</td>
 </tr>
 <tr>
 <td style="text-align: left;">2</td>
@@ -1900,7 +1907,7 @@ When connecting to a database installed remotely via  SDI Web service, select Re
 <tr>
 <td style="text-align: left;">3</td>
 <td style="text-align: left;">End Point Address</td>
-<td style="text-align: left;">Enter the End Point Address of SDI Web Service.</td>
+<td style="text-align: left;">Enter the End Point Address of SDI Gateway Service.</td>
 </tr>
 <tr>
 <td style="text-align: left;">4</td>
@@ -1915,17 +1922,17 @@ When connecting to a database installed remotely via  SDI Web service, select Re
 <tr>
 <td style="text-align: left;">6</td>
 <td style="text-align: left;">ConnectionString</td>
-<td style="text-align: left;">Please enter the name of the ConnectionString set on the SDI Web Service side.</td>
+<td style="text-align: left;">Please enter the name of the ConnectionString set on the SDI Gateway Service side.</td>
 </tr>
 <tr>
 <td style="text-align: left;">7</td>
 <td style="text-align: left;">Network Data Encryption</td>
-<td style="text-align: left;">Whether to encrypt the data when SDI communicates with the SDI Web Service. (This setting is valid only when the End Point Address is http. If the End Point Address is https, ssl encrypted communication is performed, so this setting will be ignored.)</td>
+<td style="text-align: left;">Whether to encrypt the data when SDI communicates with the SDI Gateway Service. (This setting is valid only when the End Point Address is http. If the End Point Address is https, ssl encrypted communication is performed, so this setting will be ignored.)</td>
 </tr>
 <tr>
 <td style="text-align: left;">8</td>
 <td style="text-align: left;">Network Data Compression</td>
-<td style="text-align: left;">Whether to compress the data when SDI communicates with the SDI Web Service.</td>
+<td style="text-align: left;">Whether to compress the data when SDI communicates with the SDI Gateway Service.</td>
 </tr>
 <tr>
 <td style="text-align: left;">9</td>

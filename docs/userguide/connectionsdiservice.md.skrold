@@ -1,0 +1,22 @@
+# Remote database connection configuration
+
+## Overview
+SDI can connect to a remotely installed database via the SDI Web service.   
+When connecting to a database installed remotely via  SDI Web service, select Remote DB as the location, select the data type you want to connect to, and then configure the detailed settings.  
+* It is necessary to install and set up the SDI Web service first.
+
+## Configuration
+
+<img src="../img/connection_sdiservice.png" alt="" title="" >  
+
+|No|Item|Description|
+|:--|:--|:--|
+|1|Location|Select Remote DB(via SDI Web service)|
+|2|Date Type|Select the type of target database.<br />* Oracle, SQL Server, MySQL and PostgreSQL are supported.  |
+|3|End Point Address|Enter the End Point Address of SDI Web Service.|
+|4|User Authentication Method|Select User Authentication Method<br />There are three types of authentication methods: None, Basic and UserPsk. If Basic and UserPsk are selected, enter the credentials.||
+|5|Application Authentication Method|Select Application Authentication Method.<br />There are two types of authentication methods, None and ApplicationPsk. If ApplicationPsk is selected, enter the credentials.|
+|6|ConnectionString|Please enter the name of the ConnectionString set on the SDI Web Service side.|
+|7|Network Data Encryption|Whether to encrypt the data when SDI communicates with the SDI Web Service. (This setting is valid only when the End Point Address is http. If the End Point Address is https, ssl encrypted communication is performed, so this setting will be ignored.)|
+|8|Network Data Compression|Whether to compress the data when SDI communicates with the SDI Web Service.|
+|9|Default Schema|If Default Schema is specified, the tables and views of the specified schema will be listed during mapping.<br/> If blank, all accessible tables and views will be listed.|

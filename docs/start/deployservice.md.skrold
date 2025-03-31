@@ -1,0 +1,37 @@
+# SDI Web service deployment
+
+### 1. Download and unzip the SDI Web Service.
+You can download the SDI Web Service from the following page.   
+[SDI Web service download page](/start/setupsdiwebservice/)
+
+### 2. Copy the SDI Web Service files to IIS
+Copy the folder SdiService and its entire contents to your web server's iis home directory.    
+<img src="../img/delopyservice/copyservicefolder.png" alt="" title="" width="700">  
+e.g.
+C:\inetpub\wwwroot\SdiService\
+
+
+### 3. Convert the SDI Web Service folder to an application
+3.1 Start [Internet Information Services (iis) Manager]
+<img src="../img/delopyservice/10.png" alt="" title="" width="700">  
+
+3.2  Right-click on SdiService and select Convert to Application.
+<img src="../img/delopyservice/20.png" alt="" title="">  
+
+3.3  When the Add Application window pops up, click the OK button.
+<img src="../img/delopyservice/30.png" alt="" title="" width="300">   
+
+You can customize the values ​​as needed.
+
+
+### 4.  SDI Web Service confirmation
+Use browser to navigate [http://localhost/SdiService](http://localhost/SdiService).  
+You should see the default SDI page.
+
+<img src="../img/delopyservice/40.png" alt="" title="">  
+
+In this case, the Sdi Web Service endpoint address is:   
+http://localhost/SdiService/CdbcService.svc
+
+* You can change the local host to an IP address or host name. You can also use HTTPS.
+

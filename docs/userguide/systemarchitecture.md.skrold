@@ -1,0 +1,70 @@
+# System architecture / System requirements
+
+## System architecture
+Simple Data Integrator (SDI) is composed by SDI Studio and SDI Worker agent.  
+SDI Studio is a tool for configuring connections, mappings, schedules and parameters.   
+The SDI Worker agent (Windows Service) is a tool that executes scheduled tasks.  
+The SDI Web Service provides a proxy to access the remote database.
+
+
+<img src="../img/sdiarchitecture.png" alt="" title="" width="600" >  
+
+The SDI command line interface (SdiCli.exe) is also provided for the execution of mapping tasks from the command line.
+
+## System requirements
+
+
+### SDI
+
+||System requirements|
+|:--|:--|
+|OS|Windows 2022 / 2019 / 2016 / 2012 R2 / 2012  <br /> Windows 11 / 10 / 8.1 <br />* Only 64bit version is supported, 32bit version does not work.|
+|.NET|Microsoft .NET Framework 4.7.2 or higher|
+|CPU|No special conditions, if the operation system above works.|
+|Memory|4GB or more|
+|Display|Screen resolution 1280 * 800 or higher|
+
+### SDI Web Service
+
+||System requirements|
+|:--|:--|
+|OS|Windows 2022 / 2019 / 2016 / 2012 R2 / 2012  |
+|.NET|Microsoft .NET Framework 4.6.1 or higher|
+|IIS|Microsoft Internet Information Service (IIS) 8.x or 10.x|
+|CPU|No special conditions, if the operation system above works.|
+|Memory|4GB or more|
+
+
+## Supported Datatype
+### Connect directly.
+|Datatype|Version|Source|Target|
+|:--|:--|:--|:--|
+|**Database**||||
+|Oracle|10g or higher |<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">|
+|Autonomous Database <br />(Oracle)|19c or higher |<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">|
+|SQLServer|2008 or higher |<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">|
+|Azure Synapse||<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">|
+|MySQL|5.6 or higher |<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">|
+|PostgreSQL|9.6 or higher |<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">|
+|DB2|10.1 or higher |<img src="/img/yes.png" width="20">||
+|RDBs connected via ODBC||<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">|
+|BigQuery||<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">|
+|Snowflake||<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">|
+|**File**||||
+|CSV||<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">
+|Excel||<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">
+|JSON||<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">
+|XML||<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">
+|**Web Service**||||
+|JSON-formatted REST API||<img src="/img/yes.png" width="20">||
+|XML-formatted web service||<img src="/img/yes.png" width="20">||
+
+
+### Connect to the database via SDI Web service
+|Datatype|Version|Source|Target|
+|:--|:--|:--|:--|
+|Oracle|10g or higher |<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">|
+|Autonomous Database <br />(Oracle)|19c or higher |<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">|
+|SQLServer|2008 or higher |<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">|
+|MySQL|5.6 or higher |<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">|
+|PostgreSQL|9.6 or higher |<img src="/img/yes.png" width="20">|<img src="/img/yes.png" width="20">|

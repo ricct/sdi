@@ -79,18 +79,13 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="brown">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#overview" class="md-skip">
-          Skip to content
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -360,21 +355,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
         
@@ -387,52 +367,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#main-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Main functions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-case" class="md-nav__link">
-    <span class="md-ellipsis">
-      Use case
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1902,7 +1836,7 @@
               
                 
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1911,43 +1845,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#main-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Main functions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-case" class="md-nav__link">
-    <span class="md-ellipsis">
-      Use case
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1965,79 +1862,165 @@
 
 
 
-<h1 id="overview">Overview</h1>
-<p>Simple Data Integrator (SDI) is a data integration tool (ETL) , which extracts data from the source system, converts and processes it according to business requirements, and loads the processed data into a target system.  </p>
-<h4 id="same-location">Same location</h4>
-<p><img src="https://ja.sdi.ricct.com/img/sdi1.gif" alt="" title="" width="700" /></p>
-<h4 id="multiple-locations">Multiple locations</h4>
-<p><img src="https://ja.sdi.ricct.com/img/sdi2.gif" alt="" title="" width="700" /></p>
-<p>Simple Data Integrator (SDI) supports on-premises, cloud, and hybrid cloud environments. When connecting to the cloud, a secure connection can be established via the SDI Gateway Service without the need for a VPN.</p>
-<p>It supports various data sources including Oracle, SQL Server, MySQL, PostgreSQL, DB2, Azure Synapse, Google BigQuery, Snowflake, ODBC-compliant databases, and file formats such as CSV, Excel, JSON, and XML. For file import and export, SDI is compatible with file systems, FTP/FTPS, SFTP, AWS S3, OCI Object Storage, and Azure Blob Storage.</p>
-<p>SDI also enables data retrieval and integration from web services and web APIs.</p>
-<p>A built-in scheduler allows you to automate data integration tasks at specified times or based on file changes.</p>
-<h2 id="main-functions">Main functions</h2>
-<h4 id="data-integration">Data Integration</h4>
-<ul>
-<li><img src="../img/fdb2db.png" alt="" title="" width="50" />&nbsp;&nbsp;Transfer data from the source DB table, view, query to target DB table.</li>
-<li><img src="../img/ffile2db.png" alt="" title="" width="50" />&nbsp;&nbsp; Import data from CSV, EXCEL , JSON , XML file into the target database table.</li>
-<li><img src="../img/fdb2file.png" alt="" title="" width="50" />&nbsp;&nbsp; Export table, view, query data from the source database to CSV , EXCEL , JSON , XML file.</li>
-<li><img src="../img/fexesql.png" alt="" title="" width="50" />&nbsp;&nbsp; Execute SQL and Procedure .</li>
-<li><img src="../img/webserviceapi.png" alt="" title="" width="50" />&nbsp;&nbsp;Integration with Web Services and Web APIs</li>
-<li><img src="../img/fworkflow.png" alt="" title="" width="50" />&nbsp;&nbsp; Workflow</li>
-<li><img src="../img/fnotification.png" alt="" title="" width="50" />&nbsp;&nbsp; Result notification of the execution. (email or event)</li>
-</ul>
-<h4 id="other-functions">Other functions</h4>
-<ul>
-<li><img src="../img/fdbmonitor.png" alt="" title="" width="50" />&nbsp;&nbsp; Database availability monitoring</li>
-<li><img src="../img/fdatacheck.png" alt="" title="" width="50" />&nbsp;&nbsp; Data monitoring and detection (detection of irregular data, data loss, inconsistency, etc.)</li>
-</ul>
-<h4 id="scheduler">Scheduler</h4>
-<ul>
-<li><img src="../img/fschedule.png" alt="" title="" width="50" />&nbsp;&nbsp; Hourly, daily, weekly, monthly, repeat job execution.</li>
-<li><img src="../img/ffiletrigger.png" alt="" title="" width="50" />&nbsp;&nbsp; Execute a schedule when the specified file is created, modified, or deleted.</li>
-<li><img src="../img/sschedulerexecuteseq.png" alt="" title="" width="50" />&nbsp;&nbsp;  Execute multiple jobs in parallel or in serial.</li>
-<li><img src="../img/fretry.png" alt="" title="" width="50" />&nbsp;&nbsp; Retry function.</li>
-</ul>
-<h2 id="features">Features</h2>
-<h4 id="1simple-design-easy-operation-and-powerful-functions">1．Simple design, easy operation and powerful functions</h4>
-<p>Installation is complete with just a few clicks. Data linkage and scheduler setting are completed in just 3 steps.<br />
-It can handle everything from simple table mapping to complex queries and workflows.</p>
-<p><img src="../img/features1.png" alt="" title="" width="700" /></p>
-<h4 id="2high-performance">2.High performance</h4>
-<p>Adopts architectures like parallel, in-memory, and compressed transfer to achieve high-speed data transfer.</p>
-<p><img src="../img/features2.png" alt="" title="" width="700" /></p>
-<h4 id="3easily-meet-various-requirements">3.Easily meet various requirements</h4>
-<p>It can handle any requirements such as on-premises, cloud and hybrid cloud.<br />
-While connecting to the cloud, it is possible to establish a secure link via the SDI Gateway Service without setting up a VPN.</p>
-<p><img src="../img/features3.png" alt="" title="" width="700" /></p>
-<h4 id="4high-availability">4.High Availability</h4>
-<p>Cold standby and hot standby are supported.</p>
-<p><img src="../img/features4.png" alt="" title="" width="700" /></p>
-<h2 id="use-case">Use case</h2>
-<h4 id="integration-of-data-across-internal-systems">Integration of data across internal systems</h4>
-<p>Integrate data in different formats between different systems.</p>
-<p><img src="../img/case1.png" alt="" title=""  width="500" /></p>
-<h4 id="centrally-managed-data-across-multiple-sites">Centrally managed data across multiple sites</h4>
-<p>Centralized data management and data utilization for companies with multiple sites.</p>
-<p><img src="../img/case2.png" alt="" title=""  width="500" /></p>
-<h4 id="data-linking-between-on-premises-cloud-and-multiple-clouds">Data linking between on-premises, cloud and multiple clouds.</h4>
-<p>Flexible connection design of data linking between on-premises, cloud and multiple clouds.  </p>
-<p>On-premises with cloud<br />
-<img src="../img/case3_1.png" alt="" title=""  width="500" />  </p>
-<p>Multi-cloud data linkage<br />
-<img src="../img/case3_2.png" alt="" title=""  width="500" />  </p>
-<h4 id="create-and-import-csv-excel-json-or-xml-files-regularly">Create and import CSV , Excel , JSON or XML  files regularly.</h4>
-<p>Regularly create and import CSV, Excel, JSON or XML files. Supports file systems, FTP/FTPS, SFTP, AWS S3, OCI Object Storage, web services, and web APIs.</p>
-<p><img src="../img/case4_1.png" alt="" title=""  width="500" />  </p>
-<p><img src="../img/case4_2.png" alt="" title=""  width="500" />  </p>
-<p><img src="../img/case4_3.png" alt="" title=""  width="500" />  </p>
-<p><img src="../img/case4_4.png" alt="" title=""  width="500" />  </p>
-<h4 id="database-availability-monitoring-data-monitoring-and-detection">Database availability monitoring, data monitoring and detection</h4>
-<p>Database availability monitoring and data monitoring and detection(detection of irregular data, data loss, inconsistency, etc.).</p>
-<ul>
-<li>Remote database monitoring is also possible via SDI Gateway Service.    </li>
-</ul>
-<p><img src="../img/case5.png" alt="" title=""  width="500" />  </p>
+<div class="container">
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <h1>Simple. Fast. Powerful.</h1>
+      <h2>Simple data integration. High-performance. Rich features.</h2>
+      <p>
+        SDI is a data integration tool that seamlessly connects with
+        Oracle / SQL Server / MySQL / PostgreSQL / DB2, cloud DWHs such as BigQuery / Snowflake,
+        S3 / OCI Object Storage / Azure Blob, and Web APIs.
+        With the built-in scheduler and gateway, you can
+        securely automate workflows within the same site, across multiple sites, and with cloud services..
+      </p>
+      <br>
+    </div>
+    <div class="screen">
+      <img style="width:100%" src="https://ja.sdi.ricct.com/img/sdi2.gif" alt="SDI hero image">
+    </div>
+  </section>
+
+  <section class="hero">
+    <div>
+      <a class="btn" href="/start/setupsdi/">Get Started (Setup)</a>
+      <a class="btn" href="#features">Key Features</a>
+      <a class="btn" href="#whysdi">Why SDI</a>
+      <a class="btn ghost" href="/license/licensesdi/">Licensing</a>
+    </div>
+  </section>
+
+  <!-- Key features -->
+  <section id="features" class="section">
+    <h2>Key Features</h2>
+    <div class="grid cards">
+      <article class="card">
+        <h3>Data Integration</h3>
+        <p class="muted">
+          <img src="../img/fdb2db.png" alt="DB to DB" width="38"> Database-to-database integration<br>
+          <img src="../img/ffile2db.png" alt="DB and file" width="38"> Database–file integration<br>
+          <img src="../img/webserviceapi.png" alt="Web services / API" width="38"> Web services / Web API integration<br>
+          <img src="../img/fexesql.png" alt="SQL execution" width="38"> Execute SQL queries and stored procedures
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Scheduler &amp; Triggers</h3>
+        <p class="muted">
+          <img src="../img/fschedule.png" alt="Time schedules" width="38"> Run hourly, at specific times, weekly, or monthly<br>
+          <img src="../img/fschedule.png" alt="Intervals" width="38"> Run at fixed intervals<br>
+          <img src="../img/fschedule.png" alt="File triggers" width="38"> Trigger on file create / update / delete<br>
+          <img src="../img/fretry.png" alt="Retry" width="38"> Retry capability
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Workflow &amp; Notifications</h3>
+        <p class="muted">
+          <img src="../img/fworkflow.png" alt="Workflow" width="38"> Workflow capability<br>
+          <img src="../img/fworkflow.png" alt="Chained tasks" width="38"> Chained execution of multiple tasks<br>
+          <img src="../img/fnotification.png" alt="Notifications" width="38"> Email / event notifications for run results
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Observability</h3>
+        <p class="muted">
+          <img src="../img/fdbmonitor.png" alt="Run history" width="38"> Run history visualization<br>
+          <img src="../img/fdbmonitor.png" alt="Availability" width="38"> Database availability monitoring<br>
+          <img src="../img/fdatacheck.png" alt="Anomaly detection" width="38"> Automatic detection of anomalies, missing data, and inconsistencies
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>SDI Gateway Service</h3>
+        <p class="muted">
+          Secure HTTPS-proxy connectivity across sites and clouds<br>
+          Zero-trust friendly
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>CLI</h3>
+        <p class="muted">
+          Controllable from batch scripts and external jobs<br>
+          Easy to embed into automation
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Why SDI -->
+  <section id="whysdi" class="section">
+    <h2>Why SDI</h2>
+    <div class="grid how">
+      <div class="card step">
+        <div class="num">1</div>
+        <h3>Simple &amp; Powerful</h3>
+        <p class="muted">
+          Set up in a few clicks. Complete integrations in as few as 3 steps.
+          A simple UI with strong extensibility.
+        </p>
+        <img style="width:95%" src="../img/features1.png" alt="Simple & Powerful">
+      </div>
+
+      <div class="card step">
+        <div class="num">2</div>
+        <h3>High-Performance Architecture</h3>
+        <p class="muted">
+          Parallelism, in-memory processing, and compressed transfer keep large volumes fast.
+          Bottlenecks minimized.
+        </p>
+        <img style="width:95%" src="../img/features2.png" alt="High-Performance Architecture">
+      </div>
+
+      <div class="card step">
+        <div class="num">3</div>
+        <h3>Flexible Operations</h3>
+        <p class="muted">
+          Supports on-prem, cloud, and hybrid. Cold standby and automatic failover are available.
+        </p>
+        <img style="width:95%" src="../img/features3.png" alt="Flexible Operations">
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section id="usecase" class="section">
+    <h2>Use Cases</h2>
+    <div class="grid how">
+      <div class="card step">
+        <div class="num">1</div>
+        <h3>Internal System Consolidation</h3>
+        <p class="muted">
+          Integrate and unify data across different formats and RDBs.
+          From master data and transactions through synchronization and aggregation.
+        </p>
+        <img style="width:95%" src="../img/case1.png" alt="Internal system consolidation">
+      </div>
+
+      <div class="card step">
+        <div class="num">2</div>
+        <h3>Branch / Cloud Aggregation</h3>
+        <p class="muted">
+          Bi-directional integration across sites, on-prem × cloud, and multi-cloud.
+        </p>
+        <img style="width:95%" src="../img/case2.png" alt="Branch / Cloud aggregation">
+      </div>
+
+      <div class="card step">
+        <div class="num">3</div>
+        <h3>Scheduled File Automation</h3>
+        <p class="muted">
+          Scheduled generation and auto-ingestion of CSV / Excel / JSON / XML.
+          Supports S3 / Blob / Object Storage.
+        </p>
+        <img style="width:95%" src="../img/case4_3.png" alt="Scheduled file automation">
+      </div>
+    </div>
+  </section>
+</div>
 
 
 

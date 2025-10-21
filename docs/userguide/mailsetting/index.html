@@ -56,6 +56,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/sdi.css">
     
+      <link rel="stylesheet" href="../../stylesheets/nav.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -2259,28 +2261,33 @@
 </tr>
 <tr>
 <td style="text-align: left;">{Message}</td>
-<td style="text-align: left;">Detailed message when sent from the system.</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Detailed message when sent by the system</td>
+<td style="text-align: left;">Specify at runtime</td>
 </tr>
 <tr>
 <td style="text-align: left;">{ErrorMessage}</td>
 <td style="text-align: left;">Error message when an error occurs</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Inserted only on errors</td>
+</tr>
+<tr>
+<td style="text-align: left;">{OutputFile}</td>
+<td style="text-align: left;">Contents of the exported text file</td>
+<td style="text-align: left;">Use when you want to display the output file’s contents as plain text in the email body.</td>
 </tr>
 <tr>
 <td style="text-align: left;">{AddInformation1}</td>
-<td style="text-align: left;">Additional information 1</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Additional info 1</td>
+<td style="text-align: left;">Set on the Mapping Details page</td>
 </tr>
 <tr>
 <td style="text-align: left;">{AddInformation2}</td>
-<td style="text-align: left;">Additional information 2</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Additional info 2</td>
+<td style="text-align: left;">Set on the Mapping Details page</td>
 </tr>
 <tr>
 <td style="text-align: left;">{AddInformation3}</td>
-<td style="text-align: left;">Additional information 3</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Additional info 3</td>
+<td style="text-align: left;">Set on the Mapping Details page</td>
 </tr>
 </tbody>
 </table>
@@ -2418,6 +2425,8 @@ Error Message：
     
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../javascripts/googlead.js"></script>
       
     
   </body>

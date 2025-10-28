@@ -56,6 +56,8 @@
     
       <link rel="stylesheet" href="stylesheets/nav.css">
     
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1875,7 +1877,7 @@
         Oracle / SQL Server / MySQL / PostgreSQL / DB2, cloud DWHs such as BigQuery / Snowflake,
         S3 / OCI Object Storage / Azure Blob, and Web APIs.
         With the built-in scheduler and gateway, you can
-        securely automate workflows within the same site, across multiple sites, and with cloud services..
+        securely automate workflows within the same site, across multiple sites, and with cloud services.
       </p>
       <br>
     </div>
@@ -1901,7 +1903,10 @@
     </h2>
     <div class="grid cards">
       <article class="card">
-        <h3>Data Integration</h3>
+        <h3>
+          Data Integration
+          <i class="fas fa-sync-alt"></i>
+        </h3>
         <p class="muted">
           <img src="../img/fdb2db.png" alt="DB to DB" width="38"> Database-to-database integration<br>
           <img src="../img/ffile2db.png" alt="DB and file" width="38"> Database–file integration<br>
@@ -1911,7 +1916,23 @@
       </article>
 
       <article class="card">
-        <h3>Scheduler &amp; Triggers</h3>
+        <h3>
+          Workflow &amp; Notifications
+          <i class="fas fa-project-diagram"></i>
+        </h3>
+        <p class="muted">
+          <img src="../img/fworkflow.png" alt="Workflow" width="38"> Workflow capability<br>
+          <img src="../img/fworkflow.png" alt="Chained tasks" width="38"> Chained execution of multiple tasks<br>
+          <img src="../img/fnotification.png" alt="Notifications" width="38"> Automated scheduled report delivery
+          <img src="../img/fnotification.png" alt="Notifications" width="38"> Email / event notifications for run results
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>
+          Scheduler &amp; Triggers
+          <i class="fas fa-calendar-alt"></i>
+        </h3>
         <p class="muted">
           <img src="../img/fschedule.png" alt="Time schedules" width="38"> Run hourly, at specific times, weekly, or monthly<br>
           <img src="../img/fschedule.png" alt="Intervals" width="38"> Run at fixed intervals<br>
@@ -1920,17 +1941,13 @@
         </p>
       </article>
 
-      <article class="card">
-        <h3>Workflow &amp; Notifications</h3>
-        <p class="muted">
-          <img src="../img/fworkflow.png" alt="Workflow" width="38"> Workflow capability<br>
-          <img src="../img/fworkflow.png" alt="Chained tasks" width="38"> Chained execution of multiple tasks<br>
-          <img src="../img/fnotification.png" alt="Notifications" width="38"> Email / event notifications for run results
-        </p>
-      </article>
+
 
       <article class="card">
-        <h3>Observability</h3>
+        <h3>
+          Observability
+          <i class="fas fa-tachometer-alt"></i>
+        </h3>
         <p class="muted">
           <img src="../img/fdbmonitor.png" alt="Run history" width="38"> Run history visualization<br>
           <img src="../img/fdbmonitor.png" alt="Availability" width="38"> Database availability monitoring<br>
@@ -1939,7 +1956,10 @@
       </article>
 
       <article class="card">
-        <h3>SDI Gateway Service</h3>
+        <h3>
+          SDI Gateway Service
+          <i class="fas fa-network-wired"></i>
+        </h3>
         <p class="muted">
           Secure HTTPS-proxy connectivity across sites and clouds<br>
           Zero-trust friendly
@@ -1947,7 +1967,10 @@
       </article>
 
       <article class="card">
-        <h3>CLI</h3>
+        <h3>
+          CLI
+          <i class="fas fa-terminal"></i>
+        </h3>
         <p class="muted">
           Controllable from batch scripts and external jobs<br>
           Easy to embed into automation
@@ -1956,7 +1979,15 @@
     </div>
   </section>
 
-      <p class="muted" style="margin:18px 0 8px">Supported Data Sources</p>
+      <p class="muted" style="margin:18px 0 8px">
+        <span class="caption-icon fa-stack" aria-hidden="true">
+          <!-- ベースのDB -->
+          <i class="fas fa-database fa-stack-1x" style="color:#b2d3ee;opacity:0.9"></i>
+          <!-- ずらした2個目のDB -->
+          <i class="fas fa-database fa-stack-1x" style="color:#b2d3ee;transform:translate(6px,-6px); opacity:0.6"></i>
+        </span>
+        &nbsp;Supported Data Sources
+      </p>
         <div class="logos">
 
           <div class="logo">

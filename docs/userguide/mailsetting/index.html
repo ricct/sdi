@@ -85,7 +85,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -318,7 +318,7 @@
   
 </header>
     
-<div class="slogan-div"> <img src="/img/slogan_white.png" width="100%" alt="slogan"></div>
+<div class="slogan-div"> <img src="/img/slogan.png" width="100%" alt="slogan"></div>
 
     <div class="md-container" data-md-component="container">
       
@@ -1580,9 +1580,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mail-template-description-method" class="md-nav__link">
+  <a href="#how-to-write-mail-templates" class="md-nav__link">
     <span class="md-ellipsis">
-      mail template description method
+      How to Write Mail Templates
     </span>
   </a>
   
@@ -2036,9 +2036,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mail-template-description-method" class="md-nav__link">
+  <a href="#how-to-write-mail-templates" class="md-nav__link">
     <span class="md-ellipsis">
-      mail template description method
+      How to Write Mail Templates
     </span>
   </a>
   
@@ -2225,8 +2225,16 @@
 </tr>
 </tbody>
 </table>
-<h3 id="mail-template-description-method">mail template description method</h3>
-<p>When creating an email template, you can use variables to get information. SDI defines the following system variables:</p>
+<p><a id="mailtemplate"></a></p>
+<h3 id="how-to-write-mail-templates">How to Write Mail Templates</h3>
+<p>SDI mail templates support both text and HTML.
+If the template body contains basic HTML tags, it will be sent as HTML; if not, it will be sent as plain text.</p>
+<h4 id="1-basics-of-placeholder-variables">1) Basics of Placeholder Variables</h4>
+<ul>
+<li>Enclose variables in curly braces <code>{}</code>.</li>
+<li>At runtime, SDI replaces them with values.</li>
+<li>Main system variables (examples):</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -2293,8 +2301,19 @@
 </tr>
 </tbody>
 </table>
+<h4 id="2-automating-datesperiods-safe-subset">2) Automating Dates/Periods (Safe Subset)</h4>
+<p>A safe subset that evaluates dates only inside <code>{ ... }</code> is available (arbitrary code execution is not allowed).</p>
+<p>Commonly usable expressions:</p>
+<ul>
+<li>Roots: DateTime.Now / DateTime.UtcNow / DateTime.Today</li>
+<li>Additions: .AddYears(n), .AddMonths(n), .AddDays(n), .AddHours(n), .AddMinutes(n), etc.</li>
+<li>Start/End helpers: .StartOfMonth(), .EndOfMonth(), .StartOfWeek() (depends on environment implementation)</li>
+<li>Formatting: .ToString("format"[, "culture"])</li>
+</ul>
+<p>Example (Subject):
+<code>Monthly Sales Summary ({DateTime.Now.AddMonths(-1).ToString("yyyy-M")})</code></p>
 <h3 id="mail-template-example">Mail template example</h3>
-<h4 id="system-error-mail-template-example">System error mail template example</h4>
+<h4 id="example-1-system-error-mail-template-example">Example 1: System error mail template example</h4>
 <p>Subject：</p>
 <div class="highlight"><pre><span></span><code>SDI Error  {DateTime}
 </code></pre></div>
@@ -2306,7 +2325,7 @@ Error message：
 
 {DateTime}
 </code></pre></div>
-<h4 id="mail-template-example-on-mapping-success">Mail template example on mapping success.</h4>
+<h4 id="example-2-mail-template-example-on-mapping-success">Example 2: Mail template example on mapping success.</h4>
 <p>Subject：</p>
 <div class="highlight"><pre><span></span><code>The mapping was executed successfully. (Mapping Name: {MappingName})
 </code></pre></div>
@@ -2321,7 +2340,7 @@ Mapping Name: {MappingName}
 
 {DateTime}
 </code></pre></div>
-<h4 id="mail-template-example-on-mapping-failure">Mail template example on mapping failure.</h4>
+<h4 id="example-3-mail-template-example-on-mapping-failure">Example 3: Mail template example on mapping failure.</h4>
 <p>Subject：</p>
 <div class="highlight"><pre><span></span><code>Mapping execution failed. (Mapping Name: {MappingName})
 </code></pre></div>

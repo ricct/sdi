@@ -16,7 +16,7 @@ h1 {
 h3 {
   position: relative;
   padding: 0.4em 0.5em;
-  background: linear-gradient(to right, rgb(198,223,248), transparent);
+  background: linear-gradient(to right, rgb(238,246,255), transparent);
 }
 
 
@@ -24,15 +24,13 @@ h3 {
 h4 {
   position: relative;
   padding: 0.3em 0.6em;
-  background: linear-gradient(to right, rgb(198,223,248), transparent);
-  font-weight: normal !important;
+  background: linear-gradient(to right, rgb(238,246,255), transparent);
 }
 
 h5 {
   position: relative;
   padding: 0.2em 0.8em;
-  background: linear-gradient(to right, rgb(198,223,248), transparent);
-  font-weight: normal !important;
+  background: linear-gradient(to right, rgb(238,246,255), transparent);
 }
 
 body {
@@ -45,7 +43,7 @@ body {
 .slogan-div {
   position: fixed;
   right: 218px; /* Add margin on the right */
-  top: 62px; /* Add margin on the bottom */
+  top: 67px; /* Add margin on the bottom */
   width: 318px; /* Limit the width to 318px */
   height: auto; /* Adjust height automatically */
   background-size: cover; /* Or use 'auto' depending on your preference */
@@ -100,12 +98,12 @@ text-align: center; margin: 1.5em 0;
 display: inline-block;
 background-color: #5c8eff;
 color: white;
+font-weight: bold;
 font-size: 1.2em;
 padding: 0.8em 2em;
 border-radius: 6px;
 text-decoration: none;
 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-height:50px;
 }
 
 .contact-btn:hover {

@@ -1,0 +1,121 @@
+
+.md-ellipsis {
+  font-weight: normal !important;
+}
+
+h1 {
+  position: relative;
+  #border-bottom: solid 2px #c0d3ec;
+  line-height: 1.4;
+  padding: 0.1em 0em;
+  margin: 2em 0 0.5em;
+}
+
+
+
+h3 {
+  position: relative;
+  padding: 0.4em 0.5em;
+  background: linear-gradient(to right, rgb(238,246,255), transparent);
+}
+
+
+
+h4 {
+  position: relative;
+  padding: 0.3em 0.6em;
+  background: linear-gradient(to right, rgb(238,246,255), transparent);
+}
+
+h5 {
+  position: relative;
+  padding: 0.2em 0.8em;
+  background: linear-gradient(to right, rgb(238,246,255), transparent);
+}
+
+body {
+ position: relative;
+ margin: 0;
+ padding: 0;
+ background: rgba(253,253,253,.92)!important; 
+}
+
+.slogan-div {
+  position: fixed;
+  right: 218px; /* Add margin on the right */
+  top: 67px; /* Add margin on the bottom */
+  width: 318px; /* Limit the width to 318px */
+  height: auto; /* Adjust height automatically */
+  background-size: cover; /* Or use 'auto' depending on your preference */
+  background-repeat: no-repeat;
+  z-index: 999; /* Ensure it's in front */
+            
+}
+
+ @media (max-width: 1280px) {
+     .slogan-div {
+         display: none !important; 
+     }
+ }
+ 
+ 
+ 
+.download-btn {
+  /*background-color: #ffc107;*/ /* 黄色 */
+  background-color: #004C97;
+  color: black;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease;
+}
+
+.download-btn:hover {
+  /*background-color: #e0a800;*/
+  background-color: #007BFF;
+}
+
+.download-btn a,
+.download-btn a:visited,
+.download-btn a:hover,
+.download-btn a:focus,
+.download-btn a:active  {
+  color: white;
+  text-decoration: none;
+}
+
+
+.contact-section {
+text-align: center; margin: 1.5em 0;
+}
+
+.contact-btn {
+display: inline-block;
+background-color: #5c8eff;
+color: white;
+font-weight: bold;
+font-size: 1.2em;
+padding: 0.8em 2em;
+border-radius: 6px;
+text-decoration: none;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-btn:hover {
+  background-color: #2962ff;
+}
+
+.contact-btn a,
+.contact-btn a:visited,
+.contact-btn a:hover,
+.contact-btn a:focus,
+.contact-btn a:active  {
+  color: white;
+  text-decoration: none;
+}
+

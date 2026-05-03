@@ -12,13 +12,13 @@
         <meta name="author" content="RiCCT">
       
       
-        <link rel="canonical" href="https://sdi.ricct.com/userguide/mappingsource/">
+        <link rel="canonical" href="https://sdi.ricct.com/userguide/connectionsalesforce/">
       
       
-        <link rel="prev" href="../mapping/">
+        <link rel="prev" href="../connectionsdiservice/">
       
       
-        <link rel="next" href="../mappingtarget/">
+        <link rel="next" href="../mapping/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Source Data - Simple Data Integrator</title>
+        <title>Salesforce - Simple Data Integrator</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mapping-source-data-configuration" class="md-skip">
+        <a href="#salesforce-connection-settings" class="md-skip">
           Skip to content
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Source Data
+              Salesforce
             
           </span>
         </div>
@@ -681,6 +681,8 @@
                 
   
   
+    
+  
   
   
     
@@ -691,11 +693,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -711,7 +713,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Connection Configuration
@@ -952,10 +954,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../connectionsalesforce/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Salesforce
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -966,6 +990,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwt-bearer-token-private-pem-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      JWT Bearer Token (Private PEM) Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jwt-bearer-token-certificate-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      JWT Bearer Token (Certificate) Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-credentials-flow-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Credentials Flow Authentication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -983,8 +1078,6 @@
                 
   
   
-    
-  
   
   
     
@@ -995,11 +1088,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
           <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
@@ -1015,7 +1108,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             Mapping settings
@@ -1049,32 +1142,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Source Data
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../mappingsource/" class="md-nav__link">
         
   
   
@@ -1085,140 +1156,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#for-rdb" class="md-nav__link">
-    <span class="md-ellipsis">
-      For RDB
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#for-csv" class="md-nav__link">
-    <span class="md-ellipsis">
-      For CSV
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#for-excel" class="md-nav__link">
-    <span class="md-ellipsis">
-      For Excel
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#for-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      For JSON
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#for-xml" class="md-nav__link">
-    <span class="md-ellipsis">
-      For XML
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#target-file-detail-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Target file detail configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#web-service-web-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Web Service/ Web API
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#about-dynamic-parameter-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      About Dynamic Parameter Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#salesforce" class="md-nav__link">
-    <span class="md-ellipsis">
-      Salesforce
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#odata" class="md-nav__link">
-    <span class="md-ellipsis">
-      OData
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2072,100 +2009,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration
+      Settings
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuration">
+    <nav class="md-nav" aria-label="Settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#for-rdb" class="md-nav__link">
+  <a href="#jwt-bearer-token-private-pem-authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      For RDB
+      JWT Bearer Token (Private PEM) Authentication
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#for-csv" class="md-nav__link">
+  <a href="#jwt-bearer-token-certificate-authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      For CSV
+      JWT Bearer Token (Certificate) Authentication
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#for-excel" class="md-nav__link">
+  <a href="#client-credentials-flow-authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      For Excel
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#for-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      For JSON
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#for-xml" class="md-nav__link">
-    <span class="md-ellipsis">
-      For XML
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#target-file-detail-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Target file detail configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#web-service-web-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Web Service/ Web API
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#about-dynamic-parameter-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      About Dynamic Parameter Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#salesforce" class="md-nav__link">
-    <span class="md-ellipsis">
-      Salesforce
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#odata" class="md-nav__link">
-    <span class="md-ellipsis">
-      OData
+      Client Credentials Flow Authentication
     </span>
   </a>
   
@@ -2192,16 +2066,13 @@
 
 
 
-<h1 id="mapping-source-data-configuration">Mapping source data configuration</h1>
+<h1 id="salesforce-connection-settings">Salesforce Connection Settings</h1>
 <h2 id="overview">Overview</h2>
-<p>The source data can be selected from an RDB, web service/web API, or a CSV, Excel, JSON, or XML file.</p>
-<div class="admonition note info">
-<p>Before mapping configuration,, complete the connection configuration first.</p>
-</div>
-<h2 id="configuration">Configuration</h2>
-<p><img src="../img/mapping_source.png" alt="" title="" width="500" ></p>
-<h3 id="for-rdb">For RDB</h3>
-<p><img src="../img/mapping_source_rdb.png" alt="" title="" width="500" ></p>
+<p>This screen is used to configure the settings for connecting SDI to Salesforce.
+By selecting the connection destination (Location/Data Type) and registering the necessary authentication information (Auth Domain, API Version, and input items for each authentication method), SDI can execute data acquisition and updates through the Salesforce API.</p>
+<hr />
+<h2 id="settings">Settings</h2>
+<p><img src="../img/connection_salesforce1.png" alt="" title="" >  </p>
 <table>
 <thead>
 <tr>
@@ -2213,55 +2084,30 @@
 <tbody>
 <tr>
 <td style="text-align: left;">1</td>
-<td style="text-align: left;">Source Connection</td>
-<td style="text-align: left;">Select the connection that was configured on the connection configuration form.</td>
+<td style="text-align: left;">Location</td>
+<td style="text-align: left;">Select <strong>SaaS</strong>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">2</td>
-<td style="text-align: left;">Type</td>
-<td style="text-align: left;">If you select an RDB connection, you can choose the source type from table and query.</td>
+<td style="text-align: left;">Data Type</td>
+<td style="text-align: left;">Select <strong>Salesforce</strong>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">3</td>
-<td style="text-align: left;">Table</td>
-<td style="text-align: left;">If you select a table as the type, a list of RDB tables and views will be displayed, select the object in the list.</td>
+<td style="text-align: left;">Auth domain</td>
+<td style="text-align: left;">Specify the domain used for Salesforce login/authentication.<br> ・Standard (Production): <code>login.salesforce.com</code> <br> ・Sandbox: <code>test.salesforce.com</code> <br> ・Custom Domain (My Domain): Specify the login domain configured in your Salesforce organization.<br>Example: If the URL is <code>https://MyDomainName.my.salesforce.com</code>, enter <code>MyDomainName.my.salesforce.com</code>.<br>※Do not include schemes like <code>https://</code>; enter only the domain name (hostname).</td>
 </tr>
 <tr>
 <td style="text-align: left;">4</td>
-<td style="text-align: left;">Filter</td>
-<td style="text-align: left;">If there is a condition for data extraction, describe the WHERE condition.<br />e.g.: WHERE UPDATE_TIME&gt; = SYSDATE-1</td>
-</tr>
-<tr>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">View Data</td>
-<td style="text-align: left;">Open a form that allows you to view existing data.</td>
+<td style="text-align: left;">API Version</td>
+<td style="text-align: left;">Specify the Salesforce API version to be used for the connection.<br>Normally, the default value is fine. Change the version only if required by Salesforce specifications or specific functional requirements.</td>
 </tr>
 </tbody>
 </table>
-<p><img src="../img/mapping_source_rdb2.png" alt="" title="" width="500" ></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">No</th>
-<th style="text-align: left;">Item</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">6</td>
-<td style="text-align: left;">Query</td>
-<td style="text-align: left;">Select the query if you need to write SQL to query data.</td>
-</tr>
-<tr>
-<td style="text-align: left;">7</td>
-<td style="text-align: left;">Query content</td>
-<td style="text-align: left;">Write the SQL for data extraction.<br / > e.g.： <br / >SELECT EMPID<br / >          ,  EMPNAME<br / >          ,   DEPT_CODE <br / >   FROM HR.EMP<br / > WHERE DEPT_CODE = '0003'</td>
-</tr>
-</tbody>
-</table>
-<h3 id="for-csv">For CSV</h3>
-<p><img src="../img/mapping_source_csv.png" alt="" title="" width="500" ></p>
+<h3 id="jwt-bearer-token-private-pem-authentication">JWT Bearer Token (Private PEM) Authentication</h3>
+<p>Signs a JWT using a private key (PEM) to obtain an access token by impersonating a user. 
+This method is suitable for server-to-server integration (no User ID/Password required).</p>
+<p><img src="../img/connection_salesforce2.png" alt="" title="" >  </p>
 <table>
 <thead>
 <tr>
@@ -2273,43 +2119,35 @@
 <tbody>
 <tr>
 <td style="text-align: left;">11</td>
-<td style="text-align: left;">CSV Filename</td>
-<td style="text-align: left;">Enter the name of the CSV file to be imported.<br />If you want to configure a file pattern, press the "File Detail" button and set the detailed settings.</td>
+<td style="text-align: left;">Authentication</td>
+<td style="text-align: left;">Select <strong>JWT Bearer Token (Private PEM)</strong>.<br>※You must create a <strong>Connected App</strong> in Salesforce and register a public key certificate in advance.</td>
 </tr>
 <tr>
 <td style="text-align: left;">12</td>
-<td style="text-align: left;">File Detail</td>
-<td style="text-align: left;">If you want to include multiple CSV files as import targets, press the "File Detail" button and configure the settings on the detailed settings screen. <br /><br />For more details on how to configure the settings, refer to the following: <br /><a href=".#target-file-detail-configuration" ><i class="fa fa-book" aria-hidden="true"></i> File Details Settings</a></td>
+<td style="text-align: left;">Username</td>
+<td style="text-align: left;">Enter the Salesforce username to be impersonated for JWT authentication.<br>Example: <code>user@example.com</code> <br>※API access will be performed within the scope of the permissions (Profile/Permission Sets) granted to this user.</td>
 </tr>
 <tr>
 <td style="text-align: left;">13</td>
-<td style="text-align: left;">Encoding</td>
-<td style="text-align: left;">Enter the encoding of the CSV file.&lt;br /e.g.：UTF-8、Shift_JIS</td>
+<td style="text-align: left;">Consumer Key (Client ID)</td>
+<td style="text-align: left;">Enter the <strong>Consumer Key (= Client ID)</strong> of the Connected App created in Salesforce.<br>Used to identify the application for which the JWT is issued.</td>
 </tr>
 <tr>
 <td style="text-align: left;">14</td>
-<td style="text-align: left;">Use header columns</td>
-<td style="text-align: left;">Whether the CSV file has a header row.</td>
+<td style="text-align: left;">Private key PEM</td>
+<td style="text-align: left;">Paste the <strong>Private Key (PEM format)</strong> used to sign the JWT.<br>Specify the private key that pairs with the public key certificate registered in the Salesforce Connected App.<br>※The private key is stored encrypted.</td>
 </tr>
 <tr>
 <td style="text-align: left;">15</td>
-<td style="text-align: left;">Retrieve Columns from File</td>
-<td style="text-align: left;">Select a template CSV file, analyze its column information, and display it in a list.</td>
-</tr>
-<tr>
-<td style="text-align: left;">16</td>
-<td style="text-align: left;">Columns</td>
-<td style="text-align: left;">A list displaying the columns of the template CSV file.</td>
-</tr>
-<tr>
-<td style="text-align: left;">※</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Delimiters, enclosing characters, etc. are automatically determined, so there is no need to specify them.</td>
+<td style="text-align: left;">Passphrase</td>
+<td style="text-align: left;">Enter this if the private key (PEM) is <strong>passphrase-protected (encrypted)</strong>.<br>Leave blank if using a PEM without a passphrase.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="for-excel">For Excel</h3>
-<p><img src="../img/mapping_source_excel.png" alt="" title="" width="500" ></p>
+<h3 id="jwt-bearer-token-certificate-authentication">JWT Bearer Token (Certificate) Authentication</h3>
+<p>An authentication method that signs a JWT using a certificate file (.pfx / .p12 / .crt) to obtain a Salesforce access token. 
+This method is suitable for server-to-server integration as it does not use a User ID/Password.</p>
+<p><img src="../img/connection_salesforce3.png" alt="" title="" >  </p>
 <table>
 <thead>
 <tr>
@@ -2321,43 +2159,35 @@
 <tbody>
 <tr>
 <td style="text-align: left;">21</td>
-<td style="text-align: left;">Excel Filename</td>
-<td style="text-align: left;">Enter the name of the Excel file to be imported.<br />If you want to configure a file pattern, press the "File Detail" button and set the detailed settings.</td>
+<td style="text-align: left;">Authentication</td>
+<td style="text-align: left;">Select <strong>JWT Bearer Token (Certificate)</strong>.<br>※You must create a <strong>Connected App</strong> in Salesforce and register a public key certificate in advance.</td>
 </tr>
 <tr>
 <td style="text-align: left;">22</td>
-<td style="text-align: left;">File Detail</td>
-<td style="text-align: left;">If you want to include multiple Excel files as import targets, press the "File Detail" button and configure the settings on the detailed settings screen. <br /><br />For more details on how to configure the settings, refer to the following: <br /><a href=".#target-file-detail-configuration" ><i class="fa fa-book" aria-hidden="true"></i> File Details Settings</a></td>
+<td style="text-align: left;">Username</td>
+<td style="text-align: left;">Enter the Salesforce username to be impersonated for JWT authentication.<br>Example: <code>user@example.com</code> <br>※API access will be performed within the scope of the permissions (Profile/Permission Sets) granted to this user.</td>
 </tr>
 <tr>
 <td style="text-align: left;">23</td>
-<td style="text-align: left;">Sheet</td>
-<td style="text-align: left;">Select the sheet number to be imported. <br /> * The first sheet is 1.</td>
+<td style="text-align: left;">Consumer Key (Client ID)</td>
+<td style="text-align: left;">Enter the <strong>Consumer Key (= Client ID)</strong> of the Connected App created in Salesforce.<br>Used to identify the application for which the JWT is issued.</td>
 </tr>
 <tr>
 <td style="text-align: left;">24</td>
-<td style="text-align: left;">Encoding</td>
-<td style="text-align: left;">Enter the encoding of the Excel file.&lt;br /e.g.：UTF-8、Shift_JIS</td>
+<td style="text-align: left;">Certificate file (.pfx / .p12 / .crt)</td>
+<td style="text-align: left;">Specify the certificate file used for JWT signing.<br>・ <strong>.pfx / .p12</strong>: Certificate containing a private key (normally used).<br>・ <strong>.crt</strong>: Public key certificate only (may not be usable for JWT signing depending on the environment if the private key is missing).<br>※The corresponding <strong>Public Key Certificate</strong> must be registered in the Salesforce Connected App.</td>
 </tr>
 <tr>
 <td style="text-align: left;">25</td>
-<td style="text-align: left;">Use header columns</td>
-<td style="text-align: left;">Whether the Excel file has a header row.</td>
-</tr>
-<tr>
-<td style="text-align: left;">26</td>
-<td style="text-align: left;">Retrieve Columns from File</td>
-<td style="text-align: left;">Select a template excel file, analyze its column information, and display it in a list.</td>
-</tr>
-<tr>
-<td style="text-align: left;">27</td>
-<td style="text-align: left;">Columns</td>
-<td style="text-align: left;">A list displaying the columns of the template Excel file.</td>
+<td style="text-align: left;">Certificate password (for .pfx/.p12)</td>
+<td style="text-align: left;">Enter the password set for the certificate file (.pfx/.p12).<br>Leave blank if the certificate has no password.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="for-json">For JSON</h3>
-<p><img src="../img/mapping_source_json.png" alt="" title="" width="500" ></p>
+<h3 id="client-credentials-flow-authentication">Client Credentials Flow Authentication</h3>
+<p>Obtains an access token as the application (client) itself to access the Salesforce API. 
+※This flow must be permitted/enabled on the Salesforce side.</p>
+<p><img src="../img/connection_salesforce4.png" alt="" title="" >  </p>
 <table>
 <thead>
 <tr>
@@ -2369,376 +2199,21 @@
 <tbody>
 <tr>
 <td style="text-align: left;">31</td>
-<td style="text-align: left;">JSON Filename</td>
-<td style="text-align: left;">Enter the name of the JSON file to be imported.<br />If you want to configure a file pattern, press the "File Detail" button and set the detailed settings.</td>
+<td style="text-align: left;">Authentication</td>
+<td style="text-align: left;">Select <strong>Client Credentials</strong>.<br>※This flow must be permitted/enabled within the Salesforce organization settings.</td>
 </tr>
 <tr>
 <td style="text-align: left;">32</td>
-<td style="text-align: left;">File Detail</td>
-<td style="text-align: left;">If you want to include multiple JSON files as import targets, press the "File Detail" button and configure the settings on the detailed settings screen. <br /><br />For more details on how to configure the settings, refer to the following: <br /><a href=".#target-file-detail-configuration" ><i class="fa fa-book" aria-hidden="true"></i> File Details Settings</a></td>
+<td style="text-align: left;">Consumer Key (Client ID)</td>
+<td style="text-align: left;">Enter the <strong>Consumer Key (= Client ID)</strong> of the Connected App created in Salesforce.<br>Used to identify the application to be authenticated.</td>
 </tr>
 <tr>
 <td style="text-align: left;">33</td>
-<td style="text-align: left;">Retrieve Structure from File</td>
-<td style="text-align: left;">Select a template JSON file, analyze its structure, and display it in a tree view format.</td>
-</tr>
-<tr>
-<td style="text-align: left;">34</td>
-<td style="text-align: left;">Tergget object</td>
-<td style="text-align: left;">If the data is structured as an array, each element within the array (detail row) can be imported as a single record.<br />Please select the array object to be imported.</td>
-</tr>
-<tr>
-<td style="text-align: left;">35</td>
-<td style="text-align: left;">Show Parent objects</td>
-<td style="text-align: left;">By default, the child-layer objects of the selected object are displayed. <br />If you also need parent-layer objects, check this option.</td>
+<td style="text-align: left;">Consumer secret</td>
+<td style="text-align: left;">Enter the <strong>Consumer Secret (= Client Secret)</strong> of the Connected App.<br>Used in combination with the Client ID to authenticate and obtain an access token.</td>
 </tr>
 </tbody>
 </table>
-<p>The list of objects displayed as a sample is based on the following JSON example.</p>
-<div class="highlight"><pre><span></span><code>{ 
- &quot;orderno&quot;: 1, 
- &quot;customercode&quot;: &quot;A001&quot;, 
- &quot;customeraddress&quot;:
-   {
-   &quot;streetaddress&quot;:&quot;Nagashima 1-1-1&quot;,
-   &quot;city&quot;:&quot;Aomori City&quot;,
-   &quot;state&quot;: &quot;Aomori Prefecture&quot;,
-   &quot;postalcode&quot;:&quot;030-8570&quot;
-   }, 
- &quot;detail&quot;: [
-     {
-      &quot;prodcode&quot;: 1,
-      &quot;ordernumber&quot;: 3,
-      &quot;price&quot;: 2000,
-      &quot;amount&quot;: &quot;6000&quot;
-     },
-     {
-      &quot;prodcode&quot;: 2,
-      &quot;ordernumber&quot;: 2,
-      &quot;price&quot;: 1700,
-      &quot;amount&quot;: 3400
-     }
-      ]
-} 
-</code></pre></div>
-<h3 id="for-xml">For XML</h3>
-<p><img src="../img/mapping_source_xml.png" alt="" title="" width="500" ></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">No</th>
-<th style="text-align: left;">Item</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">41</td>
-<td style="text-align: left;">XML Filename</td>
-<td style="text-align: left;">Enter the name of the XML file to be imported.<br />If you want to configure a file pattern, press the "File Detail" button and set the detailed settings.</td>
-</tr>
-<tr>
-<td style="text-align: left;">42</td>
-<td style="text-align: left;">File Detail</td>
-<td style="text-align: left;">If you want to include multiple XML files as import targets, press the "File Detail" button and configure the settings on the detailed settings screen. <br /><br />For more details on how to configure the settings, refer to the following: <br /><a href=".#target-file-detail-configuration" ><i class="fa fa-book" aria-hidden="true"></i> File Details Settings</a></td>
-</tr>
-<tr>
-<td style="text-align: left;">43</td>
-<td style="text-align: left;">Retrieve Structure from File</td>
-<td style="text-align: left;">Select a template JSON file, analyze its structure, and display it in a tree view format.</td>
-</tr>
-<tr>
-<td style="text-align: left;">44</td>
-<td style="text-align: left;">Target Element</td>
-<td style="text-align: left;">If the data is structured as an array, each element within the array (detail row) can be imported as a single record. Please select the array element to be imported.</td>
-</tr>
-<tr>
-<td style="text-align: left;">45</td>
-<td style="text-align: left;">Show Parent Elements</td>
-<td style="text-align: left;">By default, the child-level elements of the selected element are displayed. If you also need parent-level elements, check this option.</td>
-</tr>
-<tr>
-<td style="text-align: left;">46</td>
-<td style="text-align: left;">Show Attributes</td>
-<td style="text-align: left;">By default, XML attributes are not listed. If attribute data is also required, check this option.</td>
-</tr>
-</tbody>
-</table>
-<p>The list of elements displayed as a sample is based on the following XML example.</p>
-<div class="highlight"><pre><span></span><code>&lt;data&gt;
-     &lt;orderno&gt;1&lt;/orderno&gt;
-     &lt;customercode&gt;A001&lt;/customercode&gt;
-     &lt;customeraddress&gt;
-         &lt;streetaddress&gt;Nagashima 1-1-1&lt;/streetaddress&gt;
-         &lt;city&gt;Aomori City&lt;/city&gt;
-         &lt;state&gt;Aomori Prefecture&lt;/state&gt;
-         &lt;postalcode&gt;030-8570&lt;/postalcode&gt;
-     &lt;/customeraddress&gt;
-     &lt;detail&gt;
-         &lt;prodcode&gt;1&lt;/prodcode&gt;
-         &lt;ordernumber&gt;3&lt;/ordernumber&gt;
-         &lt;price&gt;2000&lt;/price&gt;
-         &lt;amount&gt;6000&lt;/amount&gt;
-     &lt;/detail&gt;
-     &lt;detail&gt;
-         &lt;prodcode&gt;2&lt;/prodcode&gt;
-         &lt;ordernumber&gt;2&lt;/ordernumber&gt;
-         &lt;price&gt;1700&lt;/price&gt;
-         &lt;amount&gt;3400&lt;/amount&gt;
-     &lt;/detail&gt;
- &lt;/data&gt;
-</code></pre></div>
-<h3 id="target-file-detail-configuration">Target file detail configuration</h3>
-<p><img src="../img/mapping_file_detail.png" alt="" title="" width="500" ></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">No</th>
-<th style="text-align: left;">Item</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">51</td>
-<td style="text-align: left;">File Selection Typt</td>
-<td style="text-align: left;">The data import target can be set as a single file or a list of files that match a filename pattern.</td>
-</tr>
-<tr>
-<td style="text-align: left;">52</td>
-<td style="text-align: left;">File Name Pattern</td>
-<td style="text-align: left;">If you select a filename pattern as the data import target, you can configure the pattern using wildcards and regular expressions.</td>
-</tr>
-<tr>
-<td style="text-align: left;">53</td>
-<td style="text-align: left;">FileMask</td>
-<td style="text-align: left;">Please enter a file mask using wildcards or regular expressions.</td>
-</tr>
-<tr>
-<td style="text-align: left;">54</td>
-<td style="text-align: left;">Order By</td>
-<td style="text-align: left;">If multiple files are selected, set the order of file import.</td>
-</tr>
-<tr>
-<td style="text-align: left;">55</td>
-<td style="text-align: left;">Order Action</td>
-<td style="text-align: left;">Please set the sorting order action.</td>
-</tr>
-<tr>
-<td style="text-align: left;">56</td>
-<td style="text-align: left;">Test</td>
-<td style="text-align: left;">The current list of target files is displayed based on the configured file mask.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="web-service-web-api">Web Service/ Web API</h3>
-<p><img src="../img/mapping_source_webserviceapi.png" alt="" title="" width="500" ></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">No</th>
-<th style="text-align: left;">Item</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">61</td>
-<td style="text-align: left;">Endpoint</td>
-<td style="text-align: left;">Please enter a relative URL.<br /><br />Dynamic parameters related to time can be configured.<br />For details on the configuration method, refer to the following:<br /><a href=".#about-dynamic-parameter-configuration" ><i class="fa fa-book" aria-hidden="true"></i> About Dynamic Parameter Configuration</a></td>
-</tr>
-<tr>
-<td style="text-align: left;">62</td>
-<td style="text-align: left;">Request Detail</td>
-<td style="text-align: left;">Configure detailed information such as the request method, headers, and POST body.</td>
-</tr>
-<tr>
-<td style="text-align: left;">63</td>
-<td style="text-align: left;">Refresh</td>
-<td style="text-align: left;">Retrieve the latest information from the endpoint.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="web-service-web-api-request-detailed-configuration">Web Service / Web API Request Detailed configuration</h4>
-<p><img src="../img/mapping_source_webserviceapi_detail.png" alt="" title=""  ></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">No</th>
-<th style="text-align: left;">Item</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">71</td>
-<td style="text-align: left;">Method</td>
-<td style="text-align: left;">Select the request method. GET and POST are supported.</td>
-</tr>
-<tr>
-<td style="text-align: left;">72</td>
-<td style="text-align: left;">Endpoint</td>
-<td style="text-align: left;">Please enter a relative URL.<br /><br />Dynamic parameters related to time can be configured.<br />For details on the configuration method, refer to the following:<br /><a href=".#about-dynamic-parameter-configuration" ><i class="fa fa-book" aria-hidden="true"></i> About Dynamic Parameter Configuration</a></td>
-</tr>
-<tr>
-<td style="text-align: left;">73</td>
-<td style="text-align: left;">test</td>
-<td style="text-align: left;">Execute an access test for the Web Service / Web API.</td>
-</tr>
-<tr>
-<td style="text-align: left;">74</td>
-<td style="text-align: left;">Headers</td>
-<td style="text-align: left;">Configure the request headers.</td>
-</tr>
-<tr>
-<td style="text-align: left;">75</td>
-<td style="text-align: left;">Body</td>
-<td style="text-align: left;">If using POST, configure the request body here.</td>
-</tr>
-<tr>
-<td style="text-align: left;">76</td>
-<td style="text-align: left;">Content-Type Setting Button</td>
-<td style="text-align: left;">A button that automatically sets the Content-Type header to text, JSON, XML, or HTML.</td>
-</tr>
-<tr>
-<td style="text-align: left;">77</td>
-<td style="text-align: left;">Response</td>
-<td style="text-align: left;">When you run the test, information about the response will be displayed.</td>
-</tr>
-</tbody>
-</table>
-<p><img src="../img/mapping_source_webserviceapi_detail_body1.png" alt="" title="" width="500" ></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">No</th>
-<th style="text-align: left;">Item</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">81</td>
-<td style="text-align: left;">Text</td>
-<td style="text-align: left;">Select "Text" if the body type is RAW text.</td>
-</tr>
-<tr>
-<td style="text-align: left;">82</td>
-<td style="text-align: left;">Body Text</td>
-<td style="text-align: left;">Please enter the body text. <br /><br />Dynamic parameters related to time can be configured.<br />For details on the configuration method, refer to the following:<br /><a href=".#about-dynamic-parameter-configuration" ><i class="fa fa-book" aria-hidden="true"></i> About Dynamic Parameter Configuration</a></td>
-</tr>
-</tbody>
-</table>
-<p><img src="../img/mapping_source_webserviceapi_detail_body2.png" alt="" title="" width="500" ></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">No</th>
-<th style="text-align: left;">Item</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">83</td>
-<td style="text-align: left;">Dynamic Generation</td>
-<td style="text-align: left;">Select "Dynamic Generation" if the body content is dynamically generated. <br />In dynamic generation, the execution result of the SQL set in SELECT SQL is used as the body for the POST request.</td>
-</tr>
-<tr>
-<td style="text-align: left;">84</td>
-<td style="text-align: left;">Connection</td>
-<td style="text-align: left;">Select the target database.</td>
-</tr>
-<tr>
-<td style="text-align: left;">85</td>
-<td style="text-align: left;">SELECT SQL</td>
-<td style="text-align: left;">Enter the SQL query to be executed.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="about-dynamic-parameter-configuration">About Dynamic Parameter Configuration</h3>
-<p>The configuration method evaluates expressions enclosed in <code>{}</code> and uses the computed values.</p>
-<table>
-  <tr>
-    <th>Example</th>
-    <th>Configuration Method</th>
-  </tr>
-  <tr>
-    <td rowspan="2">Example of using the current date</td>
-    <td>/api/v1/orders/{yyyyMMdd} /api/v1/orders/<span style="color: #ff7f50;">{yyyyMMdd}</span></td>
-  </tr>
-  <tr>
-    <td>
-{<br />
- "orderno": 1,<br />
- "customercode": "A001", <br />
- "updatedate": "<span style="color: #ff7f50;">{yyyy/MM/dd HH:mm:ss}</span>", <br />
-} <br />
-    </td>
-  </tr>  
-<tr>
-    <td rowspan="2">Example of Using Yesterday's Date.</td>
-    <td>/api/v1/orders/<span style="color: #ff7f50;">{DateTime.Now.AddDays(-1).ToString("yyyyMMdd")}</span></td>
-  </tr>
-  <tr>
-    <td>
-{ <br />
- "orderno": 1, <br />
- "customercode": "A001", <br />
- "updatedate": "<span style="color: #ff7f50;">{DateTime.Now.AddDays(-1).ToString(\"yyyyMMdd\")}</span>"<br />
-} <br />
-    </td>
-  </tr>  
-</table>
-
-<h3 id="salesforce">Salesforce</h3>
-<h4 id="objects">Objects</h4>
-<p>Objects are a concept similar to database tables.<br />
-The configuration method is the same as the table settings, so please refer to the following documentation:<br />
-<a href=".#for-rdb">Tables</a></p>
-<h4 id="soql">SOQL</h4>
-<p><img src="../img/mapping_source_salesforce2.png" alt="" title="" width="500" ></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">No</th>
-<th style="text-align: left;">Item</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">97</td>
-<td style="text-align: left;">SOQL</td>
-<td style="text-align: left;">Select <strong>SOQL</strong> if you wish to use SOQL as the method for acquiring source data.</td>
-</tr>
-<tr>
-<td style="text-align: left;">98</td>
-<td style="text-align: left;">SOQL Content</td>
-<td style="text-align: left;">Enter the SOQL query for data extraction.<br>Example:<br>SELECT Id<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, Description<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, Name<br>from Product2</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="odata">OData</h3>
-<h4 id="entity-sets">Entity Sets</h4>
-<p>Entity Sets are a concept similar to database tables.<br />
-The configuration method is the same as the table settings, so please refer to the following documentation:<br />
-<a href=".#for-rdb">Tables</a></p>
-<h5 id="regarding-odata-conditions">Regarding OData Conditions</h5>
-<p>In OData, you can control the data to be retrieved by specifying query options.</p>
-<ul>
-<li>
-<p><strong>$filter</strong> Filters the data based on specified conditions (equivalent to the SQL WHERE clause).</p>
-</li>
-<li>
-<p><strong>$orderby</strong> Specifies the sort order of the data.</p>
-</li>
-<li>
-<p><strong>$top / $skip</strong> Specifies the number of records to retrieve or the starting position (paging).</p>
-</li>
-</ul>
-<p>For details on available query options and syntax, please refer to the <a href="https://www.odata.org/odata-services/">OData Official Manual</a>.</p>
 
 
 

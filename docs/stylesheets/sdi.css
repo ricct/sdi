@@ -119,3 +119,241 @@ box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   text-decoration: none;
 }
 
+
+
+
+
+/* =========================
+   Pricing Section
+========================= */
+
+.pricing {
+  padding: 60px 20px;
+  background: #f9fbff;
+}
+
+.pricing-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+.pricing-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: center;
+  min-width: 260px;
+}
+
+.pricing-col {
+  flex: 1;                  /* これだけで均等分割 */
+
+  box-sizing: border-box;
+}
+
+/* =========================
+   Box
+========================= */
+
+.pricing-box {
+  position: relative;
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px 24px;
+  text-align: center;
+
+  box-shadow: 0 0 25px rgba(1, 41, 112, 0.08);
+
+  transition: 0.3s;
+  overflow: hidden;
+
+  height: 100%;
+}
+
+.pricing-box:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 10px 40px rgba(1, 41, 112, 0.15);
+}
+
+/* =========================
+   Title
+========================= */
+
+.pricing-box h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.plan-dev {
+  color: #14c8c0;
+}
+
+.plan-exp {
+  color: #ff8a00;
+}
+
+.plan-std {
+  color: #d63384;
+}
+
+.plan-ent {
+  color: #7c5cff;
+}
+
+/* =========================
+   Price
+========================= */
+
+* 価格全体のレイアウト */
+
+/* 価格部分を強制1行に */
+.price {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  gap: 6px;
+  margin: 20px 0 30px 0;
+}
+
+/* 数字を強調 */
+.price-sub {
+  font-size: 30px !important;     /* サイズ調整可能 */
+  font-weight: 600 !important;
+  color: #012970;
+  line-height: 1;
+}
+
+/* US$ と /Month */
+.currency {
+  font-size: 17px !important;
+  color: #555;
+  font-weight: 500;
+}
+
+/* 特にEnterprise（150）の数字が長い場合の調整 */
+.pricing-box:last-child .price-sub {
+  font-size: 30px !important;     /* 150の方が長いので少し小さく */
+}
+
+
+.free {
+  color: #16a34a;
+}
+
+/* =========================
+   Image
+========================= */
+
+.pricing-box img {
+  width: 140px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* =========================
+   List
+========================= */
+
+.pricing-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-box ul li {
+  padding: 10px 0;
+  font-size: 15px;
+  color: #444;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.pricing-box ul li:last-child {
+  border-bottom: none;
+}
+
+.pricing-box .na {
+  color: #bbb;
+  text-decoration: line-through;
+}
+
+/* =========================
+   Ribbon
+========================= */
+
+.featured {
+  position: absolute;
+  top: 18px;
+  right: -55px;
+
+  width: 180px;
+
+  background: #4154f1;
+  color: #fff;
+
+  transform: rotate(45deg);
+
+  font-size: 13px;
+  font-weight: 400;
+
+  padding: 6px 0;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+
+  .pricing-col {
+    width: 100%;
+  }
+
+  .section-header p {
+    font-size: 28px;
+  }
+
+}
+
+
+.quote-btn {
+  display: inline-block;
+
+  margin-top: 24px;
+
+  padding: 10px 24px;
+
+  border-radius: 999px;
+
+  background: #4154f1;
+
+  color: #ffffff !important;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.quote-btn:hover {
+  background: #2f43f0;
+
+  color: #ffffff !important;
+
+  transform: translateY(-2px);
+}

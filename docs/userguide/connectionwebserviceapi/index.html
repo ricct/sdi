@@ -26,7 +26,7 @@
     
     
       
-        <title>WEB Service/API - Simple Data Integrator</title>
+        <title>WEB Service/API/OData - Simple Data Integrator</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#web-serviceapi-configuration" class="md-skip">
+        <a href="#web-serviceapiodata-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              WEB Service/API
+              WEB Service/API/OData
             
           </span>
         </div>
@@ -902,7 +902,7 @@
   
   
   <span class="md-ellipsis">
-    WEB Service/API
+    WEB Service/API/OData
     
   </span>
   
@@ -915,7 +915,7 @@
   
   
   <span class="md-ellipsis">
-    WEB Service/API
+    WEB Service/API/OData
     
   </span>
   
@@ -944,6 +944,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#odata" class="md-nav__link">
+    <span class="md-ellipsis">
+      OData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-authentication-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Authentication Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -957,9 +990,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#web-service-api" class="md-nav__link">
+  <a href="#web-service-api-odata" class="md-nav__link">
     <span class="md-ellipsis">
-      Web Service / API
+      Web Service / API / OData
     </span>
   </a>
   
@@ -1988,6 +2021,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#odata" class="md-nav__link">
+    <span class="md-ellipsis">
+      OData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-authentication-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Authentication Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2001,9 +2067,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#web-service-api" class="md-nav__link">
+  <a href="#web-service-api-odata" class="md-nav__link">
     <span class="md-ellipsis">
-      Web Service / API
+      Web Service / API / OData
     </span>
   </a>
   
@@ -2031,19 +2097,31 @@
 
 
 <!-- v2.1 -->
-<h1 id="web-serviceapi-configuration">WEB Service/API configuration</h1>
+<h1 id="web-serviceapiodata-configuration">WEB Service/API/OData configuration</h1>
 <h2 id="overview">Overview</h2>
-<p>SDI can integrate with web services and APIs, supporting HTTP methods such as GET and POST.</p>
-<p>Additionally, the following authentication methods are supported:</p>
+<p>SDI can retrieve and update data by integrating with external Web Services and Web APIs.<br />
+The supported communication protocols are <strong>REST</strong>, <strong>SOAP (HTTP)</strong>, and <strong>OData (OData v2 / v4)</strong>.</p>
+<h3 id="http-methods">HTTP Methods</h3>
 <ul>
-<li>Anonymous authentication</li>
-<li>Basic authentication</li>
-<li>JSON Web Token (JWT) authentication</li>
-<li>API Key authentication</li>
-<li>Digest authentication</li>
+<li><strong>GET / POST</strong> (<em>Availability depends on the specifications of the destination API</em>)</li>
+</ul>
+<h3 id="odata">OData</h3>
+<ul>
+<li>Supports data retrieval using query options such as <code>$filter</code> against OData endpoints.<br />
+  (<em>Compatibility and behavior depend on the OData implementation of the connected system</em>)</li>
+</ul>
+<hr />
+<h3 id="supported-authentication-methods">Supported Authentication Methods</h3>
+<p>SDI supports the following authentication methods:</p>
+<ul>
+<li><strong>Anonymous Authentication</strong></li>
+<li><strong>Basic Authentication</strong></li>
+<li><strong>JSON Web Token (JWT) Authentication</strong></li>
+<li><strong>API Key Authentication</strong></li>
+<li><del><strong>Digest Authentication</strong></del> (Deprecated as of Ver. 26.1.2)</li>
 </ul>
 <h2 id="configuration">Configuration</h2>
-<h3 id="web-service-api">Web Service / API</h3>
+<h3 id="web-service-api-odata">Web Service / API / OData</h3>
 <div class="admonition note info">
 <p>Select 'Web Service / API' as the location.</p>
 </div>
@@ -2163,7 +2241,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="digest-authentication">Digest Authentication</h4>
+<h4 id="digest-authentication-deprecated-as-of-ver-2612">Digest Authentication (Deprecated as of Ver. 26.1.2)</h4>
 <p><img src="../img/connection_file_webserviceapi_digest.png" alt="" title="" > </p>
 <table>
 <thead>

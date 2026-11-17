@@ -52,6 +52,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/image-popup.css">
+    
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     
       <link rel="stylesheet" href="../../stylesheets/sdi.css">
@@ -1216,7 +1218,7 @@
           <li class="md-nav__item">
   <a href="#web-service-web-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Web Service/ Web API
+      Web Service / Web API
     </span>
   </a>
   
@@ -1308,6 +1310,29 @@
   
   <span class="md-ellipsis">
     Column Mapping Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mappingtransformations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transformation reference
     
   </span>
   
@@ -1787,6 +1812,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../studioauthentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Studio startup password authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2251,7 +2299,7 @@
           <li class="md-nav__item">
   <a href="#web-service-web-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Web Service/ Web API
+      Web Service / Web API
     </span>
   </a>
   
@@ -2499,6 +2547,11 @@ If no UTC indication is displayed, the time is interpreted as the connected data
 <p>Simple Data Integrator can use the SELECT results of one mapping as input (bind variables) for another mapping, enabling dynamic data integration between mappings.</p>
 <h4 id="overview_1">Overview</h4>
 <p>Assign the SELECT results of an upstream input mapping to the bind variables of a downstream mapping. The downstream mapping then processes data using those values. Multiple parameters and multiple input rows are supported.</p>
+<h4 id="input-mapping-execution">Input mapping execution</h4>
+<ul>
+<li>When upstream mapping A is called as input for downstream mapping B, A's normal target output is skipped.</li>
+<li>Add only downstream mapping B to the scheduler. B calls A automatically.</li>
+</ul>
 <h4 id="configuration-steps">Configuration Steps</h4>
 <p><strong>1. Enter bind variables in the extraction filter or query.</strong></p>
 <table>
@@ -2785,6 +2838,11 @@ If no UTC indication is displayed, the time is interpreted as the connected data
       ]
 } 
 </code></pre></div>
+<h4 id="recordobjectpath">Identifying the record object (JSON and XML)</h4>
+<p>SDI identifies and saves the selected object by its path from the root. Arrays with the same name under different parents remain separate. Columns come from the selected location, and all elements at that path are retrieved. Reopening the mapping restores the same location.</p>
+<p>For example, <code>data.humanResourceRequirements.data.optionalList</code> and <code>data.skillRequirements.data.optionalList</code> identify different arrays. Selecting the skill array exposes <code>skillCategory</code>, <code>skillItem</code>, and <code>requiredLevel</code>. Select the array itself to retrieve each element as a record.</p>
+<p>After retrieving a structure, select the array to import in the tree, then choose <strong>Get Column Detail</strong>. Each array element becomes one record, and its fields become source column choices. If a record-object error appears, check the loaded structure and the selected location.</p>
+<p>For JSON API page-number and offset paging, the selected array’s count determines whether paging has ended. An empty array is zero records. A missing object or a <code>null</code> value produces an error rather than falling back to another array, and does not advance the watermark.</p>
 <h3 id="xml">For XML</h3>
 <p><img src="../img/mapping_source_xml.png" alt="" title="" width="500" ></p>
 <table>
@@ -2896,8 +2954,8 @@ If no UTC indication is displayed, the time is interpreted as the connected data
 </tr>
 </tbody>
 </table>
-<h3 id="web-service-web-api">Web Service/ Web API</h3>
-<p><a href="../img/webapi_source_current.svg"><img alt="Web API source with numbered callouts" src="../img/webapi_source_current.svg" /></a></p>
+<h3 id="web-service-web-api">Web Service / Web API</h3>
+<p><a href="../img/guide-mapping-01.svg"><img alt="API source settings and column mapping" src="../img/guide-mapping-01.svg" /></a></p>
 <table>
 <thead>
 <tr>
@@ -2908,27 +2966,162 @@ If no UTC indication is displayed, the time is interpreted as the connected data
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">61</td>
+<td style="text-align: left;">1</td>
 <td style="text-align: left;">Endpoint</td>
-<td style="text-align: left;">Please enter a relative URL.<br /><br />Dynamic parameters related to time can be configured.<br />For details on the configuration method, refer to the following:<br /><a href="#webapiparameter" ><i class="fa fa-book" aria-hidden="true"></i> About Dynamic Parameter Configuration</a></td>
+<td style="text-align: left;">Enter a relative URL. Path bind variables and date expressions are supported.</td>
 </tr>
 <tr>
-<td style="text-align: left;">62</td>
-<td style="text-align: left;">Request Detail</td>
-<td style="text-align: left;">Configure detailed information such as the request method, headers, and POST body.</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Bind Parameters</td>
+<td style="text-align: left;">With <code>{bind:name}</code>, configure the input mapping and source columns.</td>
 </tr>
 <tr>
-<td style="text-align: left;">63</td>
-<td style="text-align: left;">Refresh</td>
-<td style="text-align: left;">Retrieve the latest information from the endpoint.</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Record object</td>
+<td style="text-align: left;">Select the array or object to retrieve from the loaded structure.</td>
 </tr>
 <tr>
-<td style="text-align: left;">64</td>
-<td style="text-align: left;">Set Watermark</td>
-<td style="text-align: left;">Open the watermark settings form to set the starting date and time for incremental retrieval. Appears when a supported watermark variable is used.</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Retrieve Structure from File</td>
+<td style="text-align: left;">Load a JSON/XML sample file.</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Get Column Detail</td>
+<td style="text-align: left;">Expand the loaded structure without calling the source API.</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Value / transform</td>
+<td style="text-align: left;">Configure output values and transformations. See <a href="../mappingcolumndetail/">Column mapping settings</a>.</td>
 </tr>
 </tbody>
 </table>
+<p>Use <strong>Web Request Details</strong> beside the endpoint to configure the method, headers, and POST body. The refresh icon retrieves a structure from the API. Using a watermark expression also displays <strong>Set incremental position</strong>.</p>
+<h4 id="webapibind">Pass input mapping values into an API path</h4>
+<p>For Web APIs returning JSON or XML, insert SDI’s <code>{bind:name}</code> token in the endpoint path. SDI supplies its value from the input mapping’s extracted source data, not from that mapping’s target transformations.</p>
+<p>Let A be the input mapping and B the downstream mapping that uses A's values in its API path:</p>
+<ul>
+<li>When A is called as input for B, A's normal target output is skipped.</li>
+<li>Add only downstream mapping B to the scheduler. B calls A automatically.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>/v1/orders/{bind:id}
+</code></pre></div>
+<ol>
+<li>Prepare an input mapping that retrieves IDs, such as the <strong>Get IDs</strong> mapping shown below.</li>
+<li>Enter <code>{bind:id}</code> in the detail endpoint. <strong>Bind Parameters</strong> appears.</li>
+<li>Open it, select the input mapping, and map its <code>ID</code> column to API variable <code>id</code>. Column and variable names need not match.</li>
+<li>Choose the output mode and select the response’s record object.</li>
+<li>Expand columns, configure the target, save, and run the mapping.</li>
+</ol>
+<p><a href="../img/guide-bind-02.svg"><img alt="API input mapping and output mode (upper part of the form)" src="../img/guide-bind-02.svg" /></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">No</th>
+<th style="text-align: left;">Item</th>
+<th style="text-align: left;">Configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Input mapping</td>
+<td style="text-align: left;">Select the mapping supplying the values. The group filter can narrow the list.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Output mode</td>
+<td style="text-align: left;">Combine results, or retrieve and output separately for each input row.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Input column → API variable name</td>
+<td style="text-align: left;">Map <code>ID</code> to <code>id</code> in this example.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Mode</th>
+<th style="text-align: left;">Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Combine all retrieved results into one output (Batch)</td>
+<td style="text-align: left;">Call the API for each input row, then write all results together. A retrieval failure prevents output from starting.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Retrieve and output for each input row (PerRow)</td>
+<td style="text-align: left;">Retrieve and output for each input row. Failed rows are reported and processing continues with later rows; the overall result is an error.</td>
+</tr>
+</tbody>
+</table>
+<p>Both modes call the API for each input row. PerRow also repeats pre/post processing, pre-update deletion, and file writing per input row. Avoid overwriting the same file or deleting earlier rows’ results. Use Batch to combine all IDs into one output. Zero input rows produce no downstream API calls or output. Paging starts afresh for each input row.</p>
+<p>API input mapping is required when bind tokens are used.</p>
+<p>Variable names start with an ASCII letter or <code>_</code>, followed by ASCII letters, digits, or <code>_</code>. Names are case-sensitive. Repeated occurrences of a name use the same value. NULL, empty or whitespace-only values, <code>/</code> or <code>\</code>, and values producing <code>.</code> or <code>..</code> path segments are rejected before sending. Supply unencoded values; SDI URL-encodes the variable portion.</p>
+<p>Bind tokens are supported only in the URL path, not the host, query string, headers, or request body. Raw response-file output is not supported with input binding. Combine path binds with expressions for dates and the incremental retrieval start time:</p>
+<div class="highlight"><pre><span></span><code>/order/{bind:id}?date={yyyyMMdd}&amp;since={LastWatermarkUTCTime.ToString(&quot;yyyy-MM-ddTHH:mm:ssZ&quot;)}
+</code></pre></div>
+<p><code>{bind:LastWatermarkUTCTime}</code> means an input variable, while <code>{LastWatermarkUTCTime}</code> reads the saved incremental retrieval start time. Input values are never evaluated again as expressions. A bound mapping shares one watermark across all input rows and advances it only after the whole operation succeeds.</p>
+<h5 id="use-a-bind-value-as-a-source-column">Use a bind value as a source column</h5>
+<p>An endpoint containing <code>{bind:id}</code> adds <code>BIND:id</code> to the source column choices. Select it to write the call’s ID when the response does not include that ID. Each path variable has its own choice; names remain case-sensitive.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Source</th>
+<th style="text-align: left;">Example target</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>BIND:id</code></td>
+<td style="text-align: left;"><code>ORDERID</code></td>
+<td style="text-align: left;">The input value used for this API call</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>code</code></td>
+<td style="text-align: left;"><code>CODE</code></td>
+<td style="text-align: left;">A field under the selected response detail object</td>
+</tr>
+</tbody>
+</table>
+<p>The bind value is the string before URL encoding. Every detail and page returned for the same input row receives that value in either Batch or PerRow mode. The same variable can populate several target columns. Selecting only bind columns preserves the response record count; an empty detail array does not create a bind-only row. Structure sample values are never used for execution.</p>
+<p>Adding bind choices requires no API call and also works with a file-loaded structure. A fixed query value such as <code>unit=1</code> is not a bind column. Removing or renaming an endpoint variable marks source columns that reference it as undefined. Select the variable to use again before saving or executing the mapping.</p>
+<h5 id="retrieve-a-structure-using-sample-bind-values">Retrieve a structure using sample bind values</h5>
+<p><a href="../img/guide-sample-03.svg"><img alt="Temporary bind values for structure retrieval and request testing" src="../img/guide-sample-03.svg" /></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">No</th>
+<th style="text-align: left;">Item</th>
+<th style="text-align: left;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Sample value</td>
+<td style="text-align: left;">Enter a valid value for each path variable.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Resolved endpoint</td>
+<td style="text-align: left;">Check the endpoint after substitution.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Retrieve structure</td>
+<td style="text-align: left;">Send the request using the current request settings and authentication.</td>
+</tr>
+</tbody>
+</table>
+<p>The source refresh button and <strong>Test</strong> in Web Request Details open this dialog when bind variables are present. They fetch the initial response only, without subsequent pages. POST testing sends a real POST request. An input mapping is not required for this preview. API errors leave the dialog open so values can be corrected and retried. For an empty array or other response without usable detail structure, use another value or <strong>Retrieve Structure from File</strong>.</p>
+<p><strong>Get Column Detail</strong> expands the already loaded structure and selected object; it does not call the source API or ask for bind samples. Both API-retrieved and file-loaded structures work. If no structure is loaded, retrieve one explicitly first. An RDB target still requires a database connection for target columns.</p>
+<p>Samples exist only while the mapping editor is open and are not saved to configuration files. Changing the connection or closing the editor discards them. Preview does not execute the input mapping or target output, and does not advance the execution watermark.</p>
 <h4 id="webapiincremental">Incremental retrieval for Web APIs</h4>
 <p>Use expressions containing <code>LastWatermarkLocalTime</code> or <code>LastWatermarkUTCTime</code> in the endpoint or a fixed POST text body to retrieve data from the saved position. Enclose each expression in <code>{}</code> and preserve the variable name's case.</p>
 <table>
@@ -3454,6 +3647,8 @@ The configuration method is the same as the table settings, so please refer to t
     
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../javascripts/image-popup.js"></script>
       
     
   </body>

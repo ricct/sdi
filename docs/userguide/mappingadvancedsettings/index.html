@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://sdi.ricct.com/userguide/mappingadvancedsettings/">
       
       
-        <link rel="prev" href="../mappingcolumndetail/">
+        <link rel="prev" href="../mappingtransformations/">
       
       
         <link rel="next" href="../mappingadvancedsettingssalesforce/">
@@ -51,6 +51,8 @@
         <style>:root{--md-text-font:"Saira Semi Condensed";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../stylesheets/image-popup.css">
     
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     
@@ -1139,6 +1141,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../mappingtransformations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transformation reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1237,15 +1262,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#stagingtable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Staging table details
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#password-visibility-in-mail-processing" class="md-nav__link">
+  <a href="#mail-password-visibility" class="md-nav__link">
     <span class="md-ellipsis">
-      Password visibility in mail processing
+      ZIP password visibility in mail processing
     </span>
   </a>
   
@@ -1706,6 +1740,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../studioauthentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Studio startup password authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2122,15 +2179,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#stagingtable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Staging table details
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#password-visibility-in-mail-processing" class="md-nav__link">
+  <a href="#mail-password-visibility" class="md-nav__link">
     <span class="md-ellipsis">
-      Password visibility in mail processing
+      ZIP password visibility in mail processing
     </span>
   </a>
   
@@ -2193,7 +2259,7 @@
 <tr>
 <td style="text-align: left;">5</td>
 <td style="text-align: left;">Data Update Mode</td>
-<td style="text-align: left;">Select how to update the target table.<br /> <code>Merge</code> - Merge the data into the target table using the primary key of the target table as a search condition.<br />If the result is true, then updates the row with the corresponding data from the source table. <br />In case the result is false for any rows, then inserts the corresponding row from the source table into the target table.<br /> *If the primary key is not defined on the target table, this method cannot be selected <br /><code>Append</code> - Insert the data into the target table. <br /><code>Custome</code> - Write a SQL statement for updating data.  click the Detail button to set the SQL.</td>
+<td style="text-align: left;">Select how to update the target table.<br /> <code>Merge</code> - Merge the data into the target table using the primary key of the target table as a search condition.<br />If the result is true, then updates the row with the corresponding data from the source table. <br />In case the result is false for any rows, then inserts the corresponding row from the source table into the target table.<br /> If the target has no primary key, configure matching columns in Merge Details <br /><code>Append</code> - Insert the data into the target table. <br /><code>Custom</code> - Write a SQL statement for updating data.  click the Detail button to set the SQL.</td>
 </tr>
 <tr>
 <td style="text-align: left;">6</td>
@@ -2208,7 +2274,7 @@
 <tr>
 <td style="text-align: left;">8</td>
 <td style="text-align: left;">Drop Staging table</td>
-<td style="text-align: left;">Whether to drop the Staging table after mapping processing is complete</td>
+<td style="text-align: left;">Choose whether to drop a staging table created by this operation. Pre-existing tables are not dropped. PRIVATE cleanup is automatic; see <a href="#stagingtable">Staging table details</a>.</td>
 </tr>
 <tr>
 <td style="text-align: left;">9</td>
@@ -2403,7 +2469,7 @@
 <tr>
 <td style="text-align: left;">31</td>
 <td style="text-align: left;">Mail information</td>
-<td style="text-align: left;">Set the message to, CC, subject of the e-mail, body of the e-mail, and so on.<br /> * When using an email template, it will be Read only. <br /> * For details on how to set the email title and body, please refer to the following document. <br><a href="/userguide/mailsetting/#mailtemplate">How to write an email template</a></td>
+<td style="text-align: left;">Set the message to, CC, subject of the e-mail, body of the e-mail, and so on.<br /> * When using an email template, it will be Read only. <br /> * For details on how to set the email title and body, please refer to the following document. <br><a href="../mailsetting/#mailtemplate">How to write an email template</a></td>
 </tr>
 <tr>
 <td style="text-align: left;">32</td>
@@ -2417,8 +2483,83 @@
 </tr>
 </tbody>
 </table>
-<h2 id="password-visibility-in-mail-processing">Password visibility in mail processing</h2>
-<p>Use Show passwords and secrets in the mail processing details form to show or hide credentials. Values are hidden initially; visibility is not saved.</p>
+<h3 id="stagingtable">Staging table details</h3>
+<p>For an RDB target, open <strong>Mapping Advanced Settings</strong>, then <strong>Detail</strong> under <strong>Load Into Staging Table</strong>. A staging table holds extracted data before the target is updated.</p>
+<p><a href="../img/guide-staging-oracle-08.svg"><img alt="Oracle staging table settings (upper part of the form)" src="../img/guide-staging-oracle-08.svg" /></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">No</th>
+<th style="text-align: left;">Item</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Table type</td>
+<td style="text-align: left;">Oracle offers Regular table, Temporary table (PRIVATE), and Temporary table (GLOBAL).</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Explanation</td>
+<td style="text-align: left;">Describes the scope and restrictions of the selected type.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Execute SQL Prior to Data Loading</td>
+<td style="text-align: left;">Configure SQL before loading. Use this stage or update pre/post processing when the SQL must access a temporary table in its original connection.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="choosing-a-table-type">Choosing a table type</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Destination</th>
+<th style="text-align: left;">Choices</th>
+<th style="text-align: left;">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Oracle, direct connection</td>
+<td style="text-align: left;">Regular / PRIVATE / GLOBAL</td>
+<td style="text-align: left;">Regular tables persist. PRIVATE definitions and data belong to this execution. GLOBAL definitions are shared, with data isolated to each connection.</td>
+</tr>
+<tr>
+<td style="text-align: left;">SQL Server, PostgreSQL, MySQL, direct connection</td>
+<td style="text-align: left;">Regular / Temporary</td>
+<td style="text-align: left;">Temporary tables are used within the creating connection. Oracle’s PRIVATE/GLOBAL choices are not shown.</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigQuery, Snowflake</td>
+<td style="text-align: left;">Regular / Temporary on supported connections</td>
+<td style="text-align: left;">Uses the database product’s temporary tables. Available choices depend on the connection type.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Other databases or connection types</td>
+<td style="text-align: left;">Available settings only</td>
+<td style="text-align: left;">Temporary creation is not offered for every DB2 or arbitrary ODBC connection.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../img/guide-staging-other-09.svg"><img alt="Non-Oracle example, PostgreSQL (upper part of the form)" src="../img/guide-staging-other-09.svg" /></a></p>
+<p>The non-Oracle example uses the same numbers: 1 table type, 2 explanation, 3 pre-load SQL. Do not depend on temporary data surviving across connections or being accessible to a separate mapping. Specify PostgreSQL temporary table names without a schema.</p>
+<h4 id="oracle-private">Oracle PRIVATE</h4>
+<p>Requires Oracle 18c or later. SDI uses <code>ON COMMIT PRESERVE DEFINITION</code>, so a commit during execution does not remove the definition. Loading and target updates use the same connection. SDI removes the table when execution ends, including cleanup before a pooled connection is returned for reuse.</p>
+<p>PRIVATE does not support mapped <code>CLOB</code>, <code>NCLOB</code>, or <code>BLOB</code> columns. Choose GLOBAL or a regular table when these columns must be written. Unmapped LOB columns on the target do not prevent PRIVATE use.</p>
+<p>Physical names use Oracle’s private-table prefix, normally <code>ORA$PTT_</code>, without a schema. SDI uses the database prefix when it can read it. If a custom prefix is configured but unavailable to the connection, specify a complete <code>ORA$...</code> name that complies with the database rule. Keep the physical name within 128 bytes.</p>
+<p>PRIVATE cannot be retained across executions. The data-retention checkbox is hidden. The parent <strong>Drop Staging Table</strong> setting stays visible but disabled and is treated as automatic cleanup. Do not access the table from a later connection or a Processor on Success action.</p>
+<h4 id="oracle-global">Oracle GLOBAL</h4>
+<p>SDI creates the table with <code>ON COMMIT PRESERVE ROWS</code>. The definition is shared, but loaded data belongs to its database session. For a newly created table that is not retained, SDI commits or rolls back the target update, clears the stage in the original loading session, closes that connection, then drops the definition.</p>
+<p>Consequently, stage rows are already cleared when <strong>Processor on Success</strong> runs. Put SQL that needs these rows in <strong>Postprocessor of update</strong>. If another session is using the same GLOBAL table, Oracle may reject DROP. SDI records a cleanup warning and does not terminate the other session. Avoid competing staging names in concurrent executions.</p>
+<h4 id="regular-tables-and-retention">Regular tables and retention</h4>
+<p>For regular tables, leaving <strong>Keep existing data</strong> unchecked clears existing rows before loading. Checking it retains those rows while loading. This is separate from the parent <strong>Drop Staging Table</strong> setting.</p>
+<p>Even when dropping is enabled, SDI’s completion cleanup drops only a table created by that operation. It does not drop a table that already existed before execution.</p>
+<h2 id="mail-password-visibility">ZIP password visibility in mail processing</h2>
+<p>In the mail processing details form, use <strong>Show</strong> beside the ZIP attachment password to show or hide its input. It is hidden initially, and closing the form restores masking.</p>
+<p>When <a href="../studioauthentication/">Studio authentication</a> is enabled, each reveal requires the Studio authentication password. Canceling the confirmation keeps the ZIP password hidden.</p>
 
 
 
@@ -2509,6 +2650,8 @@
     
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../javascripts/image-popup.js"></script>
       
     
   </body>

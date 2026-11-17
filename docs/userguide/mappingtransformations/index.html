@@ -1,0 +1,4348 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Simple Data Integrator (SDI)  official website.">
+      
+      
+        <meta name="author" content="RiCCT">
+      
+      
+        <link rel="canonical" href="https://sdi.ricct.com/userguide/mappingtransformations/">
+      
+      
+        <link rel="prev" href="../mappingcolumndetail/">
+      
+      
+        <link rel="next" href="../mappingadvancedsettings/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Transformation reference - Simple Data Integrator</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Saira Semi Condensed";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/image-popup.css">
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/sdi.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/nav.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-MR0GV0LG1S"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-MR0GV0LG1S",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-MR0GV0LG1S",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#transformation-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Simple Data Integrator" class="md-header__button md-logo" aria-label="Simple Data Integrator" data-md-component="logo">
+      
+  <img src="../../img/sdi-64.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Simple Data Integrator
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Transformation reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1m3.241 10.5zc-.1-2.708-.992-4.904-1.89-6.452a14 14 0 0 0-1.304-1.88L12 3.11l-.047.059c-.354.425-.828 1.06-1.304 1.88-.898 1.547-1.79 3.743-1.89 6.451Zm-12.728 0h4.745c.1-3.037 1.1-5.49 2.093-7.204.39-.672.78-1.233 1.119-1.673C6.11 3.329 2.746 7 2.513 11.5m18.974 0C21.254 7 17.89 3.329 13.53 2.623c.339.44.729 1.001 1.119 1.673.993 1.714 1.993 4.167 2.093 7.204ZM8.787 13c.182 2.478 1.02 4.5 1.862 5.953q.574.993 1.304 1.88l.047.057.047-.059c.354-.425.828-1.06 1.304-1.88.842-1.451 1.679-3.471 1.862-5.951Zm-1.504 0H2.552a9.505 9.505 0 0 0 7.918 8.377 16 16 0 0 1-1.119-1.673C8.413 18.085 7.47 15.807 7.283 13m9.434 0c-.186 2.807-1.13 5.085-2.068 6.704-.39.672-.78 1.233-1.118 1.673A9.506 9.506 0 0 0 21.447 13Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="https://ja.sdi.ricct.com/" hreflang="ja" class="md-select__link">
+              日本語
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start/setupsdi/" class="md-tabs__link">
+          
+  
+  
+  Installation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../systemarchitecture/" class="md-tabs__link">
+          
+  
+  
+  User guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../license/licensesdi/" class="md-tabs__link">
+          
+  
+  
+  License
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../faq/faqlicense/" class="md-tabs__link">
+          
+  
+  
+  FAQ
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Simple Data Integrator" class="md-nav__button md-logo" aria-label="Simple Data Integrator" data-md-component="logo">
+      
+  <img src="../../img/sdi-64.png" alt="logo">
+
+    </a>
+    Simple Data Integrator
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/setupsdi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SDI Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/sdiupgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SDI Upgrade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SDI Gateway Service
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            SDI Gateway Service
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/setupsdiwebservice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SDI Gateway Service Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/installiis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IIS Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/deployservice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SDI Gateway Service deployment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../start/configservice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SDI Gateway Service configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    User guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            User guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemarchitecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System architecture / System requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mainbasic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home Form 
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Connection Configuration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Connection Configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic Information
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectionoracle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Oracle Connection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectionsqlserver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Server Connection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectionmysql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MySQL Connection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectionpostgre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PostgreSQL Connection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectiondb2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DB2 Connection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectionodbc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ODBC Connection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectionwebserviceapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WEB Service/API/OData
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectionfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectionsdiservice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Remote (Via SDI Gateway service)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connectionsalesforce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Salesforce
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Mapping settings
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Mapping settings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mappingsource/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Source Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mappingtarget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Target Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mappingcolumndetail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Column Mapping Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Transformation reference
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transformation reference
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-input-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample notation and actual input
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choose-a-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choose a transformation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replace blanks and NULL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Replace blanks and NULL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#replace-null-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replace NULL only
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace-empty-strings-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replace empty strings only
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace-whitespace-only-strings-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replace whitespace-only strings only
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upper
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lower" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lower
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pad-left" class="md-nav__link">
+    <span class="md-ellipsis">
+      PadLeft
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pad-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      PadRight
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      RegexReplace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#substring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Substring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex-extract" class="md-nav__link">
+    <span class="md-ellipsis">
+      RegexExtract
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#split" class="md-nav__link">
+    <span class="md-ellipsis">
+      Split
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConvertType
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datetime" class="md-nav__link">
+    <span class="md-ellipsis">
+      DateTime
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#round" class="md-nav__link">
+    <span class="md-ellipsis">
+      Round
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ceiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ceiling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Floor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      CodeMap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coalesce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coalesce
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#condition-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConditionResult
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      Masking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Masking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mask-short-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      When the retained length reaches or exceeds the input
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hashing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hashing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hash-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing a hash algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-unkeyed-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try unkeyed SHA-256
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-output-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output length and destination column
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-multiple-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consistent results across mappings and servers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-key-unavailable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saved settings and unavailable keys
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combine-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transform separate columns and combine their results
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mappingadvancedsettings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mappingadvancedsettingssalesforce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Salesforce Advanced Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Scheduler settings
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Scheduler settings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedulefrequency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frequency
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedulefiletrigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Triggered by file events
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedulesetting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scheduler Properties
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedulemappinglist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workeragent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Worker Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cluster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cluster Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operationhistory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Execution Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tool
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            Tool
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataviewer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Viewer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Preferences
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            Preferences
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemsetting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System setting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mailsetting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mail setting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mappinggroupsetting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mapping Groups
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../studioauthentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Studio startup password authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Help
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            Help
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License confirmation, registration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optionservices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Optional Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdicli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SDI CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            License
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/licensesdi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SDI License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/thirdparty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Third-party licenses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://forms.gle/4GymYDkdJUh8eGkk6" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License Order
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            FAQ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/faqlicense/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/faqtechnical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Technical FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-input-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample notation and actual input
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choose-a-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choose a transformation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replace blanks and NULL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Replace blanks and NULL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#replace-null-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replace NULL only
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace-empty-strings-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replace empty strings only
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace-whitespace-only-strings-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replace whitespace-only strings only
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upper
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lower" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lower
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pad-left" class="md-nav__link">
+    <span class="md-ellipsis">
+      PadLeft
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pad-right" class="md-nav__link">
+    <span class="md-ellipsis">
+      PadRight
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      RegexReplace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#substring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Substring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex-extract" class="md-nav__link">
+    <span class="md-ellipsis">
+      RegexExtract
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#split" class="md-nav__link">
+    <span class="md-ellipsis">
+      Split
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConvertType
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datetime" class="md-nav__link">
+    <span class="md-ellipsis">
+      DateTime
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#round" class="md-nav__link">
+    <span class="md-ellipsis">
+      Round
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ceiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ceiling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Floor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      CodeMap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coalesce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coalesce
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#condition-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConditionResult
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      Masking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Masking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mask-short-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      When the retained length reaches or exceeds the input
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hashing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hashing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hash-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing a hash algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-unkeyed-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try unkeyed SHA-256
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-output-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output length and destination column
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-multiple-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consistent results across mappings and servers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-key-unavailable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saved settings and unavailable keys
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combine-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transform separate columns and combine their results
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="transformation-reference">Transformation reference</h1>
+<p><a href="../mappingcolumndetail/">Column mapping settings</a> provides 24 transformation types. Each example shows an actual configured dialog and preview using sample data. Click an image to enlarge it on this page. Click the image, backdrop, or × button, or press Esc, to close it and return to the same reading position.</p>
+<h2 id="using-the-examples">Using the examples</h2>
+<ol>
+<li>Choose the source column as Value source.</li>
+<li>Select the transformation from list <strong>1</strong>, then click Add.</li>
+<li>Select the step and configure <strong>2</strong>, Transformation options, using the table below. The “…” button opens value or condition settings.</li>
+<li>Select this step result as Value to output.</li>
+<li>Enter the sample types and values, then click <strong>3</strong>, Preview conversion.</li>
+<li>Choose OK to apply the details, then Save on the mapping form to persist them.</li>
+</ol>
+<p>In a table, <code>VALUE = "abc"</code> means select String as Input type and enter only <code>abc</code> in Sample input for the VALUE row. Do not enter <code>VALUE =</code> or the quotation marks. Quotes around preview results are display notation too.</p>
+<h3 id="sample-input-notation">Sample notation and actual input</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Notation</th>
+<th style="text-align: left;">What to enter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>"abc"</code></td>
+<td style="text-align: left;">Choose String and enter only <code>abc</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>""</code></td>
+<td style="text-align: left;">Choose String and leave the field empty; do not enter two quote characters.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>"   "</code></td>
+<td style="text-align: left;">Choose String and enter three spaces.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>NULL</code></td>
+<td style="text-align: left;">Choose Null and leave the value field empty. This differs from the String <code>NULL</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>123</code></td>
+<td style="text-align: left;">To test a number, choose Number and enter <code>123</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Backslash notation depends on the field.</strong> Sample input and literal values do not translate <code>\t</code> or <code>\n</code> into actual tabs or line breaks. The Tab key moves between cells. To check multiline values, use source data containing actual line breaks.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Notation and meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Sample input / literal</td>
+<td style="text-align: left;"><code>\t</code> is a backslash followed by t; <code>\n</code> is a backslash followed by n.</td>
+</tr>
+<tr>
+<td style="text-align: left;">RegexReplace / RegexExtract pattern</td>
+<td style="text-align: left;"><code>\t</code> matches a tab, <code>\n</code> matches a line feed, and <code>\s+</code> matches a run of whitespace.</td>
+</tr>
+<tr>
+<td style="text-align: left;">RegexReplace replacement text</td>
+<td style="text-align: left;"><code>$1</code> inserts capture group 1. <code>\t</code> and <code>\n</code> do not insert a tab or line break.</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="../mappingcolumndetail/#steps">Steps and output</a> for the shared Input value, Result name, and Enabled fields. Tables below list operation-specific fields. For a literal in a “…” editor, choose Literal, set its type, and enter the example value.</p>
+<h2 id="choose-a-transformation">Choose a transformation</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Transformation</th>
+<th style="text-align: left;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#value-default">Replace blanks and NULL</a></td>
+<td style="text-align: left;">Replace NULL, empty strings, or whitespace-only strings with a specified value.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#trim">Trim</a></td>
+<td style="text-align: left;">Remove unwanted whitespace around a name or code.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#upper">Upper</a></td>
+<td style="text-align: left;">Normalize alphabetic codes to uppercase.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#lower">Lower</a></td>
+<td style="text-align: left;">Normalize alphabetic identifiers or an email domain to lowercase.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#pad-left">PadLeft</a></td>
+<td style="text-align: left;">Pad the left of codes to a consistent width.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#pad-right">PadRight</a></td>
+<td style="text-align: left;">Pad the right side for fixed-width output.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#replace">Replace</a></td>
+<td style="text-align: left;">Replace a literal string, such as hyphens in telephone numbers.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#regex-replace">RegexReplace</a></td>
+<td style="text-align: left;">Replace a pattern, such as runs of whitespace.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#substring">Substring</a></td>
+<td style="text-align: left;">Extract a fixed range from a code.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#regex-extract">RegexExtract</a></td>
+<td style="text-align: left;">Extract part of a value using a pattern.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#concat">Concat</a></td>
+<td style="text-align: left;">Join columns, literals, and transformed results into one string.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#split">Split</a></td>
+<td style="text-align: left;">Retrieve one item from a delimited string.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#convert-type">ConvertType</a></td>
+<td style="text-align: left;">Convert values to another type, such as numeric text to Number.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#datetime">DateTime</a></td>
+<td style="text-align: left;">Configure date formatting, time-zone conversion, and date arithmetic.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#calculate">Calculate</a></td>
+<td style="text-align: left;">Calculate using two values, such as unit price multiplied by quantity.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#round">Round</a></td>
+<td style="text-align: left;">Round a number to a specified number of decimal places.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#ceiling">Ceiling</a></td>
+<td style="text-align: left;">Return the smallest integer greater than or equal to the input.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#floor">Floor</a></td>
+<td style="text-align: left;">Return the largest integer less than or equal to the input.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#condition">Condition</a></td>
+<td style="text-align: left;">Choose an output value according to a condition.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#code-map">CodeMap</a></td>
+<td style="text-align: left;">Translate codes between systems.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#coalesce">Coalesce</a></td>
+<td style="text-align: left;">Select the first non-NULL candidate from a list.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#condition-result">ConditionResult</a></td>
+<td style="text-align: left;">Output whether a condition is true or false.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#mask">Masking</a></td>
+<td style="text-align: left;">Hide all or part of a name, phone number, or code with a chosen character.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#hash">Hashing</a></td>
+<td style="text-align: left;">Produce a fixed-length hash string for matching equal input values.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="null-default"></a></p>
+<p><a id="empty-default"></a></p>
+<p><a id="whitespace-default"></a></p>
+<h2 id="value-default">Replace blanks and NULL</h2>
+<p>Replace NULL, empty strings, or strings containing only whitespace such as spaces and tabs with a specified value. Select each target independently.</p>
+<p><a class="sdi-image-popup" href="../img/transform-value-default.png"><img alt="Replace blanks and NULL settings and preview" src="../img/transform-value-default.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Select one or more of NULL, Empty string, and Whitespace only under Replace when. All three are selected for a new step. Open Replacement value with “…”, choose Literal, type String, and enter Unknown. A source column, Bind reference, or earlier step result can also provide the replacement.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Target</th>
+<th style="text-align: left;">Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;">A missing value, distinct from the text "NULL".</td>
+</tr>
+<tr>
+<td style="text-align: left;">Empty string</td>
+<td style="text-align: left;">A zero-length string <code>""</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Whitespace only</td>
+<td style="text-align: left;">One or more whitespace characters, including spaces, tabs, or line breaks. Excludes an empty string.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Replacement value (supports references)</td>
+<td style="text-align: left;"><code>Constant: Unknown</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>NULL</code></td>
+<td style="text-align: left;"><code>"Unknown"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = empty string (choose String and leave the input blank)</td>
+<td style="text-align: left;"><code>"Unknown"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = three spaces</td>
+<td style="text-align: left;"><code>"Unknown"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"ABC"</code></td>
+<td style="text-align: left;"><code>"ABC"</code></td>
+</tr>
+</tbody>
+</table>
+<p><a class="sdi-image-popup" href="../img/transform-value-default-settings.png"><img alt="Replace blanks and NULL detail settings" src="../img/transform-value-default-settings.png" /></a></p>
+<p>In child area <strong>1</strong>, set the mode, reference, literal type, and value as applicable; use <strong>2</strong>, OK, to return. Column and Bind references use the dropdown. Literal values do not use Reference.</p>
+<p><strong>Notes</strong></p>
+<p>Only selected value types are replaced; other values are unchanged. Select at least one target. All selected targets use the same replacement. To assign different replacements, add separate steps with different target selections.</p>
+<details>
+<summary>Examples with a single selected target</summary>
+<h3 id="replace-null-only">Replace NULL only</h3>
+<p>Select only the matching target.</p>
+<p><a class="sdi-image-popup" href="../img/transform-null-default.png"><img alt="Replace NULL only" src="../img/transform-null-default.png" /></a></p>
+<p><a class="sdi-image-popup" href="../img/transform-null-default-settings.png"><img alt="Replacement value settings" src="../img/transform-null-default-settings.png" /></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>NULL</code></td>
+<td style="text-align: left;"><code>"Unknown"</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="replace-empty-strings-only">Replace empty strings only</h3>
+<p>Select only the matching target.</p>
+<p><a class="sdi-image-popup" href="../img/transform-empty-default.png"><img alt="Replace empty strings only" src="../img/transform-empty-default.png" /></a></p>
+<p><a class="sdi-image-popup" href="../img/transform-empty-default-settings.png"><img alt="Replacement value settings" src="../img/transform-empty-default-settings.png" /></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>""</code></td>
+<td style="text-align: left;"><code>"Not entered"</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="replace-whitespace-only-strings-only">Replace whitespace-only strings only</h3>
+<p>Select only the matching target.</p>
+<p><a class="sdi-image-popup" href="../img/transform-whitespace-default.png"><img alt="Replace whitespace-only strings only" src="../img/transform-whitespace-default.png" /></a></p>
+<p><a class="sdi-image-popup" href="../img/transform-whitespace-default-settings.png"><img alt="Replacement value settings" src="../img/transform-whitespace-default-settings.png" /></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>"   "</code></td>
+<td style="text-align: left;"><code>"Not entered"</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h2 id="trim">Trim</h2>
+<p>Remove unwanted whitespace around a name or code.</p>
+<p><a class="sdi-image-popup" href="../img/transform-trim.png"><img alt="Trim settings and preview" src="../img/transform-trim.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Choose Both, Start, or End for Trim side. The example uses Both.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Trim side</td>
+<td style="text-align: left;"><code>Both</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"  abc  "</code></td>
+<td style="text-align: left;"><code>"abc"</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong></p>
+<p>Whitespace inside the string is preserved. Leading or trailing tabs and line breaks are also trimmed. To uppercase the cleaned value, use this result as the input of a later Upper step.</p>
+<h2 id="upper">Upper</h2>
+<p>Normalize alphabetic codes to uppercase.</p>
+<p><a class="sdi-image-popup" href="../img/transform-upper.png"><img alt="Upper settings and preview" src="../img/transform-upper.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Choose the source column or earlier result as Input value. Upper has no additional operation-specific options.</p>
+<p>There are no operation-specific fields. Check the input value and selected output step.</p>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"Abc-01"</code></td>
+<td style="text-align: left;"><code>"ABC-01"</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong></p>
+<p>Digits and punctuation are preserved. Casing is culture-invariant; this operation has no culture selector. NULL stays NULL.</p>
+<h2 id="lower">Lower</h2>
+<p>Normalize alphabetic identifiers or an email domain to lowercase.</p>
+<p><a class="sdi-image-popup" href="../img/transform-lower.png"><img alt="Lower settings and preview" src="../img/transform-lower.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Select the column or earlier result as Input value. Lower has no additional operation-specific options.</p>
+<p>There are no operation-specific fields. Check the input value and selected output step.</p>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"Abc-01"</code></td>
+<td style="text-align: left;"><code>"abc-01"</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong></p>
+<p>The whole input value is lowercased using invariant casing. To change only part of an address, combine extraction, casing, and concatenation. NULL stays NULL.</p>
+<h2 id="pad-left">PadLeft</h2>
+<p>Pad the left of codes to a consistent width.</p>
+<p><a class="sdi-image-popup" href="../img/transform-pad-left.png"><img alt="PadLeft settings and preview" src="../img/transform-pad-left.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Set Output length to 5 and Padding character (1 character) to <code>0</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Output length</td>
+<td style="text-align: left;"><code>5</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Padding character (1 character)</td>
+<td style="text-align: left;"><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"7"</code></td>
+<td style="text-align: left;"><code>"00007"</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong></p>
+<p>Output length is the total width, not the number of characters to add. Padding must be one character. Longer input is not truncated. Use a string destination when leading zeros must be retained. The field accepts one character and rejects multi-character paste. It must not be empty when previewing or accepting settings; one space is valid.</p>
+<h2 id="pad-right">PadRight</h2>
+<p>Pad the right side for fixed-width output.</p>
+<p><a class="sdi-image-popup" href="../img/transform-pad-right.png"><img alt="PadRight settings and preview" src="../img/transform-pad-right.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Set Output length to 5 and Padding character (1 character) to <code>_</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Output length</td>
+<td style="text-align: left;"><code>5</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Padding character (1 character)</td>
+<td style="text-align: left;"><code>_</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"AB"</code></td>
+<td style="text-align: left;"><code>"AB___"</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong></p>
+<p>Input already at or above the width is unchanged. To pad with spaces, enter one actual space as the padding character. Width counts characters, not bytes. The field accepts one character and rejects multi-character paste. It must not be empty when previewing or accepting settings; one space is valid.</p>
+<h2 id="replace">Replace</h2>
+<p>Replace a literal string, such as hyphens in telephone numbers.</p>
+<p><a class="sdi-image-popup" href="../img/transform-replace.png"><img alt="Replace settings and preview" src="../img/transform-replace.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Set Search text value to the String literal <code>-</code> and Replacement text value to an empty String literal. Both parameters can also use a column or earlier result.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Search text value</td>
+<td style="text-align: left;"><code>Constant: -</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Replacement text value</td>
+<td style="text-align: left;"><code>Constant:</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Ignore case</td>
+<td style="text-align: left;"><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"090-1234-5678"</code></td>
+<td style="text-align: left;"><code>"09012345678"</code></td>
+</tr>
+</tbody>
+</table>
+<p><a class="sdi-image-popup" href="../img/transform-replace-settings.png"><img alt="Replace detail settings" src="../img/transform-replace-settings.png" /></a></p>
+<p>In child area <strong>1</strong>, set the mode, reference, literal type, and value as applicable; use <strong>2</strong>, OK, to return. Column and Bind references use the dropdown. Literal values do not use Reference.</p>
+<p><strong>Notes</strong></p>
+<p>All occurrences are replaced. Search text is literal, not a regular expression. Ignore case changes matching behavior. The search string must not be empty.</p>
+<h2 id="regex-replace">RegexReplace</h2>
+<p>Replace a pattern, such as runs of whitespace.</p>
+<p><a class="sdi-image-popup" href="../img/transform-regex-replace.png"><img alt="RegexReplace settings and preview" src="../img/transform-regex-replace.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Enter <code>\s+</code> as Search text / pattern and <code>-</code> as Replacement text. Enter one backslash in the UI.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Search text / pattern</td>
+<td style="text-align: left;"><code>\s+</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Replacement text</td>
+<td style="text-align: left;"><code>-</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Ignore case</td>
+<td style="text-align: left;"><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"AB  12   CD"</code></td>
+<td style="text-align: left;"><code>"AB-12-CD"</code></td>
+</tr>
+</tbody>
+</table>
+<p>Copy the following into Sample input for VALUE and choose Input type String. This example uses spaces only, with no tabs.</p>
+<div class="highlight"><pre><span></span><code>AB  12   CD
+</code></pre></div>
+<p>There are two spaces between AB and 12, and three between 12 and CD. Enter <code>\s+</code> exactly as shown in Search text / pattern, using one backslash. Enter <code>-</code> in Replacement text, then click Preview conversion to obtain <code>AB-12-CD</code>.</p>
+<p>In the Japanese screenshot, the backslash may look like a yen sign. The actual character is the ASCII backslash (U+005C); copy <code>\s+</code> from this page. A full-width yen sign is a different character.</p>
+<p><strong>Notes</strong></p>
+<p>The example replaces each run of spaces with one hyphen. <code>\s+</code> also matches actual tabs, line breaks, and other whitespace. Typing the two characters <code>\t</code> or <code>\n</code> into Sample input does not create a tab or line break. Patterns use .NET regular expressions; replacement text can reference capture groups with <code>$1</code>. Invalid patterns or a regex timeout cause a conversion error.</p>
+<h2 id="substring">Substring</h2>
+<p>Extract a fixed range from a code.</p>
+<p><a class="sdi-image-popup" href="../img/transform-substring.png"><img alt="Substring settings and preview" src="../img/transform-substring.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Set Start position value and Length value to Number literals of 5. Either parameter can also come from a column or earlier result.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Start position value</td>
+<td style="text-align: left;"><code>Constant: 5</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Length value</td>
+<td style="text-align: left;"><code>Constant: 5</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">When the requested range exceeds the text length</td>
+<td style="text-align: left;"><code>Raise an error</code> (default) / <code>Return NULL</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"ABC-12345"</code></td>
+<td style="text-align: left;"><code>"12345"</code></td>
+</tr>
+</tbody>
+</table>
+<p><a class="sdi-image-popup" href="../img/transform-substring-settings.png"><img alt="Substring detail settings" src="../img/transform-substring-settings.png" /></a></p>
+<p>In child area <strong>1</strong>, set the mode, reference, literal type, and value as applicable; use <strong>2</strong>, OK, to return. Column and Bind references use the dropdown. Literal values do not use Reference.</p>
+<p><strong>Notes</strong></p>
+<p>Positions start at 1. A length of 0 at a valid start position returns an empty string. When a range exceeds the input, the selected out-of-range action applies. The range is never automatically shortened to the available characters.</p>
+<p>For example, reading five characters from position 1 of <code>ABC</code> causes a conversion error with Raise an error, or returns NULL with Return NULL. A later Replace blanks and NULL step can replace that NULL with a chosen value.</p>
+<p>This choice applies only to an unavailable range. Invalid settings, such as a start position of 0 or a negative length, remain errors. The form's On conversion error setting handles errors raised by Raise an error and other conversion failures.</p>
+<h2 id="regex-extract">RegexExtract</h2>
+<p>Extract part of a value using a pattern.</p>
+<p><a class="sdi-image-popup" href="../img/transform-regex-extract.png"><img alt="RegexExtract settings and preview" src="../img/transform-regex-extract.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Use pattern <code>ORDER-(\d+)</code> and Group 1 to extract the captured digits.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Search text / pattern</td>
+<td style="text-align: left;"><code>ORDER-(\d+)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Ignore case</td>
+<td style="text-align: left;"><code>False</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Group (0 for entire match)</td>
+<td style="text-align: left;"><code>1</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"ORDER-12345"</code></td>
+<td style="text-align: left;"><code>"12345"</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong></p>
+<p>Only the first match is used. Group 0 is the whole match; higher numbers select capture groups. No match, a missing group, or an unsuccessful group causes an error.</p>
+<h2 id="concat">Concat</h2>
+<p>Join columns, literals, and transformed results into one string.</p>
+<p><a class="sdi-image-popup" href="../img/transform-concat.png"><img alt="Concat settings and preview" src="../img/transform-concat.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Open Values to concatenate with “…”. Add source columns VALUE and GIVEN_NAME in that order. Enter one actual space as Separator.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Values to concatenate</td>
+<td style="text-align: left;"><code>2 Settings</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Separator</td>
+<td style="text-align: left;"><code></code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Skip null elements</td>
+<td style="text-align: left;"><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"Sato"</code><br><code>GIVEN_NAME</code> = <code>"Hanako"</code></td>
+<td style="text-align: left;"><code>"Sato Hanako"</code></td>
+</tr>
+</tbody>
+</table>
+<p><a class="sdi-image-popup" href="../img/transform-concat-settings.png"><img alt="Concat detail settings" src="../img/transform-concat-settings.png" /></a></p>
+<p>In child area <strong>1</strong>, set the mode, reference, literal type, and value as applicable; use <strong>2</strong>, OK, to return. Column and Bind references use the dropdown. Literal values do not use Reference.</p>
+<p><strong>Notes</strong></p>
+<p>Values are joined in list order. A blank separator inserts no characters. With Skip null elements = True, only NULLs are removed; empty strings remain. If it is False and any element is NULL, the result is NULL.</p>
+<h2 id="split">Split</h2>
+<p>Retrieve one item from a delimited string.</p>
+<p><a class="sdi-image-popup" href="../img/transform-split.png"><img alt="Split settings and preview" src="../img/transform-split.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Set Separator to <code>,</code> and Item index to 2.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Separator</td>
+<td style="text-align: left;"><code>,</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Item index (1-based)</td>
+<td style="text-align: left;"><code>2</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">When the requested item does not exist</td>
+<td style="text-align: left;"><code>Raise an error</code> (default) / <code>Return NULL</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"A,B,C"</code></td>
+<td style="text-align: left;"><code>"B"</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong></p>
+<p>The index starts at 1 and includes empty items: item 2 of <code>A,,C</code> is empty. Separator is a literal string, not a regex. This operation does not create additional rows or columns.</p>
+<p>For example, requesting item 3 of <code>aaa_bbb</code> with separator <code>_</code> causes a conversion error with Raise an error, or returns NULL with Return NULL. A later Replace blanks and NULL step can replace that NULL with a chosen value. An existing empty item remains an empty string regardless of this choice.</p>
+<p>An index of 0 or less, or an empty separator, remains a configuration error. The form's On conversion error setting handles errors raised by Raise an error and other conversion failures.</p>
+<h2 id="convert-type">ConvertType</h2>
+<p>Convert values to another type, such as numeric text to Number.</p>
+<p><a class="sdi-image-popup" href="../img/transform-convert-type.png"><img alt="ConvertType settings and preview" src="../img/transform-convert-type.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Set Output type to Number, Culture to <code>en-US</code>, and Allow numeric group separators to True. Keep the sample input type String.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Output type</td>
+<td style="text-align: left;"><code>Number</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Culture (empty for invariant)</td>
+<td style="text-align: left;"><code>en-US</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Allow numeric group separators</td>
+<td style="text-align: left;"><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"1,234.50"</code></td>
+<td style="text-align: left;"><code>1234.50</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong></p>
+<p>Output types are String, Number, Boolean, DateTime, and Null. An empty culture uses invariant formatting. Boolean conversion accepts <code>true</code>, <code>false</code>, <code>1</code>, and <code>0</code>. DateTime adds input-format and time-zone options. Use the DateTime transformation to create a date string with an explicit output format.</p>
+<h2 id="datetime">DateTime</h2>
+<p>Configure date formatting, time-zone conversion, and date arithmetic.</p>
+<p><a class="sdi-image-popup" href="../img/transform-datetime.png"><img alt="DateTime settings and preview" src="../img/transform-datetime.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Set Input format mode to Exact, Input format to <code>yyyyMMdd</code>, and Date only to True. Set Output mode to String and Output format to <code>yyyy-MM-dd</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Culture (empty for invariant)</td>
+<td style="text-align: left;"><code>empty</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Input format mode</td>
+<td style="text-align: left;"><code>Exact</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Input format</td>
+<td style="text-align: left;"><code>yyyyMMdd</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Date only</td>
+<td style="text-align: left;"><code>True</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Input time zone</td>
+<td style="text-align: left;"><code>UTC</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Output time zone</td>
+<td style="text-align: left;"><code>Keep</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Output mode</td>
+<td style="text-align: left;"><code>String</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Output format</td>
+<td style="text-align: left;"><code>yyyy-MM-dd</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Years to add</td>
+<td style="text-align: left;"><code>0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Months to add</td>
+<td style="text-align: left;"><code>0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Days to add</td>
+<td style="text-align: left;"><code>0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Hours to add</td>
+<td style="text-align: left;"><code>0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Minutes to add</td>
+<td style="text-align: left;"><code>0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Seconds to add</td>
+<td style="text-align: left;"><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"20240401"</code></td>
+<td style="text-align: left;"><code>"2024-04-01"</code></td>
+</tr>
+</tbody>
+</table>
+<p><a class="sdi-image-popup" href="../img/transform-datetime-output.png"><img alt="Output format settings" src="../img/transform-datetime-output.png" /></a></p>
+<p>Input and output options are in the same property panel. Scroll it to reach Output mode and Output format.</p>
+<p><a class="sdi-image-popup" href="../img/transform-datetime-add.png"><img alt="Date arithmetic options" src="../img/transform-datetime-add.png" /></a></p>
+<p>Additions apply in year, month, day, hour, minute, second order before output-zone conversion. Negative values subtract; Days to add = <code>1</code> selects the next day.</p>
+<p><a class="sdi-image-popup" href="../img/transform-datetime-zone.png"><img alt="UTC to Japan time conversion" src="../img/transform-datetime-zone.png" /></a></p>
+<p>For time-zone conversion, input <code>2024-04-01T00:00:00Z</code>, Output time zone = <code>Tokyo Standard Time</code>, and Output format = <code>yyyy-MM-dd HH:mm:sszzz</code> produce <code>2024-04-01 09:00:00+09:00</code>. An input Z or offset takes precedence; otherwise Input time zone is used. Keep preserves the input offset. Choose UTC for a Z-suffixed output. Invalid or ambiguous daylight-saving times cause errors.</p>
+<p><strong>Notes</strong></p>
+<p><code>MM</code> means month, <code>mm</code> means minute, and <code>HH</code> uses a 24-hour clock. Custom formats are accepted. Typed output does not use Output format. For Date only, keep the output time zone as Keep and hours/minutes/seconds additions at 0.</p>
+<h2 id="calculate">Calculate</h2>
+<p>Calculate using two values, such as unit price multiplied by quantity.</p>
+<p><a class="sdi-image-popup" href="../img/transform-calculate.png"><img alt="Calculate settings and preview" src="../img/transform-calculate.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Use VALUE as the unit price, select Multiply, and open Operand with “…”. Choose Column and select QUANTITY.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Arithmetic operation</td>
+<td style="text-align: left;"><code>Multiply</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Operand</td>
+<td style="text-align: left;"><code>QUANTITY</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>1200</code><br><code>QUANTITY</code> = <code>3</code></td>
+<td style="text-align: left;"><code>3600</code></td>
+</tr>
+</tbody>
+</table>
+<p><a class="sdi-image-popup" href="../img/transform-calculate-settings.png"><img alt="Calculate detail settings" src="../img/transform-calculate-settings.png" /></a></p>
+<p>In child area <strong>1</strong>, set the mode, reference, literal type, and value as applicable; use <strong>2</strong>, OK, to return. Column and Bind references use the dropdown. Literal values do not use Reference.</p>
+<p><strong>Notes</strong></p>
+<p>Operations are Add, Subtract, Multiply, Divide, and Remainder. Subtraction and division use input minus/divided by operand. A NULL input or operand produces NULL. Division/remainder by zero and numeric overflow cause errors.</p>
+<h2 id="round">Round</h2>
+<p>Round a number to a specified number of decimal places.</p>
+<p><a class="sdi-image-popup" href="../img/transform-round.png"><img alt="Round settings and preview" src="../img/transform-round.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Set Precision value to the Number literal 2 and Rounding mode to AwayFromZero. Precision may also come from a column or earlier result.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Precision value</td>
+<td style="text-align: left;"><code>Constant: 2</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Rounding mode</td>
+<td style="text-align: left;"><code>AwayFromZero</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>123.455</code></td>
+<td style="text-align: left;"><code>123.46</code></td>
+</tr>
+</tbody>
+</table>
+<p><a class="sdi-image-popup" href="../img/transform-round-settings.png"><img alt="Round detail settings" src="../img/transform-round-settings.png" /></a></p>
+<p>In child area <strong>1</strong>, set the mode, reference, literal type, and value as applicable; use <strong>2</strong>, OK, to return. Column and Bind references use the dropdown. Literal values do not use Reference.</p>
+<p><strong>Notes</strong></p>
+<p>Precision is 0–28 decimal places. AwayFromZero rounds midpoint values away from zero; ToEven chooses the even last digit. For 123.445 at two places, the results are 123.45 and 123.44 respectively.</p>
+<h2 id="ceiling">Ceiling</h2>
+<p>Return the smallest integer greater than or equal to the input.</p>
+<p><a class="sdi-image-popup" href="../img/transform-ceiling.png"><img alt="Ceiling settings and preview" src="../img/transform-ceiling.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Select a numeric column or calculation result as Input value. Ceiling has no additional operation-specific options.</p>
+<p>There are no operation-specific fields. Check the input value and selected output step.</p>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>12.3</code></td>
+<td style="text-align: left;"><code>13</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong></p>
+<p>This rounds to an integer; it does not accept a decimal-place parameter. A negative value such as <code>-12.3</code> becomes <code>-12</code>, rounding toward positive infinity.</p>
+<h2 id="floor">Floor</h2>
+<p>Return the largest integer less than or equal to the input.</p>
+<p><a class="sdi-image-popup" href="../img/transform-floor.png"><img alt="Floor settings and preview" src="../img/transform-floor.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Select a numeric column or calculation result as Input value. Floor has no additional operation-specific options.</p>
+<p>There are no operation-specific fields. Check the input value and selected output step.</p>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>12.9</code></td>
+<td style="text-align: left;"><code>12</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong></p>
+<p>Floor rounds toward negative infinity rather than simply removing the fractional part. <code>-12.3</code> becomes <code>-13</code>. Use Round when you need a specified decimal precision.</p>
+<h2 id="condition">Condition</h2>
+<p>Choose an output value according to a condition.</p>
+<p><a class="sdi-image-popup" href="../img/transform-condition.png"><img alt="Condition settings and preview" src="../img/transform-condition.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Open Conditions. Set Left value to Origin, Comparison to Greater, and Right value to the Number literal 0. Set Value when true to In stock and Value when false to Out of stock, both String literals.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Conditions</td>
+<td style="text-align: left;"><code>Compare</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Value when true</td>
+<td style="text-align: left;"><code>Constant: In stock</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Value when false</td>
+<td style="text-align: left;"><code>Constant: Out of stock</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>3</code></td>
+<td style="text-align: left;"><code>"In stock"</code></td>
+</tr>
+</tbody>
+</table>
+<p><a class="sdi-image-popup" href="../img/transform-condition-settings.png"><img alt="Condition detail settings" src="../img/transform-condition-settings.png" /></a></p>
+<p>Child area <strong>1</strong> is the condition tree. Select a condition and use <strong>2</strong> to set its mode, left/right values, comparison, and NOT. Groups use All or Any and contain child conditions. Choose OK to return.</p>
+<p><a class="sdi-image-popup" href="../img/transform-condition-true.png"><img alt="Configure the value when true" src="../img/transform-condition-true.png" /></a></p>
+<p>Open Value when true, choose Literal, type String, and enter In stock. Value when false uses the same editor.</p>
+<p><strong>Notes</strong></p>
+<p>Either branch may use a literal, column, bind variable, origin, or earlier result. At runtime only the selected branch value is evaluated. Use numeric types on both sides when you want a numeric comparison.</p>
+<h2 id="code-map">CodeMap</h2>
+<p>Translate codes between systems.</p>
+<p><a class="sdi-image-popup" href="../img/transform-code-map.png"><img alt="CodeMap settings and preview" src="../img/transform-code-map.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Open Code mapping. Map input code 1 to the String Active and code 0 to Inactive. Set Action when unmatched for values absent from the table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Ignore case</td>
+<td style="text-align: left;"><code>False</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Code mapping</td>
+<td style="text-align: left;"><code>2 Settings</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Action when unmatched</td>
+<td style="text-align: left;"><code>Fail</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"1"</code></td>
+<td style="text-align: left;"><code>"Active"</code></td>
+</tr>
+</tbody>
+</table>
+<p><a class="sdi-image-popup" href="../img/transform-code-map-settings.png"><img alt="CodeMap detail settings" src="../img/transform-code-map-settings.png" /></a></p>
+<p>Use child area <strong>1</strong> to enter input codes and typed outputs, then <strong>2</strong>, OK, to return. A row’s trash icon removes that mapping.</p>
+<p><strong>Notes</strong></p>
+<p>Unmatched actions are Fail, Keep, Null, and Default. Default lets you specify a replacement. Input codes must be unique, considering Ignore case. Treat codes with meaningful leading zeros as strings in both input and mapping.</p>
+<h2 id="coalesce">Coalesce</h2>
+<p>Select the first non-NULL candidate from a list.</p>
+<p><a class="sdi-image-popup" href="../img/transform-coalesce.png"><img alt="Coalesce settings and preview" src="../img/transform-coalesce.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Open Values to concatenate and list VALUE, BACKUP_EMAIL, then the String literal <code>unknown@example.com</code>. For Coalesce, this field holds candidates; it does not concatenate strings.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Values to concatenate</td>
+<td style="text-align: left;"><code>3 Settings</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>NULL</code><br><code>BACKUP_EMAIL</code> = <code>"backup@example.com"</code></td>
+<td style="text-align: left;"><code>"backup@example.com"</code></td>
+</tr>
+</tbody>
+</table>
+<p><a class="sdi-image-popup" href="../img/transform-coalesce-settings.png"><img alt="Coalesce detail settings" src="../img/transform-coalesce-settings.png" /></a></p>
+<p>In child area <strong>1</strong>, set the mode, reference, literal type, and value as applicable; use <strong>2</strong>, OK, to return. Column and Bind references use the dropdown. Literal values do not use Reference.</p>
+<p><strong>Notes</strong></p>
+<p>Candidates are evaluated in order until a non-NULL value is found. Empty and whitespace-only strings count as values. If all candidates are NULL, the result is NULL. Numbers and earlier step results are also supported.</p>
+<h2 id="condition-result">ConditionResult</h2>
+<p>Output whether a condition is true or false.</p>
+<p><a class="sdi-image-popup" href="../img/transform-condition-result.png"><img alt="ConditionResult settings and preview" src="../img/transform-condition-result.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Open Conditions, choose All, and add two comparisons: Origin GreaterOrEqual 100 and Origin Less 200.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Conditions</td>
+<td style="text-align: left;"><code>All</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>120</code></td>
+<td style="text-align: left;"><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<p><a class="sdi-image-popup" href="../img/transform-condition-result-settings.png"><img alt="ConditionResult detail settings" src="../img/transform-condition-result-settings.png" /></a></p>
+<p>Child area <strong>1</strong> is the condition tree. Select a condition and use <strong>2</strong> to set its mode, left/right values, comparison, and NOT. Groups use All or Any and contain child conditions. Choose OK to return.</p>
+<p><strong>Notes</strong></p>
+<p>The result is a Boolean, not a string. Unlike Condition, it has no true/false output-value branches. Groups support All/Any and Negate (NOT). A later step can reference this Boolean result.</p>
+<h2 id="mask">Masking</h2>
+<p>Hide all or part of a name, phone number, or code with a chosen character.</p>
+<p><a class="sdi-image-popup" href="../img/transform-mask.png"><img alt="Masking settings and preview" src="../img/transform-mask.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Choose Keep trailing, set Trailing characters to keep to 4, and Mask character (1 character) to <code>*</code>. Use Keep leading or Keep leading and trailing for other partial masks. Only relevant length fields are shown.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Masking mode</td>
+<td style="text-align: left;"><code>Keep trailing</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Trailing characters to keep</td>
+<td style="text-align: left;"><code>4</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Mask character (1 character)</td>
+<td style="text-align: left;"><code>*</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"09012345678"</code></td>
+<td style="text-align: left;"><code>"*******5678"</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong></p>
+<p>The defaults are Mask all and <code>*</code>. Retain counts must be nonnegative. If their sum reaches the input length, the whole input is masked. NULL and empty strings stay unchanged. Lengths count Unicode code points without splitting surrogate pairs; combining marks count separately. The mask character follows the single-character padding restriction and cannot be a surrogate pair.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Mode</th>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Mask all</td>
+<td style="text-align: left;"><code>山田太郎</code></td>
+<td style="text-align: left;"><code>****</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Keep 2 leading</td>
+<td style="text-align: left;"><code>AB123456</code></td>
+<td style="text-align: left;"><code>AB******</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Keep 4 trailing</td>
+<td style="text-align: left;"><code>09012345678</code></td>
+<td style="text-align: left;"><code>*******5678</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Keep 1 leading and 2 trailing</td>
+<td style="text-align: left;"><code>abcdef</code></td>
+<td style="text-align: left;"><code>a***ef</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Short input with 4 trailing retained</td>
+<td style="text-align: left;"><code>123</code></td>
+<td style="text-align: left;"><code>***</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mask-short-input">When the retained length reaches or exceeds the input</h3>
+<p><strong>The entire input is masked without an error, including when the retained length exactly equals the input length.</strong> The On conversion error policy is not invoked. For input <code>12345</code> and mask character <code>*</code>, the results are:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Configuration</th>
+<th style="text-align: left;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Keep 2 leading characters</td>
+<td style="text-align: left;"><code>12***</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Keep 4 leading characters</td>
+<td style="text-align: left;"><code>1234*</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Keep 5 leading characters (equal length)</td>
+<td style="text-align: left;"><code>*****</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Keep 56 leading characters (exceeds input length)</td>
+<td style="text-align: left;"><code>*****</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Keep 1 leading and 4 trailing characters (total 5)</td>
+<td style="text-align: left;"><code>*****</code></td>
+</tr>
+</tbody>
+</table>
+<p><a class="sdi-image-popup" href="../img/transform-mask-short.png"><img alt="Masking when the retained length exceeds the input" src="../img/transform-mask-short.png" /></a></p>
+<p>Keep leading and trailing uses the sum of both counts. This prevents a short input value from being exposed in full.</p>
+<h2 id="hash">Hashing</h2>
+<p>Produce a fixed-length hash string for matching equal input values.</p>
+<p><a class="sdi-image-popup" href="../img/transform-hash.png"><img alt="Hashing settings and preview" src="../img/transform-hash.png" /></a></p>
+<p><strong>Configure</strong></p>
+<p>Choose HMAC-SHA256 (SDI management key). Key source is fixed to SDI management key, so no additional key registration or input is needed. Choose SHA-256 (unkeyed) for an unkeyed calculation.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Hash algorithm</td>
+<td style="text-align: left;"><code>HMAC-SHA256 (SDI management key)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Key source</td>
+<td style="text-align: left;"><code>SDI management key</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Final result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>VALUE</code> = <code>"employee001"</code></td>
+<td style="text-align: left;"><code>"9c93a8ee3b2e26ba914428bf142fe552f383d8c01e7fdd362b0c58c906602c16"</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong></p>
+<p>UTF-8 input produces 64 lowercase hexadecimal characters. NULL stays NULL; an empty string is hashed. Whitespace and case are preserved; normalize in earlier steps when needed. Use a string destination of at least 64 characters. HMAC results depend on the SDI configuration; the screenshot uses a sample environment. Unkeyed SHA-256 allows candidate values to be hashed and compared.</p>
+<h3 id="hash-algorithms">Choosing a hash algorithm</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Algorithm</th>
+<th style="text-align: left;">Inputs to the calculation</th>
+<th style="text-align: left;">Result for the same input</th>
+<th style="text-align: left;">Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">HMAC-SHA256 (SDI management key)</td>
+<td style="text-align: left;">Input value and a key derived internally by SDI</td>
+<td style="text-align: left;">Identical with the same SDI configuration</td>
+<td style="text-align: left;">Pseudonymizing and matching identifiers</td>
+</tr>
+<tr>
+<td style="text-align: left;">SHA-256 (unkeyed)</td>
+<td style="text-align: left;">Input value only</td>
+<td style="text-align: left;">Identical across SDI environments</td>
+<td style="text-align: left;">Matching standard hashes with other systems</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Neither algorithm requires additional hash-key registration.</strong> HMAC-SHA256 uses the existing SDI management-key mechanism. Use the default HMAC-SHA256 to conceal values such as employee IDs or phone numbers. With unkeyed SHA-256, candidates for the original value can be hashed and compared.</p>
+<h3 id="hash-unkeyed-example">Try unkeyed SHA-256</h3>
+<p>Change Hash algorithm to SHA-256 (unkeyed). Key source is hidden. Set the sample Input type to String and its value to <code>abc</code>, then click Preview conversion.</p>
+<p><a class="sdi-image-popup" href="../img/transform-hash-sha256.png"><img alt="Unkeyed SHA-256 settings and preview" src="../img/transform-hash-sha256.png" /></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sample input</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>abc</code></td>
+<td style="text-align: left;"><code>ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad</code></td>
+</tr>
+</tbody>
+</table>
+<p>For this exact string encoded as UTF-8, the result is the same in every SDI environment.</p>
+<h3 id="hash-output-length">Output length and destination column</h3>
+<p><strong>Both algorithms output exactly 64 lowercase hexadecimal characters, regardless of input length.</strong> Short input becomes longer; input longer than 64 characters becomes shorter.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Hash output length</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Employee ID <code>E001</code>: 4 characters</td>
+<td style="text-align: left;">64 characters</td>
+</tr>
+<tr>
+<td style="text-align: left;">Phone number: 11 characters</td>
+<td style="text-align: left;">64 characters</td>
+</tr>
+<tr>
+<td style="text-align: left;">Description: 1,000 characters</td>
+<td style="text-align: left;">64 characters</td>
+</tr>
+</tbody>
+</table>
+<p>Provide a string destination that can hold at least 64 characters; <code>VARCHAR2(64 CHAR)</code> is one Oracle example. SDI does not truncate the hash to fit the destination. NULL stays NULL; an empty string produces a 64-character hash.</p>
+<h3 id="hash-multiple-servers">Consistent results across mappings and servers</h3>
+<p>Mappings and servers sharing the same SDI configuration produce the same result for the same input and transformation settings. Register the existing management key for the shared configuration on each server. Recreating the SDI configuration may change hash results.</p>
+<p>Entering the same management password alone does not guarantee equal results in independently created SDI configurations. Share or migrate the same SDI configuration when hashes must match. The HMAC screenshot shows a sample environment, so its result may differ from yours.</p>
+<h3 id="hash-key-unavailable">Saved settings and unavailable keys</h3>
+<p>A mapping stores the algorithm, key source, and derivation version, never key material. If the HMAC key is unavailable, execution fails before extraction or output; the per-column NULL/default error policy does not apply. Hashing provides no reverse operation or absolute uniqueness guarantee.</p>
+<h2 id="combine-results">Transform separate columns and combine their results</h2>
+<p><a class="sdi-image-popup" href="../img/transform-workflow.png"><img alt="Combine independent transformation results" src="../img/transform-workflow.png" /></a></p>
+<p>Create these four steps. Steps 1–3 each read their own source column, keeping independent results.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Step</th>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Operation</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">VALUE = <code>"  ab  "</code></td>
+<td style="text-align: left;">Trim</td>
+<td style="text-align: left;"><code>"ab"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">CODE = <code>"xy"</code></td>
+<td style="text-align: left;">Upper</td>
+<td style="text-align: left;"><code>"XY"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">DATE = <code>"20240401"</code></td>
+<td style="text-align: left;">DateTime</td>
+<td style="text-align: left;"><code>"2024-04-01"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Results of steps 1, 2, 3</td>
+<td style="text-align: left;">Concat, separator <code>&#124;</code></td>
+<td style="text-align: left;"><code>&quot;ab&#124;XY&#124;2024-04-01&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<p><a class="sdi-image-popup" href="../img/transform-workflow-settings.png"><img alt="Select step results for concatenation" src="../img/transform-workflow-settings.png" /></a></p>
+<p>In step 4, choose StepResult for each concatenation item and select steps 1, 2, and 3 in order. Set Value to output to step 4 and preview.</p>
+<p>Only earlier enabled steps can be referenced. Results not needed by the selected output or its dependencies are shown as not used. The calculation evaluates only required results and their dependencies. Results belonging to another target column are not available.</p>
+<p><a href="../mappingcolumndetail/">Back to column mapping settings</a></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; <a href="https://www.ricct.com"> Research Institute of Cloud Computing Technology(RiCCT)</a>. All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ricct/sdi" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/InstituteCloud" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.top"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../javascripts/image-popup.js"></script>
+      
+    
+  </body>
+</html>
